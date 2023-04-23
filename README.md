@@ -14,5 +14,5 @@ Tugas Besar IF2210 Pemrograman Berorientasi Objek
 2. Buka terminal pada lokasi repositori
 3. Pada terminal salin/ketik teks dibawah ini:
 ```
-java -jar "Tucil3_Maps.jar"
+java -jar "IF2210_TB2_CTF.jar"
 ```
