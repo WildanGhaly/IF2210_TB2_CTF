@@ -22,9 +22,13 @@ public class GUI extends javax.swing.JFrame {
                                           "April",   "Mei", "Juni",
                                           "Juli",  "Agustus", "September",
                                           "Oktober", "November", "Desember"};
+    private static final String[] days= {"Sunday", "Monday", "Tuesday", "Wednesday",
+                                          "Thursday", "Friday", "Saturday"
+                                          };                                      
     private final SimpleDateFormat sdf  = new SimpleDateFormat("hh:mm");
     private int   currentSecond;
     private Calendar clock;
+
     public GUI() {
         initComponents();
     }
@@ -36,18 +40,27 @@ public class GUI extends javax.swing.JFrame {
     public void start(){
         reset();
         Timer timer = new Timer();
-        int month = clock.get(Calendar.MONTH);
+        Integer month = clock.get(Calendar.MONTH);
         Integer day = clock.get(Calendar.DAY_OF_MONTH);
         Integer year = clock.get(Calendar.YEAR);
+        Integer today = clock.get(Calendar.DAY_OF_WEEK);
         timer.scheduleAtFixedRate( new TimerTask(){
             public void run(){
                 if( currentSecond == 60 ) {
                     reset();
                 }
-                jLabel1.setText( String.format("%s:%02d", sdf.format(clock.getTime()), currentSecond ));
-                String date = day.toString().concat(" " + months[month] + " " + year.toString());
+                String timeStamp = String.format("%s", sdf.format(clock.getTime()), currentSecond );
+                if(clock.get(Calendar.AM_PM) == 0){
+                    timeStamp = timeStamp.concat(" A.M.");
+                } else {
+                    timeStamp = timeStamp.concat(" P.M.");
+                }
+                timeLabel.setText(timeStamp);
+                String date = days[today-1].concat(", " + day.toString() + " " + months[month] + " " + year.toString());
+                System.out.println(timeStamp);
                 System.out.println(date);
-                jLabel2.setText(String.format(date));
+                System.out.println(days[today-1]);
+                dateLabel.setText(String.format(date));
                 currentSecond++;
             }
         }, 0, 1000 );
@@ -62,12 +75,16 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        background = new javax.swing.JPanel();
         Clock = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        timeLabel = new javax.swing.JLabel();
+        dateLabel = new javax.swing.JLabel();
+        logoCTF = new javax.swing.JLabel();
+        footer = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TEST");
+        setBackground(new java.awt.Color(168, 218, 220));
         setName("jFrame"); // NOI18N
         addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
@@ -75,27 +92,78 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        start();
+        background.setBackground(new java.awt.Color(168, 218, 220));
+
+        Clock.setBackground(new java.awt.Color(29, 53, 87));
+        Clock.setToolTipText("");
+        Clock.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        Clock.setFocusCycleRoot(true);
+        Clock.setFocusTraversalPolicyProvider(true);
+        Clock.setName(""); // NOI18N
+        Clock.setRequestFocusEnabled(false);
+
+        timeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        timeLabel.setForeground(new java.awt.Color(255, 255, 255));
+        timeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        timeLabel.setText("Clock");
+        timeLabel.setToolTipText("");
+
+        dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dateLabel.setForeground(new java.awt.Color(255, 255, 255));
+        dateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dateLabel.setText("Date");
 
         javax.swing.GroupLayout ClockLayout = new javax.swing.GroupLayout(Clock);
         Clock.setLayout(ClockLayout);
         ClockLayout.setHorizontalGroup(
             ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ClockLayout.createSequentialGroup()
-                .addGap(64, 64, 64)
-                .addGroup(ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(72, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         ClockLayout.setVerticalGroup(
             ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClockLayout.createSequentialGroup()
-                .addContainerGap(18, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel1)
-                .addGap(29, 29, 29))
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addComponent(dateLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(timeLabel)
+                .addGap(21, 21, 21))
+        );
+
+        logoCTF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoctf.png"))); // NOI18N
+        logoCTF.setToolTipText("");
+        logoCTF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+
+        footer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        footer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/footer.png"))); // NOI18N
+
+        javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
+        background.setLayout(backgroundLayout);
+        backgroundLayout.setHorizontalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addGap(474, 474, 474)
+                .addGroup(backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(logoCTF, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Clock, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(backgroundLayout.createSequentialGroup()
+                .addComponent(footer)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        backgroundLayout.setVerticalGroup(
+            backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
+                .addContainerGap(237, Short.MAX_VALUE)
+                .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(189, 189, 189)
+                .addComponent(footer, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -103,15 +171,12 @@ public class GUI extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(579, Short.MAX_VALUE)
-                .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(528, 528, 528))
+                .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 635, Short.MAX_VALUE))
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -159,7 +224,10 @@ public class GUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Clock;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel background;
+    private javax.swing.JLabel dateLabel;
+    private javax.swing.JLabel footer;
+    private javax.swing.JLabel logoCTF;
+    private javax.swing.JLabel timeLabel;
     // End of variables declaration//GEN-END:variables
 }
