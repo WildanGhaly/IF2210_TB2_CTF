@@ -135,6 +135,7 @@ public class GUI extends javax.swing.JFrame {
         dateLabel.setForeground(new java.awt.Color(255, 255, 255));
         dateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dateLabel.setText("Date");
+        start();
 
         javax.swing.GroupLayout ClockLayout = new javax.swing.GroupLayout(Clock);
         Clock.setLayout(ClockLayout);
