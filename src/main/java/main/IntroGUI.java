@@ -111,7 +111,6 @@ public class IntroGUI extends javax.swing.JFrame {
         setTitle("TEST");
         setBackground(new java.awt.Color(168, 218, 220));
         setName("jFrame"); // NOI18N
-        setPreferredSize(new java.awt.Dimension(1280, 720));
         setResizable(false);
         addContainerListener(new java.awt.event.ContainerAdapter() {
             public void componentAdded(java.awt.event.ContainerEvent evt) {
@@ -130,6 +129,7 @@ public class IntroGUI extends javax.swing.JFrame {
         timeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         timeLabel.setText("Clock");
         timeLabel.setToolTipText("");
+        timeLabel.setPreferredSize(new java.awt.Dimension(357, 38));
 
         dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,7 +144,7 @@ public class IntroGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 357, Short.MAX_VALUE))
+                    .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ClockLayout.setVerticalGroup(
@@ -153,7 +153,7 @@ public class IntroGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(dateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(timeLabel)
+                .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap(12, Short.MAX_VALUE))
         );
 
