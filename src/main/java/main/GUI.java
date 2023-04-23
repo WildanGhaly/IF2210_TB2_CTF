@@ -22,8 +22,8 @@ public class GUI extends javax.swing.JFrame {
                                           "April",   "Mei", "Juni",
                                           "Juli",  "Agustus", "September",
                                           "Oktober", "November", "Desember"};
-    private static final String[] days= {"Sunday", "Monday", "Tuesday", "Wednesday",
-                                          "Thursday", "Friday", "Saturday"
+    private static final String[] days= {"SUN", "MON", "TUE", "WED",
+                                          "THU", "FRI", "SAT"
                                           };                                      
     private final SimpleDateFormat sdf  = new SimpleDateFormat("hh:mm");
     private int   currentSecond;
@@ -102,16 +102,17 @@ public class GUI extends javax.swing.JFrame {
         Clock.setName(""); // NOI18N
         Clock.setRequestFocusEnabled(false);
 
-        timeLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        timeLabel.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         timeLabel.setForeground(new java.awt.Color(255, 255, 255));
         timeLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         timeLabel.setText("Clock");
         timeLabel.setToolTipText("");
 
-        dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dateLabel.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
         dateLabel.setForeground(new java.awt.Color(255, 255, 255));
         dateLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dateLabel.setText("Date");
+        start();
 
         javax.swing.GroupLayout ClockLayout = new javax.swing.GroupLayout(Clock);
         Clock.setLayout(ClockLayout);
@@ -120,18 +121,18 @@ public class GUI extends javax.swing.JFrame {
             .addGroup(ClockLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dateLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(timeLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(dateLabel, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         ClockLayout.setVerticalGroup(
             ClockLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ClockLayout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(18, Short.MAX_VALUE)
                 .addComponent(dateLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(timeLabel)
-                .addGap(21, 21, 21))
+                .addGap(15, 15, 15))
         );
 
         logoCTF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoctf.png"))); // NOI18N
