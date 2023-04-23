@@ -20,10 +20,10 @@ import javax.swing.JPanel;
  *
  * @author user
  */
-public class GUI extends javax.swing.JFrame {
+public class IntroGUI extends javax.swing.JFrame {
 
     /**
-     * Creates new form GUI
+     * Creates new form IntroGUI
      */
     private static final String[] months= {"Januari", "Februari", "Maret",
                                           "April",   "Mei", "Juni",
@@ -37,7 +37,7 @@ public class GUI extends javax.swing.JFrame {
     private Calendar clock;
     final Image image = requestImage();
 
-    public GUI() {
+    public IntroGUI() {
         initComponents();
     }
 
@@ -80,6 +80,7 @@ public class GUI extends javax.swing.JFrame {
                 System.out.println(timeStamp);
                 System.out.println(date);
                 dateLabel.setText(String.format(date));
+                System.out.println(currentSecond);
                 currentSecond++;
             }
         }, 0, 1000 );
@@ -153,7 +154,7 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(dateLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(timeLabel)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         logoCTF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoctf.png"))); // NOI18N
@@ -182,12 +183,12 @@ public class GUI extends javax.swing.JFrame {
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, backgroundLayout.createSequentialGroup()
-                .addContainerGap(243, Short.MAX_VALUE)
-                .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(248, Short.MAX_VALUE)
+                .addComponent(logoCTF)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Clock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(201, 201, 201)
-                .addComponent(footer, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(footer))
         );
 
         start();
@@ -196,11 +197,11 @@ public class GUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, 1281, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(background, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, 691, Short.MAX_VALUE)
+            .addComponent(background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
