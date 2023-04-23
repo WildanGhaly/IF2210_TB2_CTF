@@ -79,7 +79,6 @@ public class GUI extends javax.swing.JFrame {
                 String date = days[today-1].concat(", " + day.toString() + " " + months[month] + " " + year.toString());
                 System.out.println(timeStamp);
                 System.out.println(date);
-                System.out.println(days[today-1]);
                 dateLabel.setText(String.format(date));
                 currentSecond++;
             }
