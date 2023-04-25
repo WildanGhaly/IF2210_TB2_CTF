@@ -57,7 +57,7 @@ public class IntroGUI extends javax.swing.JFrame {
         clock = Calendar.getInstance();
         currentSecond = clock.get(Calendar.SECOND);
     }
-    public void start(){
+    public void dateTimeThreading(){
         reset();
         Timer timer = new Timer();
         Integer month = clock.get(Calendar.MONTH);
@@ -191,7 +191,7 @@ public class IntroGUI extends javax.swing.JFrame {
                 .addComponent(footer))
         );
 
-        start();
+        dateTimeThreading();
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
