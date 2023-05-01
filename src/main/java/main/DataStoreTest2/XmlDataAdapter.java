@@ -20,7 +20,7 @@ public class XmlDataAdapter implements DataAdapter {
         JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, data.get(0).getClass());
         Marshaller marshaller = jaxbContext.createMarshaller();
         marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-        System.out.println("Data here: " + data);
+        // System.out.println("Data here: " + data);
         marshaller.marshal(new DataWrapper(data), file);
     }
 
@@ -29,7 +29,7 @@ public class XmlDataAdapter implements DataAdapter {
     public List<?> loadData(String path) throws IOException {
         try {
             File file = new File(path);
-            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, Person.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, Person.class, Customer.class, Product.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             DataWrapper dataWrapper = (DataWrapper) unmarshaller.unmarshal(file);
             return (List<Object>) dataWrapper.getData();
