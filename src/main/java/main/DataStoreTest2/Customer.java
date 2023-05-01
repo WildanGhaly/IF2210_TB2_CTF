@@ -2,16 +2,36 @@ package main.DataStoreTest2;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "customer")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
     private int id;
     private String name;
     private String email;
 
+    public Customer() {
+        // required by JAXB
+    }
+
     public Customer(int id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Customer [id=" + id + ", name=" + name + ", email=" + email + "]";
+    }
+
+    public static long getSerialversionuid() {
+        return serialVersionUID;
     }
 
     public int getId() {
@@ -37,9 +57,5 @@ public class Customer implements Serializable {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    @Override
-    public String toString() {
-        return "Customer [id=" + id + ", name=" + name + ", email=" + email + "]";
-    }
 }
+

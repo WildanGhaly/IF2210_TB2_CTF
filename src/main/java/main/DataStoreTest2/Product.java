@@ -2,11 +2,14 @@ package main.DataStoreTest2;
 
 import java.io.Serializable;
 
-public class Product implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class Product {
     private int id;
     private String name;
     private double price;
+
+    public Product() {
+        // Required for JavaBeans convention
+    }
 
     public Product(int id, String name, double price) {
         this.id = id;
@@ -40,7 +43,11 @@ public class Product implements Serializable {
 
     @Override
     public String toString() {
-        return "Product [id=" + id + ", name=" + name + ", price=" + price + "]";
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", price=" + price +
+                '}';
     }
 }
 
