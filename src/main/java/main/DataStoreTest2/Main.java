@@ -91,5 +91,63 @@ public class Main {
         } catch (IOException | JAXBException e) {
             e.printStackTrace();
         } 
+
+
+        // Save the data to a file
+        try {
+            DataAdapter adapter = new ObjDataAdapter();
+            List<Product> dataProduct = new ArrayList<>();
+            dataProduct.add(product);
+            dataProduct.add(product);
+
+            adapter.saveData(PRODUCT_FILE_OBJ, dataProduct);
+            System.out.println("Data saved successfully");
+        } catch (IOException | JAXBException e) {
+            System.err.println("Failed to save data: " + e.getMessage());
+        }
+
+        // Load the data from the file
+        try {
+            DataAdapter adapter = new ObjDataAdapter();
+            List<?> loadedData = adapter.loadData(PRODUCT_FILE_OBJ);
+            System.out.println("Data loaded successfully:");
+            for (Object obj : loadedData) {
+                System.out.println(obj);
+            }
+        } catch (IOException e) {
+            System.err.println("Failed to load data: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+
+        // Save the data to a file
+        try {
+            DataAdapter adapter = new ObjDataAdapter();
+            List<Customer> dataCustomer = new ArrayList<>();
+            dataCustomer.add(customer);
+            dataCustomer.add(customer);
+
+            adapter.saveData(CUSTOMER_FILE_OBJ, dataCustomer);
+            System.out.println("Data saved successfully");
+        } catch (IOException | JAXBException e) {
+            System.err.println("Failed to save data: " + e.getMessage());
+        }
+
+        // Load the data from the file
+        try {
+            DataAdapter adapter = new ObjDataAdapter();
+            List<?> loadedData = adapter.loadData(CUSTOMER_FILE_OBJ);
+            System.out.println("Data loaded successfully:");
+            for (Object obj : loadedData) {
+                System.out.println(obj);
+            }
+        } catch (IOException e) {
+            System.err.println("Failed to load data: " + e.getMessage());
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
