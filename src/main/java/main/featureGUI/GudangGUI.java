@@ -10,12 +10,12 @@ import javax.swing.JPanel;
  *
  * @author user
  */
-public class Gudang extends javax.swing.JPanel {
+public class GudangGUI extends javax.swing.JPanel {
 
     /**
      * Creates new form Gudang
      */
-    public Gudang() {
+    public GudangGUI() {
         initComponents();
     }
 

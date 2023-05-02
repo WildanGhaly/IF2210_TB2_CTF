@@ -8,12 +8,12 @@ package main.featureGUI;
  *
  * @author user
  */
-public class HalamanUtama extends javax.swing.JPanel {
+public class HalamanUtamaGUI extends javax.swing.JPanel {
 
     /**
      * Creates new form HalamanUtama
      */
-    public HalamanUtama() {
+    public HalamanUtamaGUI() {
         initComponents();
     }
 

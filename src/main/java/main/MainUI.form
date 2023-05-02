@@ -579,7 +579,7 @@
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="setForm(new HalamanUtama());"/>
+            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="setForm(new main.featureGUI.HalamanUtamaGUI());"/>
           </AuxValues>
 
           <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>

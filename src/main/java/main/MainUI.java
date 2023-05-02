@@ -15,8 +15,8 @@ import javax.swing.JComponent;
 import javax.swing.JPanel;
 
 import main.featureGUI.Util.RequestImage;
-import main.featureGUI.Gudang;
-import main.featureGUI.HalamanUtama;
+import main.featureGUI.GudangGUI;
+import main.featureGUI.HalamanUtamaGUI;
 import main.featureGUI.Util.DateTime;
 /**
  *
@@ -409,7 +409,7 @@ public class MainUI extends javax.swing.JFrame {
         );
 
         leftBarPanel.getAccessibleContext().setAccessibleParent(this);
-        setForm(new HalamanUtama());
+        setForm(new HalamanUtamaGUI());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -432,7 +432,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void buttonHalamanUtamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHalamanUtamaActionPerformed
         selectedButton(buttonHalamanUtama);
-        setForm(new HalamanUtama());
+        setForm(new HalamanUtamaGUI());
     }//GEN-LAST:event_buttonHalamanUtamaActionPerformed
 
     private void buttonPendaftaranMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPendaftaranMemberActionPerformed
@@ -453,7 +453,7 @@ public class MainUI extends javax.swing.JFrame {
 
     private void buttonGudangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGudangActionPerformed
         selectedButton(buttonGudang);
-        setForm(new Gudang());
+        setForm(new GudangGUI());
     }//GEN-LAST:event_buttonGudangActionPerformed
 
     private void buttonSettingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSettingActionPerformed
