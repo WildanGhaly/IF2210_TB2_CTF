@@ -8,5 +8,5 @@ import javax.xml.bind.PropertyException;
 
 public interface DataAdapter {
     void saveData(String path, List<?> data) throws IOException, PropertyException, JAXBException;
-    List<?> loadData(String path) throws IOException;
+    List<?> loadData(String path) throws IOException, ClassNotFoundException;
 }

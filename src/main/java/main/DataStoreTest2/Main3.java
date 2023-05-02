@@ -8,7 +8,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.PropertyException;
 
 public class Main3 {
-    public static void main(String[] args) throws IOException, PropertyException, JAXBException {
+    public static void main(String[] args) throws IOException, PropertyException, JAXBException, ClassNotFoundException {
         // Create some test data
         List<Person> people = new ArrayList<>();
         people.add(new Person("Wildan", 19));
