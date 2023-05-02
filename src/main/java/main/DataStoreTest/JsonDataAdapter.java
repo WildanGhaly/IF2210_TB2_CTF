@@ -12,7 +12,7 @@ public class JsonDataAdapter implements DataStore {
 
     @Override
     public void saveData(Object data) {
-        String json = gson.toJson(data);
+        // String json = gson.toJson(data);
         // save json to file
     }
 
