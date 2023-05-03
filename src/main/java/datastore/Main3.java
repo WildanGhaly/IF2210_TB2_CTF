@@ -1,4 +1,4 @@
-package main.DataStoreTest2;
+package datastore;
 
 import java.io.IOException;
 import java.util.ArrayList;

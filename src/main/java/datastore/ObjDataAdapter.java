@@ -1,4 +1,4 @@
-package main.DataStoreTest2;
+package datastore;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

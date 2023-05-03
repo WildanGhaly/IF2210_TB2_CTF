@@ -1,4 +1,4 @@
-package main.DataStoreTest2;
+package datastore;
 
 import java.io.File;
 import java.io.IOException;
@@ -12,9 +12,9 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import main.DataStoreTest2.CustomerStatus.Customer;
-import main.DataStoreTest2.CustomerStatus.Member;
-import main.DataStoreTest2.CustomerStatus.VIP;
+import datastore.CustomerStatus.Customer;
+import datastore.CustomerStatus.Member;
+import datastore.CustomerStatus.VIP;
 
 public class XmlDataAdapter implements DataAdapter {
 

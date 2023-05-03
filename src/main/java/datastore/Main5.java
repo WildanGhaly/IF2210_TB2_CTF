@@ -1,26 +1,26 @@
-package main.DataStoreTest2;
+package datastore;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import main.DataStoreTest2.CustomerStatus.Customer;
-import main.DataStoreTest2.CustomerStatus.Member;
-import main.DataStoreTest2.CustomerStatus.VIP;
+import datastore.CustomerStatus.Customer;
+import datastore.CustomerStatus.Member;
+import datastore.CustomerStatus.VIP;
 
 public class Main5 {
     
     public static void main(String[] args) {
-        final String CUSTOMER_FILE_JSON = "src/main/java/main/DataStoreTest2/database/customer.json";
-        final String CUSTOMER_FILE_XML = "src/main/java/main/DataStoreTest2/database/customer.xml";
-        final String CUSTOMER_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/customer.obj";
+        final String CUSTOMER_FILE_JSON = "src/main/java/datastore/database/customer.json";
+        final String CUSTOMER_FILE_XML = "src/main/java/datastore/database/customer.xml";
+        final String CUSTOMER_FILE_OBJ = "src/main/java/datastore/database/customer.obj";
         
-        final String MEMBER_FILE_JSON = "src/main/java/main/DataStoreTest2/database/member.json";
-        final String MEMBER_FILE_XML = "src/main/java/main/DataStoreTest2/database/member.xml";
-        final String MEMBER_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/member.obj";
+        final String MEMBER_FILE_JSON = "src/main/java/datastore/database/member.json";
+        final String MEMBER_FILE_XML = "src/main/java/datastore/database/member.xml";
+        final String MEMBER_FILE_OBJ = "src/main/java/datastore/database/member.obj";
     
-        final String VIP_FILE_JSON = "src/main/java/main/DataStoreTest2/database/vip.json";
-        final String VIP_FILE_XML = "src/main/java/main/DataStoreTest2/database/vip.xml";
-        final String VIP_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/vip.obj";
+        final String VIP_FILE_JSON = "src/main/java/datastore/database/vip.json";
+        final String VIP_FILE_XML = "src/main/java/datastore/database/vip.xml";
+        final String VIP_FILE_OBJ = "src/main/java/datastore/database/vip.obj";
 
         List<Customer> customers = new ArrayList<>();
         List<Member> members = new ArrayList<>();

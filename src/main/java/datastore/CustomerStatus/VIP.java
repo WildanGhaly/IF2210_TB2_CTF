@@ -1,4 +1,4 @@
-package main.DataStoreTest2.CustomerStatus;
+package datastore.CustomerStatus;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
