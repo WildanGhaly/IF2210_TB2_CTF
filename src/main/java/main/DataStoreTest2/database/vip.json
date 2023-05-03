@@ -1,0 +1,23 @@
+[
+  {
+    "name": "WillyVIP",
+    "phoneNumber": "1234567890",
+    "id": 7,
+    "points": 0,
+    "totalSpent": 0.0
+  },
+  {
+    "name": "WildanVIP",
+    "phoneNumber": "32422222222",
+    "id": 8,
+    "points": 0,
+    "totalSpent": 0.0
+  },
+  {
+    "name": "GhalyVIP",
+    "phoneNumber": "00000000000",
+    "id": 9,
+    "points": 0,
+    "totalSpent": 0.0
+  }
+]
