@@ -12,6 +12,10 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import main.DataStoreTest2.CustomerStatus.Customer;
+import main.DataStoreTest2.CustomerStatus.Member;
+import main.DataStoreTest2.CustomerStatus.VIP;
+
 public class XmlDataAdapter implements DataAdapter {
 
     @Override
@@ -29,7 +33,7 @@ public class XmlDataAdapter implements DataAdapter {
     public List<?> loadData(String path) throws IOException {
         try {
             File file = new File(path);
-            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, Person.class, Customer.class, Product.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class,  Customer.class, Member.class, VIP.class, Person.class, Customers.class, Product.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             DataWrapper dataWrapper = (DataWrapper) unmarshaller.unmarshal(file);
             return (List<Object>) dataWrapper.getData();

@@ -17,7 +17,7 @@ public class Main {
         final String CUSTOMER_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/customer.obj";
 
         Product product = new Product(1, "Product 1", 600.0);
-        Customer customer = new Customer(1, "Customer 1", "1234567890");
+        Customers customer = new Customers(1, "Customer 1", "1234567890");
         System.out.println(product);
 
         DataAdapter adapterJSON = new JsonDataAdapter();
@@ -53,7 +53,7 @@ public class Main {
 
 
         try {
-            List<Customer> dataCustomer = new ArrayList<>();
+            List<Customers> dataCustomer = new ArrayList<>();
             dataCustomer.add(customer);
 
             adapterXML.saveData(CUSTOMER_FILE_XML, dataCustomer);
@@ -124,7 +124,7 @@ public class Main {
         // Save the data to a file
         try {
             DataAdapter adapter = new ObjDataAdapter();
-            List<Customer> dataCustomer = new ArrayList<>();
+            List<Customers> dataCustomer = new ArrayList<>();
             dataCustomer.add(customer);
             dataCustomer.add(customer);
 
