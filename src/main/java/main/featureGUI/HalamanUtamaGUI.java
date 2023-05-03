@@ -4,6 +4,13 @@
  */
 package main.featureGUI;
 
+import java.awt.Graphics;
+import java.awt.Image;
+
+import javax.swing.JPanel;
+
+import main.featureGUI.Util.RequestImage;
+
 /**
  *
  * @author user
@@ -13,6 +20,9 @@ public class HalamanUtamaGUI extends javax.swing.JPanel {
     /**
      * Creates new form HalamanUtama
      */
+    private final Image logoHalamanUtamaBg = RequestImage.requestImage("HalamanUtama.png");
+    private final Image logoHalamanUtamaFg = RequestImage.requestImage("logoChizuruBesar.png");
+
     public HalamanUtamaGUI() {
         initComponents();
     }
@@ -21,46 +31,93 @@ public class HalamanUtamaGUI extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        halamanUtama = new javax.swing.JPanel();
+        logoHalamanUtama = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(logoHalamanUtamaBg, 0, 0, null);
+            }
+        };
+        logoCTF = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(logoHalamanUtamaFg, 0, 0, null);
+            }
+        };
 
         setPreferredSize(new java.awt.Dimension(904, 720));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
-        jLabel2.setText("HALAMAN UTAMA");
+        halamanUtama.setBackground(new java.awt.Color(40, 41, 61));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(236, 236, 236)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 418, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(250, Short.MAX_VALUE))
+        logoHalamanUtama.setBackground(new java.awt.Color(40, 41, 61));
+        logoHalamanUtama.setPreferredSize(new java.awt.Dimension(866, 698));
+
+        logoCTF.setBackground(new java.awt.Color(40, 41, 61));
+        logoCTF.setPreferredSize(new java.awt.Dimension(428, 325));
+
+        javax.swing.GroupLayout logoCTFLayout = new javax.swing.GroupLayout(logoCTF);
+        logoCTF.setLayout(logoCTFLayout);
+        logoCTFLayout.setHorizontalGroup(
+            logoCTFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 428, Short.MAX_VALUE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(234, 234, 234)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(252, Short.MAX_VALUE))
+        logoCTFLayout.setVerticalGroup(
+            logoCTFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 325, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout logoHalamanUtamaLayout = new javax.swing.GroupLayout(logoHalamanUtama);
+        logoHalamanUtama.setLayout(logoHalamanUtamaLayout);
+        logoHalamanUtamaLayout.setHorizontalGroup(
+            logoHalamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(logoHalamanUtamaLayout.createSequentialGroup()
+                .addGap(216, 216, 216)
+                .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(222, Short.MAX_VALUE))
+        );
+        logoHalamanUtamaLayout.setVerticalGroup(
+            logoHalamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoHalamanUtamaLayout.createSequentialGroup()
+                .addContainerGap(193, Short.MAX_VALUE)
+                .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(180, 180, 180))
+        );
+
+        javax.swing.GroupLayout halamanUtamaLayout = new javax.swing.GroupLayout(halamanUtama);
+        halamanUtama.setLayout(halamanUtamaLayout);
+        halamanUtamaLayout.setHorizontalGroup(
+            halamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(halamanUtamaLayout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addComponent(logoHalamanUtama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+        halamanUtamaLayout.setVerticalGroup(
+            halamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(halamanUtamaLayout.createSequentialGroup()
+                .addGap(12, 12, 12)
+                .addComponent(logoHalamanUtama, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(10, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(halamanUtama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(halamanUtama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel halamanUtama;
+    private javax.swing.JPanel logoCTF;
+    private javax.swing.JPanel logoHalamanUtama;
     // End of variables declaration//GEN-END:variables
 }
