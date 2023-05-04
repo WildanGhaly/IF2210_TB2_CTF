@@ -63,7 +63,9 @@ public class Main5 {
         DataAdapter adapterXML = new XmlDataAdapter();
         DataAdapter adapterOBJ = new ObjDataAdapter();
 
+
         /* Save in JSON */
+
         try {
             adapterJSON.saveData(CUSTOMER_FILE_JSON, customers);
             adapterJSON.saveData(MEMBER_FILE_JSON, members);
@@ -74,6 +76,7 @@ public class Main5 {
         }
 
         /* Save in XML */
+
         try {
             adapterXML.saveData(CUSTOMER_FILE_XML, customers);
             adapterXML.saveData(MEMBER_FILE_XML, members);
@@ -84,6 +87,7 @@ public class Main5 {
         }
 
         /* Save in OBJ */
+        
         try {
             adapterOBJ.saveData(CUSTOMER_FILE_OBJ, customers);
             adapterOBJ.saveData(MEMBER_FILE_OBJ, members);
