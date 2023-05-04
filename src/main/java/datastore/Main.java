@@ -1,4 +1,4 @@
-package main.DataStoreTest2;
+package datastore;
 
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.PropertyException;
@@ -9,12 +9,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) throws ClassNotFoundException {
-        final String PRODUCT_FILE_JSON = "src/main/java/main/DataStoreTest2/database/product.json";
-        final String CUSTOMER_FILE_JSON = "src/main/java/main/DataStoreTest2/database/customer.json";
-        final String PRODUCT_FILE_XML = "src/main/java/main/DataStoreTest2/database/product.xml";
-        final String CUSTOMER_FILE_XML = "src/main/java/main/DataStoreTest2/database/customer.xml";
-        final String PRODUCT_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/product.obj";
-        final String CUSTOMER_FILE_OBJ = "src/main/java/main/DataStoreTest2/database/customer.obj";
+        final String PRODUCT_FILE_JSON = "src/main/java/datastore/database/product.json";
+        final String CUSTOMER_FILE_JSON = "src/main/java/datastore/database/customer.json";
+        final String PRODUCT_FILE_XML = "src/main/java/datastore/database/product.xml";
+        final String CUSTOMER_FILE_XML = "src/main/java/datastore/database/customer.xml";
+        final String PRODUCT_FILE_OBJ = "src/main/java/datastore/database/product.obj";
+        final String CUSTOMER_FILE_OBJ = "src/main/java/datastore/database/customer.obj";
 
         Product product = new Product(1, "Product 1", 600.0);
         Customers customer = new Customers(1, "Customer 1", "1234567890");

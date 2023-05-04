@@ -1,4 +1,4 @@
-package main.DataStoreTest2.CustomerStatus;
+package datastore.CustomerStatus;
 
 public class MainCustomer {
     public static void main(String[] args) {

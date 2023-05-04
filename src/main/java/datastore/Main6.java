@@ -1,4 +1,4 @@
-package main.DataStoreTest2;
+package datastore;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -7,7 +7,7 @@ import java.util.List;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.PropertyException;
 
-import main.DataStoreTest2.CustomerStatus.Customer;
+import datastore.CustomerStatus.Customer;
 
 public class Main6 {
     public static void main(String[] args) throws IOException, PropertyException, JAXBException, ClassNotFoundException {
