@@ -4,15 +4,21 @@
         <id>4</id>
         <points>0</points>
         <totalSpent>0.0</totalSpent>
+        <name>Willy</name>
+        <phoneNumber>1234567890</phoneNumber>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
         <id>5</id>
         <points>0</points>
         <totalSpent>0.0</totalSpent>
+        <name>Wildan</name>
+        <phoneNumber>32422222222</phoneNumber>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
         <id>6</id>
         <points>0</points>
         <totalSpent>0.0</totalSpent>
+        <name>Ghaly</name>
+        <phoneNumber>00000000000</phoneNumber>
     </item>
 </dataWrapper>

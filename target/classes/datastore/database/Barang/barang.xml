@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<dataWrapper>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <buyPrice>50000.0</buyPrice>
+        <image>baju.com</image>
+        <kategori>Pakaian</kategori>
+        <name>Baju</name>
+        <sellPrice>100000.0</sellPrice>
+        <stock>2</stock>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <buyPrice>100000.0</buyPrice>
+        <image>celana.com</image>
+        <kategori>Pakaian</kategori>
+        <name>Celana</name>
+        <sellPrice>200000.0</sellPrice>
+        <stock>3</stock>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <buyPrice>150000.0</buyPrice>
+        <image>sepatu.com</image>
+        <kategori>Pakaian</kategori>
+        <name>Sepatu</name>
+        <sellPrice>300000.0</sellPrice>
+        <stock>4</stock>
+    </item>
+</dataWrapper>
