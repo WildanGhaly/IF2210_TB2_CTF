@@ -25,12 +25,7 @@ import main.featureGUI.PengaturanGUI;
 import main.featureGUI.UpdateMemberGUI;
 /**
  *
- * @author user
- * @author user
- * @author user
- * @author user
- * @author user
- * @author user
+ * @author ChizuruTheFinest
  */
 public class MainUI extends javax.swing.JFrame {
 
@@ -72,7 +67,7 @@ public class MainUI extends javax.swing.JFrame {
         mainPanel.repaint();
         mainPanel.revalidate();
     }
-    
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -131,7 +126,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonHalamanUtama.setBackground(new java.awt.Color(40, 41, 61));
         buttonHalamanUtama.setForeground(new java.awt.Color(217, 217, 217));
-        buttonHalamanUtama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonHalamanUtama.png"))); // NOI18N
+        buttonHalamanUtama.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonHalamanUtama.png"))); // NOI18N
         buttonHalamanUtama.setToolTipText("");
         buttonHalamanUtama.setBorder(null);
         buttonHalamanUtama.setBorderPainted(false);
@@ -150,7 +145,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonPendaftaranMember.setBackground(new java.awt.Color(40, 41, 61));
         buttonPendaftaranMember.setForeground(new java.awt.Color(217, 217, 217));
-        buttonPendaftaranMember.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonPendaftaranmember.png"))); // NOI18N
+        buttonPendaftaranMember.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonPendaftaranmember.png"))); // NOI18N
         buttonPendaftaranMember.setToolTipText("");
         buttonPendaftaranMember.setBorder(null);
         buttonPendaftaranMember.setBorderPainted(false);
@@ -170,7 +165,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonPembayaran.setBackground(new java.awt.Color(40, 41, 61));
         buttonPembayaran.setForeground(new java.awt.Color(217, 217, 217));
-        buttonPembayaran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonPembayaran.png"))); // NOI18N
+        buttonPembayaran.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonPembayaran.png"))); // NOI18N
         buttonPembayaran.setToolTipText("");
         buttonPembayaran.setBorder(null);
         buttonPembayaran.setBorderPainted(false);
@@ -190,7 +185,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonUpdateMember.setBackground(new java.awt.Color(40, 41, 61));
         buttonUpdateMember.setForeground(new java.awt.Color(217, 217, 217));
-        buttonUpdateMember.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonUpdatemember.png"))); // NOI18N
+        buttonUpdateMember.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonUpdatemember.png"))); // NOI18N
         buttonUpdateMember.setToolTipText("");
         buttonUpdateMember.setBorder(null);
         buttonUpdateMember.setBorderPainted(false);
@@ -210,7 +205,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonHistoriTransaksi.setBackground(new java.awt.Color(40, 41, 61));
         buttonHistoriTransaksi.setForeground(new java.awt.Color(217, 217, 217));
-        buttonHistoriTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonHistoritransaksi.png"))); // NOI18N
+        buttonHistoriTransaksi.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonHistoritransaksi.png"))); // NOI18N
         buttonHistoriTransaksi.setToolTipText("");
         buttonHistoriTransaksi.setBorder(null);
         buttonHistoriTransaksi.setBorderPainted(false);
@@ -231,7 +226,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonGudang.setBackground(new java.awt.Color(40, 41, 61));
         buttonGudang.setForeground(new java.awt.Color(217, 217, 217));
-        buttonGudang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonGudang.png"))); // NOI18N
+        buttonGudang.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonGudang.png"))); // NOI18N
         buttonGudang.setToolTipText("");
         buttonGudang.setBorder(null);
         buttonGudang.setBorderPainted(false);
@@ -251,7 +246,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonSetting.setBackground(new java.awt.Color(40, 41, 61));
         buttonSetting.setForeground(new java.awt.Color(217, 217, 217));
-        buttonSetting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonPengaturan.png"))); // NOI18N
+        buttonSetting.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonPengaturan.png"))); // NOI18N
         buttonSetting.setToolTipText("");
         buttonSetting.setBorder(null);
         buttonSetting.setBorderPainted(false);
@@ -271,7 +266,7 @@ public class MainUI extends javax.swing.JFrame {
 
         buttonLaporanPenjualan.setBackground(new java.awt.Color(40, 41, 61));
         buttonLaporanPenjualan.setForeground(new java.awt.Color(217, 217, 217));
-        buttonLaporanPenjualan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/buttonLaporanpenjualan.png"))); // NOI18N
+        buttonLaporanPenjualan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonDefault/buttonLaporanpenjualan.png"))); // NOI18N
         buttonLaporanPenjualan.setToolTipText("");
         buttonLaporanPenjualan.setBorder(null);
         buttonLaporanPenjualan.setBorderPainted(false);

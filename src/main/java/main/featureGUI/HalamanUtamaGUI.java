@@ -55,17 +55,17 @@ public class HalamanUtamaGUI extends javax.swing.JPanel {
         logoHalamanUtama.setPreferredSize(new java.awt.Dimension(866, 698));
 
         logoCTF.setBackground(new java.awt.Color(40, 41, 61));
-        logoCTF.setPreferredSize(new java.awt.Dimension(428, 325));
+        logoCTF.setPreferredSize(new java.awt.Dimension(454, 351));
 
         javax.swing.GroupLayout logoCTFLayout = new javax.swing.GroupLayout(logoCTF);
         logoCTF.setLayout(logoCTFLayout);
         logoCTFLayout.setHorizontalGroup(
             logoCTFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 428, Short.MAX_VALUE)
+            .addGap(0, 454, Short.MAX_VALUE)
         );
         logoCTFLayout.setVerticalGroup(
             logoCTFLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 325, Short.MAX_VALUE)
+            .addGap(0, 351, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout logoHalamanUtamaLayout = new javax.swing.GroupLayout(logoHalamanUtama);
@@ -73,16 +73,16 @@ public class HalamanUtamaGUI extends javax.swing.JPanel {
         logoHalamanUtamaLayout.setHorizontalGroup(
             logoHalamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(logoHalamanUtamaLayout.createSequentialGroup()
-                .addGap(216, 216, 216)
+                .addGap(207, 207, 207)
                 .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(222, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
         logoHalamanUtamaLayout.setVerticalGroup(
             logoHalamanUtamaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, logoHalamanUtamaLayout.createSequentialGroup()
-                .addContainerGap(193, Short.MAX_VALUE)
+                .addContainerGap(173, Short.MAX_VALUE)
                 .addComponent(logoCTF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(180, 180, 180))
+                .addGap(174, 174, 174))
         );
 
         javax.swing.GroupLayout halamanUtamaLayout = new javax.swing.GroupLayout(halamanUtama);

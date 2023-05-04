@@ -196,7 +196,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonHalamanUtama.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonHalamanUtama.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -232,7 +232,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonPendaftaranmember.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonPendaftaranmember.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -271,7 +271,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonPembayaran.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonPembayaran.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -310,7 +310,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonUpdatemember.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonUpdatemember.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -349,7 +349,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonHistoritransaksi.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonHistoritransaksi.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -389,7 +389,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonGudang.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonGudang.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -428,7 +428,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonPengaturan.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonPengaturan.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -467,7 +467,7 @@
                       <Color blue="d9" green="d9" red="d9" type="rgb"/>
                     </Property>
                     <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/buttonLaporanpenjualan.png"/>
+                      <Image iconType="3" name="/img/ButtonDefault/buttonLaporanpenjualan.png"/>
                     </Property>
                     <Property name="toolTipText" type="java.lang.String" value=""/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
