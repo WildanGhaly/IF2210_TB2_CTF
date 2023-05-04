@@ -150,12 +150,12 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         pendaftaranMemberLayout.setVerticalGroup(
             pendaftaranMemberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pendaftaranMemberLayout.createSequentialGroup()
-                .addGap(40, 40, 40)
+                .addGap(19, 19, 19)
                 .addComponent(logoPendaftaran)
-                .addGap(41, 41, 41)
+                .addGap(59, 59, 59)
                 .addComponent(boxPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(addMember, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                .addComponent(addMember, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
                 .addGap(147, 147, 147))
         );
 

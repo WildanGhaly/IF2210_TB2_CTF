@@ -55,7 +55,7 @@ public class DateTime extends javax.swing.JPanel implements Runnable{
                 if( currentSecond == 60 ) {
                     reset();
                 }
-                String timeStamp = String.format("%s:%02d", sdf.format(clock.getTime()), currentSecond );
+                String timeStamp = String.format("%s", sdf.format(clock.getTime()), currentSecond );
                 if(clock.get(Calendar.AM_PM) == 0){
                     timeStamp = timeStamp.concat(" A.M.");
                 } else {
@@ -66,7 +66,6 @@ public class DateTime extends javax.swing.JPanel implements Runnable{
                 System.out.println(timeStamp);
                 System.out.println(date);
                 dateLabel.setText(String.format(date));
-                System.out.println(currentSecond);
                 currentSecond++;
             }
         }, 0, 1000 );

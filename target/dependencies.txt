@@ -1,0 +1,9 @@
+digraph "com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" { 
+	"com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" -> "com.kenai.nbpwr:org-jdesktop-animation-timing:nbm:1.0-201002281504:provided" ; 
+	"com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.26:provided" ; 
+	"com.kenai.nbpwr:org-jdesktop-animation-timing:nbm:1.0-201002281504:provided" -> "net.java.dev.timingframework:timingframework:jar:1.0:provided" ; 
+ } digraph "com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" { 
+	"com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" -> "com.kenai.nbpwr:org-jdesktop-animation-timing:nbm:1.0-201002281504:provided" ; 
+	"com.mycompany:IF2210_TB2_CTF:jar:1.0-SNAPSHOT" -> "org.projectlombok:lombok:jar:1.18.26:provided" ; 
+	"com.kenai.nbpwr:org-jdesktop-animation-timing:nbm:1.0-201002281504:provided" -> "net.java.dev.timingframework:timingframework:jar:1.0:provided" ; 
+ } 
