@@ -5,10 +5,14 @@ import java.util.*;
 import javax.xml.bind.*;
 import javax.xml.bind.annotation.*;
 
+import datastore.CustomerStatus.Member;
+import datastore.CustomerStatus.VIP;
+import datastore.CustomerStatus.Customer;
+
 public class XmlDataAdapter2 implements DataAdapter {
     
     @XmlRootElement(name = "data")
-    @XmlSeeAlso({Employee.class, Manager.class})
+    @XmlSeeAlso({Employee.class, Manager.class, Customer.class, Member.class, VIP.class})
     static class DataWrapper {
         @XmlElement(name = "item")
         List<Object> items;
@@ -22,7 +26,7 @@ public class XmlDataAdapter2 implements DataAdapter {
     public void saveData(String path, List<?> data) throws IOException, JAXBException {
         DataWrapper wrapper = new DataWrapper(new ArrayList<>(data));
         try (OutputStream os = new FileOutputStream(path)) {
-            JAXBContext context = JAXBContext.newInstance(DataWrapper.class, Employee.class, Manager.class);
+            JAXBContext context = JAXBContext.newInstance(DataWrapper.class, Employee.class, Manager.class, Customer.class, Member.class, VIP.class);
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
             marshaller.marshal(wrapper, os);
@@ -32,7 +36,7 @@ public class XmlDataAdapter2 implements DataAdapter {
     @Override
     public List<?> loadData(String path) throws IOException, ClassNotFoundException, JAXBException {
         try (InputStream is = new FileInputStream(path)) {
-            JAXBContext context = JAXBContext.newInstance(DataWrapper.class, Employee.class, Manager.class);
+            JAXBContext context = JAXBContext.newInstance(DataWrapper.class, Employee.class, Manager.class, Customer.class, Member.class, VIP.class);
             Unmarshaller unmarshaller = context.createUnmarshaller();
             DataWrapper wrapper = (DataWrapper) unmarshaller.unmarshal(is);
             return wrapper.items;
