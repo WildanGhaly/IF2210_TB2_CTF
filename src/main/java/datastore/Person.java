@@ -2,11 +2,22 @@ package datastore;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+
 @XmlRootElement
-public class Person implements Serializable {
+@XmlAccessorType(XmlAccessType.FIELD)
+@Data
+public class Person implements Serializable{
+
+    @XmlElement(name = "name")
     private String name;
+
+    @XmlElement(name = "age")
     private int age;
 
     public Person() {}
@@ -16,20 +27,6 @@ public class Person implements Serializable {
         this.age = age;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 }
+
 

@@ -39,8 +39,8 @@ public class Main5 {
         final String BARANG_FILE_OBJ        = LOCATE + BARANG + OBJ;
 
         List<Customer> customers = new ArrayList<>();
-        List<Member> members = new ArrayList<>();
-        List<VIP> vips = new ArrayList<>();
+        List<Customer> members = new ArrayList<>();
+        List<Customer> vips = new ArrayList<>();
         List<Barang> barangs = new ArrayList<>();
 
         customers.add(new Customer(1));
