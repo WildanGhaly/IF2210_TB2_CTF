@@ -2,13 +2,17 @@ package datastore.CustomerStatus;
 
 import java.io.Serializable;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlSeeAlso;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@XmlRootElement
-public class Customer implements Serializable{
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlSeeAlso({Member.class, VIP.class})
+@Setter @Getter
+public class Customer implements Serializable {
 
     private int id;
     protected int points;
