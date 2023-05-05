@@ -1,0 +1,26 @@
+[
+  {
+    "stock": 2,
+    "name": "Baju",
+    "sellPrice": 100000.0,
+    "buyPrice": 50000.0,
+    "kategori": "Pakaian",
+    "image": "baju.com"
+  },
+  {
+    "stock": 3,
+    "name": "Celana",
+    "sellPrice": 200000.0,
+    "buyPrice": 100000.0,
+    "kategori": "Pakaian",
+    "image": "celana.com"
+  },
+  {
+    "stock": 4,
+    "name": "Sepatu",
+    "sellPrice": 300000.0,
+    "buyPrice": 150000.0,
+    "kategori": "Pakaian",
+    "image": "sepatu.com"
+  }
+]

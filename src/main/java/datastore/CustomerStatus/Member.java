@@ -2,6 +2,11 @@ package datastore.CustomerStatus;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
 @XmlRootElement
 public class Member extends Customer {
 
@@ -18,14 +23,6 @@ public class Member extends Customer {
         super(id);
         this.name = name;
         this.phoneNumber = phoneNumber;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
     }
 
     @Override

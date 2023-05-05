@@ -2,6 +2,11 @@ package datastore.CustomerStatus;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@Data
+@EqualsAndHashCode(callSuper=false)
 @XmlRootElement
 public class VIP extends Member {
 

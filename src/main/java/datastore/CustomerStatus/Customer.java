@@ -4,6 +4,9 @@ import java.io.Serializable;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+import lombok.Data;
+
+@Data
 @XmlRootElement
 public class Customer implements Serializable{
 
@@ -19,31 +22,8 @@ public class Customer implements Serializable{
         this.totalSpent = 0;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public void addOrder(double orderAmount) {
         this.totalSpent += orderAmount;
     }
 
-    public int getPoints() {
-        return points;
-    }
-
-    public double getTotalSpent() {
-        return totalSpent;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setPoints(int points) {
-        this.points = points;
-    }
-
-    public void setTotalSpent(double totalSpent) {
-        this.totalSpent = totalSpent;
-    }
 }
