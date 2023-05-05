@@ -1,8 +1,12 @@
-package datastore;
+package datastore.test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import datastore.DataAdapter;
+import datastore.JsonDataAdapter;
+import datastore.ObjDataAdapter;
+import datastore.XmlDataAdapter;
 import datastore.CustomerStatus.Customer;
 import datastore.CustomerStatus.Member;
 import datastore.CustomerStatus.VIP;
