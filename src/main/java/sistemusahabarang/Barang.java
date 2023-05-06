@@ -1,22 +1,42 @@
 package sistemusahabarang;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import java.io.Serializable;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+import javax.xml.bind.annotation.XmlRootElement;
 
-/**
- *
- * @author user
- */
-@NoArgsConstructor @Getter @Setter @AllArgsConstructor
-public class Barang {
-    private @Setter @Getter Integer id;
-    private @Setter @Getter Double harga;
+import lombok.Data;
+
+@Data
+@XmlRootElement
+public class Barang implements Serializable {
+    private int stock;
+    private String name;
+    private double sellPrice;
+    private double buyPrice;
+    private String kategori;
+    private String image;
+
+    public Barang() {}
+
+    public Barang(int stock, String name, double sellPrice, double buyPrice, String kategori, String image) {
+        this.stock = stock;
+        this.name = name;
+        this.sellPrice = sellPrice;
+        this.buyPrice = buyPrice;
+        this.kategori = kategori;
+        this.image = image;
+    }
+
+    // Implementasi operasi CRUD
+    public void addStock(int jumlah) {
+        stock += jumlah;
+    }
+
+    public void subtractStock(int jumlah) {
+        if (jumlah > stock) {
+            throw new IllegalArgumentException("stock tidak cukup!");
+        }
+        stock -= jumlah;
+    }
+
 }
-
