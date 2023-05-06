@@ -2,11 +2,11 @@ package datastore.test;
 
 import java.util.*;
 
+import customer.Customer;
+import customer.Member;
+import customer.VIP;
 import datastore.DataAdapter;
 import datastore.XmlDataAdapter2;
-import datastore.CustomerStatus.Customer;
-import datastore.CustomerStatus.Member;
-import datastore.CustomerStatus.VIP;
 
 public class Main {
     public static void main(String[] args) throws Exception {
