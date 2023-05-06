@@ -40,7 +40,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
             .addGroup(gudangPanelLayout.createSequentialGroup()
                 .addGap(205, 205, 205)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(228, Short.MAX_VALUE))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

@@ -42,7 +42,10 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         inputNoTelepon = new javax.swing.JTextField();
         addMember = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(904, 680));
+
         pendaftaranMember.setBackground(new java.awt.Color(40, 41, 61));
+        pendaftaranMember.setPreferredSize(new java.awt.Dimension(904, 680));
 
         logoPendaftaran.setBackground(new java.awt.Color(40, 41, 61));
         logoPendaftaran.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -151,13 +154,13 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         pendaftaranMemberLayout.setVerticalGroup(
             pendaftaranMemberLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pendaftaranMemberLayout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(0, 0, 0)
                 .addComponent(logoPendaftaran)
                 .addGap(59, 59, 59)
                 .addComponent(boxPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(addMember, javax.swing.GroupLayout.DEFAULT_SIZE, 66, Short.MAX_VALUE)
-                .addGap(147, 147, 147))
+                .addComponent(addMember, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
+                .addGap(69, 69, 69))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -168,7 +171,7 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pendaftaranMember, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pendaftaranMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
