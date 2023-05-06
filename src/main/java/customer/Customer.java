@@ -49,6 +49,12 @@ public class Customer implements Serializable {
         this.totalSpent = 0;
     }
 
+    public Customer(int id, int points, double totalSpent){
+        this.id = id;
+        this.points = points;
+        this.totalSpent = totalSpent;
+    }
+
     /**
      * Adds the specified amount to this customer's total spending.
      * @param orderAmount the amount of money spent in the latest order

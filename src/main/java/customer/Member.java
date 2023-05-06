@@ -51,6 +51,12 @@ public class Member extends Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    public Member(int id, int points, double totalSpent, String name, String phoneNumber){
+        super(id, points, totalSpent);
+        this.name = name;
+        this.phoneNumber = phoneNumber;
+    }
+
     /**
      * Adds the specified amount to this member's total spending and updates the loyalty points.
      * @param orderAmount the amount of money spent in the latest order

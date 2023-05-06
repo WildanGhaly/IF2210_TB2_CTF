@@ -40,6 +40,10 @@ public class VIP extends Member {
         super(id, name, phoneNumber);
     }
 
+    public VIP(int id, int points, double totalSpent, String name, String phoneNumber){
+        super(id, points, totalSpent, name, phoneNumber);
+    }
+
     /**
      * Applies the member's loyalty points as a discount on the specified amount, up to the maximum
      * amount of points available, and adds a fixed discount based on the VIP discount rate.
