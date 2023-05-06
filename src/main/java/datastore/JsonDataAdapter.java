@@ -10,10 +10,27 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * The <b>JsonDataAdapter</b> class implements the <code>DataAdapter</code> interface to save and load data from a file in JSON format.
+ * This class uses the <b>Gson</b> library to convert data to and from JSON format.
+ * <p>To save data, the <code>saveData</code> method writes a List of objects to a specified file path in JSON format using Gson's <code>toJson</code> method.</p>
+ * <p>To load data, the <code>loadData</code> method reads a List of objects from a specified file path in JSON format using Gson's <code>fromJson</code> method.</p>
+ * @see DataAdapter
+ * @see com.google.gson.Gson
+ * @see com.google.gson.GsonBuilder
+ * @see com.google.gson.reflect.TypeToken
+ * @author<u1>@WildanGhaly</u1>
+*/
 public class JsonDataAdapter implements DataAdapter {
 
     private Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
+    /**
+     * The saveData method writes a List of objects to a specified file path in JSON format using Gson's toJson method.
+     * @param path - the path to the file where the data should be saved
+     * @param data - the List of objects to be saved
+     * @throws IOException if there is an issue writing the file
+     */
     @Override
     public void saveData(String path, List<?> data) throws IOException {
         FileWriter writer = new FileWriter(new File(path));
@@ -21,6 +38,12 @@ public class JsonDataAdapter implements DataAdapter {
         writer.close();
     }
 
+    /**
+     * The loadData method reads a List of objects from a specified file path in JSON format using Gson's fromJson method.
+     * @param path - the path to the file where the data is stored
+     * @return a List of objects read from the file
+     * @throws IOException if there is an issue reading the file
+     */
     @Override
     public List<?> loadData(String path) throws IOException {
         FileReader reader = new FileReader(new File(path));
