@@ -49,7 +49,7 @@ public class ModernScrollBarUI extends BasicScrollBarUI {
     }
 
     @Override
-    protected void paintTrack(Graphics graphic, JComponent jc, Rectangle rctngl) {
+    protected void paintTrack(Graphics graphic, JComponent jc, Rectangle rec) {
         Graphics2D g2 = (Graphics2D) graphic;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
         int orientation = scrollbar.getOrientation();
@@ -59,30 +59,30 @@ public class ModernScrollBarUI extends BasicScrollBarUI {
         int width;
         int height;
         if (orientation == JScrollBar.VERTICAL) {
-            size = rctngl.width / 2;
-            x = rctngl.x + ((rctngl.width - size) / 2);
-            y = rctngl.y;
+            size = rec.width / 2;
+            x = rec.x + ((rec.width - size) / 2);
+            y = rec.y;
             width = size;
-            height = rctngl.height;
+            height = rec.height;
         } else {
-            size = rctngl.height / 2;
-            y = rctngl.y + ((rctngl.height - size) / 2);
+            size = rec.height / 2;
+            y = rec.y + ((rec.height - size) / 2);
             x = 0;
-            width = rctngl.width;
+            width = rec.width;
             height = size;
         }
-        g2.setColor(new Color(240, 240, 240));
+        g2.setColor(new Color(62, 231, 188));
         g2.fillRect(x, y, width, height);
     }
 
     @Override
-    protected void paintThumb(Graphics graphic, JComponent jc, Rectangle rctngl) {
+    protected void paintThumb(Graphics graphic, JComponent jc, Rectangle rec) {
         Graphics2D g2 = (Graphics2D) graphic;
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-        int x = rctngl.x;
-        int y = rctngl.y;
-        int width = rctngl.width;
-        int height = rctngl.height;
+        int x = rec.x;
+        int y = rec.y;
+        int width = rec.width;
+        int height = rec.height;
         if (scrollbar.getOrientation() == JScrollBar.VERTICAL) {
             y += 8;
             height -= 16;
@@ -91,7 +91,7 @@ public class ModernScrollBarUI extends BasicScrollBarUI {
             width -= 16;
         }
         g2.setColor(scrollbar.getForeground());
-        g2.fillRoundRect(x, y, width, height, 10, 10);
+        g2.fillRect(x, y, width, height);
     }
 
     private class ScrollBarButton extends JButton {

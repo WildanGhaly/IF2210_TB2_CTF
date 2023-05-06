@@ -5,6 +5,7 @@
 package main.featureGUI;
 
 import main.featureGUI.Util.RequestImage;
+import main.featureGUI.Util.UtilFunction;
 
 import java.awt.Graphics;
 import java.awt.Image;
@@ -194,29 +195,18 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         if(inputNama.getText().equals(" Ketikkan nama...") || inputNoTelepon.getText().equals(" Ketik nomor telepon...")){
             JOptionPane.showMessageDialog(null, "invalid name");
         }
-        else if (!isNumeric(inputNoTelepon.getText())){
+        else if (!UtilFunction.isNumeric(inputNoTelepon.getText())){
             JOptionPane.showMessageDialog(null, "invalid telephone number");
         } else {
-            /*data masuk*/
+            /*TODO data masuk disini*/
             inputNama.getText();
             inputNoTelepon.getText();
+            /*data masuk disini*/
             JOptionPane.showMessageDialog(null, "Member Added");
             inputNama.setText(" Ketikkan nama...");
             inputNoTelepon.setText(" Ketik nomor telepon...");
         }
     }//GEN-LAST:event_addMemberActionPerformed
-
-    private boolean isNumeric (String strNum){
-        if (strNum == null){
-            return false;
-        }
-        try {
-            Integer.parseInt(strNum);
-        } catch (NumberFormatException nfe) {
-            return false;
-        }
-        return true;
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addMember;
