@@ -1,8 +1,12 @@
-package datastore;
+package datastore.test;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import datastore.DataAdapter;
+import datastore.JsonDataAdapter;
+import datastore.ObjDataAdapter;
+import datastore.XmlDataAdapter;
 import datastore.CustomerStatus.Customer;
 import datastore.CustomerStatus.Member;
 import datastore.CustomerStatus.VIP;
@@ -39,8 +43,8 @@ public class Main5 {
         final String BARANG_FILE_OBJ        = LOCATE + BARANG + OBJ;
 
         List<Customer> customers = new ArrayList<>();
-        List<Member> members = new ArrayList<>();
-        List<VIP> vips = new ArrayList<>();
+        List<Customer> members = new ArrayList<>();
+        List<Customer> vips = new ArrayList<>();
         List<Barang> barangs = new ArrayList<>();
 
         customers.add(new Customer(1));
@@ -59,9 +63,9 @@ public class Main5 {
         barangs.add(new Barang(3, "Celana", 200_000, 100_000, "Pakaian", "celana.com"));
         barangs.add(new Barang(4, "Sepatu", 300_000, 150_000, "Pakaian", "sepatu.com"));
 
-        DataAdapter adapterJSON = new JsonDataAdapter();
-        DataAdapter adapterXML = new XmlDataAdapter();
-        DataAdapter adapterOBJ = new ObjDataAdapter();
+        DataAdapter adapterJSON     = new JsonDataAdapter();
+        DataAdapter adapterXML      = new XmlDataAdapter();
+        DataAdapter adapterOBJ      = new ObjDataAdapter();
 
 
         /* Save in JSON */
@@ -144,10 +148,15 @@ public class Main5 {
         /* Load from XML */
         
         loadedData = null;
+        List<Customer>  loadedCustomersXML     = new ArrayList<>();
+        List<Member>    loadedMembersXML       = new ArrayList<>();
+        List<VIP>       loadedVIPXML           = new ArrayList<>();
 
         try {
             loadedData = adapterXML.loadData(CUSTOMER_FILE_XML);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedCustomersXML.add((Customer) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -156,7 +165,9 @@ public class Main5 {
 
         try {
             loadedData = adapterXML.loadData(MEMBER_FILE_XML);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedMembersXML.add((Member) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -165,7 +176,9 @@ public class Main5 {
 
         try {
             loadedData = adapterXML.loadData(VIP_FILE_XML);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedVIPXML.add((VIP) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -185,10 +198,15 @@ public class Main5 {
         /* Load from OBJ */
         
         loadedData = null;
+        List<Customer>  loadedCustomersOBJ     = new ArrayList<>();
+        List<Member>    loadedMembersOBJ       = new ArrayList<>();
+        List<VIP>       loadedVIPOBJ           = new ArrayList<>();
 
         try {
             loadedData = adapterOBJ.loadData(CUSTOMER_FILE_OBJ);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedCustomersOBJ.add((Customer) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -197,7 +215,9 @@ public class Main5 {
 
         try {
             loadedData = adapterOBJ.loadData(MEMBER_FILE_OBJ);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedMembersOBJ.add((Member) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -206,7 +226,9 @@ public class Main5 {
 
         try {
             loadedData = adapterOBJ.loadData(VIP_FILE_OBJ);
-            System.out.println(loadedData);
+            for (Object obj : loadedData){
+                loadedVIPOBJ.add((VIP) obj);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -221,6 +243,27 @@ public class Main5 {
         }
 
         System.out.println("Load OBJ success\n");
-    }
 
+        System.out.println("\n\nThe result of XML:");
+        for (Customer cust : loadedCustomersXML){
+            System.out.println("Customer: " + cust.getId() + " || " + cust.getPoints() + " || " + cust.getTotalSpent());
+        }
+        for (Member memb : loadedMembersXML){
+            System.out.println("Member: " + memb.getId() + " || " + memb.getPoints() + " || " + memb.getTotalSpent() + " || " + memb.getName() + " || " + memb.getPhoneNumber());
+        }
+        for (VIP vip : loadedVIPXML){
+            System.out.println("VIP: " + vip.getId() + " || " + vip.getPoints() + " || " + vip.getTotalSpent() + " || " + vip.getName() + " || " + vip.getPhoneNumber() + " || ");
+        }
+
+        System.out.println("\n\nThe result of OBJ:");
+        for (Customer cust : loadedCustomersOBJ){
+            System.out.println("Customer: " + cust.getId() + " || " + cust.getPoints() + " || " + cust.getTotalSpent());
+        }
+        for (Member memb : loadedMembersOBJ){
+            System.out.println("Member: " + memb.getId() + " || " + memb.getPoints() + " || " + memb.getTotalSpent() + " || " + memb.getName() + " || " + memb.getPhoneNumber());
+        }
+        for (VIP vip : loadedVIPOBJ){
+            System.out.println("VIP: " + vip.getId() + " || " + vip.getPoints() + " || " + vip.getTotalSpent() + " || " + vip.getName() + " || " + vip.getPhoneNumber() + " || ");
+        }
+    }
 }

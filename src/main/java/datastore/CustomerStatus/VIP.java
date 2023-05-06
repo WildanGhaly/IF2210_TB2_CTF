@@ -1,13 +1,14 @@
 package datastore.CustomerStatus;
 
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 
-import lombok.Data;
-import lombok.EqualsAndHashCode;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
-@EqualsAndHashCode(callSuper=false)
-@XmlRootElement
+
+@XmlAccessorType(XmlAccessType.FIELD)
+@Setter @Getter
 public class VIP extends Member {
 
     private static final double DISCOUNT_RATE_VIP = 0.1;
