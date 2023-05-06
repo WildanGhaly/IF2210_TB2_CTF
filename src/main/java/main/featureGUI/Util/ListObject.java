@@ -11,7 +11,7 @@ import javax.swing.DefaultListModel;
 import javax.swing.JList;
 import javax.swing.ListCellRenderer;
 
-import datastore.Item.Barang;
+import sistemusahabarang.Barang;
 
 /**
  *
