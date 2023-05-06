@@ -4,7 +4,7 @@
  */
 package main.featureGUI.Util;
 
-import datastore.Item.Barang;
+import sistemusahabarang.Barang;
 import lombok.Getter;
 import lombok.Setter;
 
