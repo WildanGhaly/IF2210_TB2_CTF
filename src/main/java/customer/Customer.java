@@ -49,6 +49,12 @@ public class Customer implements Serializable {
         this.totalSpent = 0;
     }
 
+    /**
+     * Creates a new customer with the specified ID, points, and spending history.
+     * @param id the unique identifier for this customer
+     * @param points the number of loyalty points this customer has
+     * @param totalSpent the total amount of money this customer has spent
+     */
     public Customer(int id, int points, double totalSpent){
         this.id = id;
         this.points = points;

@@ -40,6 +40,14 @@ public class VIP extends Member {
         super(id, name, phoneNumber);
     }
 
+    /**
+     * Creates a new VIP member with the specified ID, points, total spending, name, and phone number.
+     * @param id the unique identifier for this VIP member
+     * @param points the number of loyalty points this VIP member has
+     * @param totalSpent the total amount of money this VIP member has spent
+     * @param name the name of this VIP member
+     * @param phoneNumber the phone number of this VIP member
+     */
     public VIP(int id, int points, double totalSpent, String name, String phoneNumber){
         super(id, points, totalSpent, name, phoneNumber);
     }

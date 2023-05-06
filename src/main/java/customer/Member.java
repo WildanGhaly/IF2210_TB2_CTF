@@ -51,6 +51,14 @@ public class Member extends Customer {
         this.phoneNumber = phoneNumber;
     }
 
+    /**
+     * Creates a new member with the specified ID, points, total spending, name, and phone number.
+     * @param id the unique identifier for this member  
+     * @param points the number of loyalty points this member has
+     * @param totalSpent the total amount of money this member has spent
+     * @param name the name of this member
+     * @param phoneNumber the phone number of this member
+     */
     public Member(int id, int points, double totalSpent, String name, String phoneNumber){
         super(id, points, totalSpent);
         this.name = name;
