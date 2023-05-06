@@ -4,14 +4,15 @@
  */
 package main;
 
+import java.awt.Color;
+import java.awt.Component;
+import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.RenderingHints;
-import java.util.ArrayList;
 
-import javax.swing.JButton;
-import javax.swing.JComponent;
 import javax.swing.JPanel;
 
 import main.featureGUI.Util.RequestImage;
@@ -34,40 +35,19 @@ public class MainUI extends javax.swing.JFrame {
      */
     private final Image leftBarBg = RequestImage.requestImage("leftBarUtama.png");
     private final Image buttonContainerBg = RequestImage.requestImage("allButtonPanel.png");
-    private final ArrayList<JButton> buttonList;
-    private HalamanUtamaGUI halamanUtamaGUI = new HalamanUtamaGUI();
-    private GudangGUI gudangGUI = new GudangGUI();
-    private HistoriTransaksiGUI historiTransaksiGUI = new HistoriTransaksiGUI();
-    private LaporanPenjualanGUI laporanPenjualanGUI = new LaporanPenjualanGUI();
-    private PembayaranGUI pembayaranGUI = new PembayaranGUI();
-    private PendaftaranMemberGUI pendaftaranMemberGUI = new PendaftaranMemberGUI();
-    private PengaturanGUI pengaturanGUI = new PengaturanGUI();
-    private UpdateMemberGUI updateMemberGUI = new UpdateMemberGUI();
+    private final GudangGUI gudangGUI = new GudangGUI();
+    private final HistoriTransaksiGUI historiTransaksiGUI = new HistoriTransaksiGUI();
+    private final LaporanPenjualanGUI laporanPenjualanGUI = new LaporanPenjualanGUI();
+    private final PembayaranGUI pembayaranGUI = new PembayaranGUI();
+    private final PendaftaranMemberGUI pendaftaranMemberGUI = new PendaftaranMemberGUI();
+    private final PengaturanGUI pengaturanGUI = new PengaturanGUI();
+    private final UpdateMemberGUI updateMemberGUI = new UpdateMemberGUI();
+    private final HalamanUtamaGUI halamanUtamaGUI = new HalamanUtamaGUI();
 
     public MainUI() {
         initComponents();
-        buttonList = new ArrayList<>();
-        buttonList.add(buttonHalamanUtama);
-        buttonList.add(buttonPendaftaranMember);
-        buttonList.add(buttonPembayaran);
-        buttonList.add(buttonUpdateMember);
-        buttonList.add(buttonHistoriTransaksi);
-        buttonList.add(buttonGudang);
-        buttonList.add(buttonSetting);
-        buttonList.add(buttonLaporanPenjualan);
     }
     
-    public JPanel getMainPanel(){
-        return this.mainPanel;
-    }
-
-    public void setForm(JComponent panel){
-        mainPanel.removeAll();
-        mainPanel.add(panel);
-        mainPanel.repaint();
-        mainPanel.revalidate();
-    }
-
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -97,9 +77,10 @@ public class MainUI extends javax.swing.JFrame {
         buttonGudang = new javax.swing.JButton();
         buttonSetting = new javax.swing.JButton();
         buttonLaporanPenjualan = new javax.swing.JButton();
-        dateTime2 = new main.featureGUI.Util.DateTime();
-        jLabel1 = new javax.swing.JLabel();
-        mainPanel = new javax.swing.JPanel();
+        dateTime = new main.featureGUI.Util.DateTime();
+        logoKecil = new javax.swing.JLabel();
+        mainTab = new main.featureGUI.customtabbedpane.CustomTabbedPane();
+        mainTab.addTab("Home", halamanUtamaGUI);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TEST");
@@ -155,8 +136,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonPendaftaranMember.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         buttonPendaftaranMember.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonPendaftaranMember.setPreferredSize(new java.awt.Dimension(229, 37));
+        buttonPendaftaranMember.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pendaftaran Member.png"))); // NOI18N
         buttonPendaftaranMember.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Pendaftaran member.png"))); // NOI18N
-        buttonPendaftaranMember.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pendaftaran Member.png"))); // NOI18N
         buttonPendaftaranMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPendaftaranMemberActionPerformed(evt);
@@ -175,8 +156,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonPembayaran.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         buttonPembayaran.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonPembayaran.setPreferredSize(new java.awt.Dimension(153, 37));
+        buttonPembayaran.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pembayaran.png"))); // NOI18N
         buttonPembayaran.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Pembayaran.png"))); // NOI18N
-        buttonPembayaran.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pembayaran.png"))); // NOI18N
         buttonPembayaran.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonPembayaranActionPerformed(evt);
@@ -195,8 +176,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonUpdateMember.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         buttonUpdateMember.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonUpdateMember.setPreferredSize(new java.awt.Dimension(169, 37));
+        buttonUpdateMember.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Update Member.png"))); // NOI18N
         buttonUpdateMember.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Update member.png"))); // NOI18N
-        buttonUpdateMember.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Update Member.png"))); // NOI18N
         buttonUpdateMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonUpdateMemberActionPerformed(evt);
@@ -216,8 +197,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonHistoriTransaksi.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonHistoriTransaksi.setName(""); // NOI18N
         buttonHistoriTransaksi.setPreferredSize(new java.awt.Dimension(194, 37));
+        buttonHistoriTransaksi.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Histori Transaksi.png"))); // NOI18N
         buttonHistoriTransaksi.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Histori transaksi.png"))); // NOI18N
-        buttonHistoriTransaksi.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Histori Transaksi.png"))); // NOI18N
         buttonHistoriTransaksi.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonHistoriTransaksiActionPerformed(evt);
@@ -236,8 +217,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonGudang.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         buttonGudang.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonGudang.setPreferredSize(new java.awt.Dimension(88, 37));
+        buttonGudang.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Gudang.png"))); // NOI18N
         buttonGudang.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Gudang.png"))); // NOI18N
-        buttonGudang.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Gudang.png"))); // NOI18N
         buttonGudang.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonGudangActionPerformed(evt);
@@ -256,8 +237,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonSetting.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         buttonSetting.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonSetting.setPreferredSize(new java.awt.Dimension(144, 37));
+        buttonSetting.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pengaturan.png"))); // NOI18N
         buttonSetting.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Pengaturan.png"))); // NOI18N
-        buttonSetting.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Pengaturan.png"))); // NOI18N
         buttonSetting.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonSettingActionPerformed(evt);
@@ -277,8 +258,8 @@ public class MainUI extends javax.swing.JFrame {
         buttonLaporanPenjualan.setMaximumSize(new java.awt.Dimension(9999, 9999));
         buttonLaporanPenjualan.setMinimumSize(new java.awt.Dimension(216, 27));
         buttonLaporanPenjualan.setPreferredSize(new java.awt.Dimension(216, 37));
+        buttonLaporanPenjualan.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Laporan Penjualan.png"))); // NOI18N
         buttonLaporanPenjualan.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonHover/Laporan penjualan.png"))); // NOI18N
-        buttonLaporanPenjualan.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/ButtonSelected/Laporan Penjualan.png"))); // NOI18N
         buttonLaporanPenjualan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonLaporanPenjualanActionPerformed(evt);
@@ -324,10 +305,10 @@ public class MainUI extends javax.swing.JFrame {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
-        dateTime2.setOpaque(false);
+        dateTime.setOpaque(false);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoChizuruKecil.png"))); // NOI18N
+        logoKecil.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoKecil.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logoChizuruKecil.png"))); // NOI18N
 
         javax.swing.GroupLayout leftBarPanelLayout = new javax.swing.GroupLayout(leftBarPanel);
         leftBarPanel.setLayout(leftBarPanelLayout);
@@ -336,26 +317,23 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(leftBarPanelLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addGroup(leftBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(dateTime2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(dateTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(leftBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(logoKecil, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(buttonContainer, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         leftBarPanelLayout.setVerticalGroup(
             leftBarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, leftBarPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(logoKecil)
                 .addGap(39, 39, 39)
                 .addComponent(buttonContainer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(dateTime2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(dateTime, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(41, 41, 41))
         );
-
-        mainPanel.setPreferredSize(new java.awt.Dimension(904, 720));
-        mainPanel.setLayout(new java.awt.BorderLayout());
 
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
@@ -364,19 +342,15 @@ public class MainUI extends javax.swing.JFrame {
             .addGroup(backgroundLayout.createSequentialGroup()
                 .addComponent(leftBarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(mainTab, javax.swing.GroupLayout.DEFAULT_SIZE, 904, Short.MAX_VALUE))
         );
         backgroundLayout.setVerticalGroup(
             backgroundLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(leftBarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(backgroundLayout.createSequentialGroup()
-                .addComponent(mainPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(mainTab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         leftBarPanel.getAccessibleContext().setAccessibleParent(this);
-        setForm(new main.featureGUI.HalamanUtamaGUI());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -398,54 +372,73 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_formComponentAdded
 
     private void buttonHalamanUtamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHalamanUtamaActionPerformed
-        selectedButton(buttonHalamanUtama);
-        setForm(halamanUtamaGUI);
+        mainTab.setSelectedComponent(halamanUtamaGUI);
+        
     }//GEN-LAST:event_buttonHalamanUtamaActionPerformed
 
     private void buttonPendaftaranMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPendaftaranMemberActionPerformed
-        selectedButton(buttonPendaftaranMember);
-        setForm(pendaftaranMemberGUI);
+        if (mainTab.indexOfComponent(pendaftaranMemberGUI) == -1){
+            addTab(pendaftaranMemberGUI, "Daftar");
+        }
+        mainTab.setSelectedComponent(pendaftaranMemberGUI);
+        
     }//GEN-LAST:event_buttonPendaftaranMemberActionPerformed
 
     private void buttonPembayaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPembayaranActionPerformed
-        selectedButton(buttonPembayaran);
-        setForm(pembayaranGUI);
+        if (mainTab.indexOfComponent(pembayaranGUI) == -1){
+            addTab(pembayaranGUI, "Bayar");
+        }
+        mainTab.setSelectedComponent(pembayaranGUI);
     }//GEN-LAST:event_buttonPembayaranActionPerformed
 
     private void buttonUpdateMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateMemberActionPerformed
-        selectedButton(buttonUpdateMember);
-        setForm(updateMemberGUI);
+        if (mainTab.indexOfComponent(updateMemberGUI) == -1){
+            addTab(updateMemberGUI, "Update");
+        }
+        mainTab.setSelectedComponent(updateMemberGUI);
+        
+        
     }//GEN-LAST:event_buttonUpdateMemberActionPerformed
 
     private void buttonHistoriTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHistoriTransaksiActionPerformed
-        selectedButton(buttonHistoriTransaksi);
-        setForm(historiTransaksiGUI);
+        if (mainTab.indexOfComponent(historiTransaksiGUI) == -1){
+            addTab(historiTransaksiGUI, "Histori");
+        }
+        mainTab.setSelectedComponent(historiTransaksiGUI);
+        
+        
     }//GEN-LAST:event_buttonHistoriTransaksiActionPerformed
 
     private void buttonGudangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGudangActionPerformed
-        selectedButton(buttonGudang);
-        setForm(gudangGUI);
+        if (mainTab.indexOfComponent(gudangGUI) == -1){
+            addTab(gudangGUI, "Gudang");
+        }
+        mainTab.setSelectedComponent(gudangGUI);
+        
     }//GEN-LAST:event_buttonGudangActionPerformed
 
     private void buttonSettingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSettingActionPerformed
-        selectedButton(buttonSetting);
-        setForm(pengaturanGUI);
+        if (mainTab.indexOfComponent(pengaturanGUI) == -1){
+            addTab(pengaturanGUI, "Pengaturan");
+        }
+        mainTab.setSelectedComponent(pengaturanGUI);
+        
     }//GEN-LAST:event_buttonSettingActionPerformed
 
     private void buttonLaporanPenjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLaporanPenjualanActionPerformed
-        selectedButton(buttonLaporanPenjualan);
-        setForm(laporanPenjualanGUI);
+        if (mainTab.indexOfComponent(laporanPenjualanGUI) == -1){
+            addTab(laporanPenjualanGUI, "Laporan");
+        }
+        mainTab.setSelectedComponent(laporanPenjualanGUI);
+        
     }//GEN-LAST:event_buttonLaporanPenjualanActionPerformed
     
-    public void selectedButton (JButton button){
-        for (JButton buttons : buttonList) {
-            if (buttons.equals(button)){
-                buttons.setSelected(true);
-            } else {
-                buttons.setSelected(false);
-            }
-        }
+    public void addTab(Component c, String title){
+        mainTab.addTab(title, c);
+        mainTab.setTabComponentAt(mainTab.getTabCount()-1, new TabComponent(title, c));
     }
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel background;
     private javax.swing.JPanel buttonContainer;
@@ -457,9 +450,69 @@ public class MainUI extends javax.swing.JFrame {
     private javax.swing.JButton buttonPendaftaranMember;
     private javax.swing.JButton buttonSetting;
     private javax.swing.JButton buttonUpdateMember;
-    private main.featureGUI.Util.DateTime dateTime2;
-    private javax.swing.JLabel jLabel1;
+    private main.featureGUI.Util.DateTime dateTime;
     private javax.swing.JPanel leftBarPanel;
-    private javax.swing.JPanel mainPanel;
+    private javax.swing.JLabel logoKecil;
+    private main.featureGUI.customtabbedpane.CustomTabbedPane mainTab;
     // End of variables declaration//GEN-END:variables
+    
+    public class TabComponent extends javax.swing.JPanel {
+
+        /** Creates new form TabComponent */
+        private String title;
+        private Component component;
+        public TabComponent(String title, Component component) {
+            this.title = title;
+            this.component = component;
+            initComponents();
+        }
+                       
+        private void initComponents() {
+    
+            deleteButton = new javax.swing.JButton();
+            titleTab = new javax.swing.JLabel();
+    
+            setOpaque(false);
+    
+            deleteButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Utility/X.png")));
+            deleteButton.setBorderPainted(false);
+            deleteButton.setContentAreaFilled(false);
+            deleteButton.setPreferredSize(new java.awt.Dimension(20, 20));
+            deleteButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
+            deleteButton.addActionListener(new java.awt.event.ActionListener() {
+                public void actionPerformed(java.awt.event.ActionEvent evt) {
+                    deleteButtonActionPerformed(evt);
+                }
+            });
+            titleTab.setFont(new Font("Inter", 1, 12));
+            titleTab.setForeground(new Color(40, 41, 61));
+            titleTab.setText(this.title);
+    
+            javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+            this.setLayout(layout);
+            layout.setHorizontalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addComponent(titleTab, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addGap(0, 0, 0)
+                    .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+            );
+            layout.setVerticalGroup(
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(deleteButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(titleTab, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            );
+        }// </editor-fold>                        
+    
+        private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {                                             
+            mainTab.remove(component);
+        }                                            
+    
+    
+        // Variables declaration - do not modify                     
+        private javax.swing.JButton deleteButton;
+        private javax.swing.JLabel titleTab;
+        // End of variables declaration                   
+    
+    }
 }
