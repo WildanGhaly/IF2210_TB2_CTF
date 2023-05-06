@@ -3,16 +3,32 @@ package datastore.test;
 import java.util.ArrayList;
 import java.util.List;
 
+import customer.Customer;
+import customer.Member;
+import customer.VIP;
 import datastore.DataAdapter;
 import datastore.JsonDataAdapter;
 import datastore.ObjDataAdapter;
 import datastore.XmlDataAdapter;
-import datastore.CustomerStatus.Customer;
-import datastore.CustomerStatus.Member;
-import datastore.CustomerStatus.VIP;
+import sistemusahabarang.Barang;
 
-import datastore.Item.Barang;
-
+/**
+ * <p>
+ * This class tests the <strong>DataAdapter interface</strong> using three different implementations: {@code XmlDataAdapter},
+ * {@code JsonDataAdapter}, and {@code ObjDataAdapter}. The tested classes are {@code Customer}, {@code Member}, {@code VIP}, and {@code Barang}.
+ * </p>
+ * <p>
+ * The goal of the test is to save and load data from files in three different formats: <strong>XML, JSON, and OBJ</strong>.
+ * The data is saved in twelve different files, including customer.xml, customer.json, customer.obj,
+ * member.xml, member.json, member.obj, vip.xml, vip.json, vip.obj, barang.xml, barang.json, and barang.obj.
+ * </p>
+ * <p>
+ * The loaded data is printed to the console, and the saved data is also printed to the console for verification.
+ * </p>
+ * <p>
+ * @author:@WildanGhaly
+ * </p>
+ */
 public class Main5 {
     
     public static void main(String[] args) {
