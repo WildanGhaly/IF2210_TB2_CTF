@@ -42,7 +42,7 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
             .addGroup(gudangPanelLayout.createSequentialGroup()
                 .addGap(214, 214, 214)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(219, Short.MAX_VALUE))
+                .addContainerGap(179, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
