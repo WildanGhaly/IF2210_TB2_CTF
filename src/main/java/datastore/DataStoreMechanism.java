@@ -1038,6 +1038,63 @@ public class DataStoreMechanism {
 
 
     /**
+     * <p>This method is used to get the last id of the customer. </p>
+     * <p>The method will load the data from the database file, then get the last id of the customer.</p>
+     * <p>The method will return the last id of the customer.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static int getLastCustomerID (String path) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "customers.xml";
+     * int lastID = DataStoreMechanism.getLastCustomerID(path);
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     *  @return The last id of the customer.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Customer
+     */
+    public static int getLastCustomerID(String path) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+        if (data.get(data.size() - 1) instanceof Customer){
+            return ((Customer) data.get(data.size() - 1)).getId();
+        } else if (data.get(data.size() - 1) instanceof LinkedTreeMap){
+            return (int) (double) ((LinkedTreeMap<?, ?>) data.get(data.size() - 1)).get("id");
+        }
+        return 0;
+    }
+
+
+
+    /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args
      * @throws ClassNotFoundException
