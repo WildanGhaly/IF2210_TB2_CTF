@@ -1,5 +1,6 @@
 package datastore.test;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,7 @@ import datastore.JsonDataAdapter;
 import datastore.ObjDataAdapter;
 import datastore.XmlDataAdapter;
 import sistemusahabarang.Barang;
+import sistemusahabarang.History;
 
 /**
  * <p>
@@ -38,6 +40,7 @@ public class Main5 {
         final String MEMBER                 = "Member/member";
         final String BARANG                 = "Barang/barang";
         final String VIP                    = "VIP/vip";
+        final String HISTORY                = "History/history";
         final String JSON                   = ".json";
         final String XML                    = ".xml";
         final String OBJ                    = ".obj";
@@ -58,10 +61,15 @@ public class Main5 {
         final String BARANG_FILE_XML        = LOCATE + BARANG + XML;
         final String BARANG_FILE_OBJ        = LOCATE + BARANG + OBJ;
 
+        final String HISTORY_FILE_JSON      = LOCATE + HISTORY + JSON;
+        final String HISTORY_FILE_XML       = LOCATE + HISTORY + XML;
+        final String HISTORY_FILE_OBJ       = LOCATE + HISTORY + OBJ;
+
         List<Customer> customers = new ArrayList<>();
         List<Customer> members = new ArrayList<>();
         List<Customer> vips = new ArrayList<>();
         List<Barang> barangs = new ArrayList<>();
+        List<History> histories = new ArrayList<>();
 
         customers.add(new Customer(1));
         customers.add(new Customer(2));
@@ -75,9 +83,13 @@ public class Main5 {
         vips.add(new VIP(8, "WildanVIP", "32422222222"));
         vips.add(new VIP(9, "GhalyVIP", "00000000000"));
 
-        barangs.add(new Barang(2, "Baju", 100_000, 50_000, "Pakaian", "baju.com"));
-        barangs.add(new Barang(3, "Celana", 200_000, 100_000, "Pakaian", "celana.com"));
-        barangs.add(new Barang(4, "Sepatu", 300_000, 150_000, "Pakaian", "sepatu.com"));
+        barangs.add(new Barang(0, 2, "Baju", 100_000, 50_000, "Pakaian", "baju.com"));
+        barangs.add(new Barang(1, 3, "Celana", 200_000, 100_000, "Pakaian", "celana.com"));
+        barangs.add(new Barang(2, 4, "Sepatu", 300_000, 150_000, "Pakaian", "sepatu.com"));
+
+        histories.add(new History(1, "Willy", "Ayam Goreng", LocalDate.now().toString(), 2, 5000, 10000));
+        histories.add(new History(1, "Willy", "Ayam Bakar", LocalDate.now().toString(), 3, 5000, 15000));
+        histories.add(new History(2, "Wildan", "Ayam Geprek", LocalDate.now().toString(), 4, 3000, 12000));
 
         DataAdapter adapterJSON     = new JsonDataAdapter();
         DataAdapter adapterXML      = new XmlDataAdapter();
@@ -91,7 +103,8 @@ public class Main5 {
             adapterJSON.saveData(MEMBER_FILE_JSON, members);
             adapterJSON.saveData(VIP_FILE_JSON, vips);
             adapterJSON.saveData(BARANG_FILE_JSON, barangs);
-            adapterJSON.addData(BARANG_FILE_JSON, new Barang(5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
+            adapterJSON.saveData(HISTORY_FILE_JSON, histories);
+            adapterJSON.addData(BARANG_FILE_JSON, new Barang(3, 5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
             adapterJSON.addData(MEMBER_FILE_JSON, new Member(10, "WildanGhaly", "1234567890"));
 
         } catch (Exception e) {
@@ -105,7 +118,8 @@ public class Main5 {
             adapterXML.saveData(MEMBER_FILE_XML, members);
             adapterXML.saveData(VIP_FILE_XML, vips);
             adapterXML.saveData(BARANG_FILE_XML, barangs);
-            adapterXML.addData(BARANG_FILE_XML, new Barang(5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
+            adapterXML.saveData(HISTORY_FILE_XML, histories);
+            adapterXML.addData(BARANG_FILE_XML, new Barang(4, 5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
             adapterXML.addData(MEMBER_FILE_XML, new Member(10, "WildanGhaly", "1234567890"));
         } catch (Exception e) {
             e.printStackTrace();
@@ -118,7 +132,8 @@ public class Main5 {
             adapterOBJ.saveData(MEMBER_FILE_OBJ, members);
             adapterOBJ.saveData(VIP_FILE_OBJ, vips);
             adapterOBJ.saveData(BARANG_FILE_OBJ, barangs);
-            adapterOBJ.addData(BARANG_FILE_OBJ, new Barang(5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
+            adapterOBJ.saveData(HISTORY_FILE_OBJ, histories);
+            adapterOBJ.addData(BARANG_FILE_OBJ, new Barang(5, 5, "Kemeja", 400_000, 200_000, "Pakaian", "kemeja.com"));
             adapterOBJ.addData(MEMBER_FILE_OBJ, new Member(10, "WildanGhaly", "1234567890"));
         } catch (Exception e) {
             e.printStackTrace();
@@ -160,6 +175,15 @@ public class Main5 {
 
         try {
             loadedData = adapterJSON.loadData(BARANG_FILE_JSON);
+            System.out.println(loadedData);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        loadedData = null;
+
+        try {
+            loadedData = adapterJSON.loadData(HISTORY_FILE_JSON);
             System.out.println(loadedData);
         } catch (Exception e) {
             e.printStackTrace();
@@ -215,6 +239,15 @@ public class Main5 {
             e.printStackTrace();
         }
 
+        loadedData = null;
+
+        try {
+            loadedData = adapterXML.loadData(HISTORY_FILE_XML);
+            System.out.println(loadedData);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         System.out.println("Load XML success\n");
 
 
@@ -260,6 +293,15 @@ public class Main5 {
 
         try {
             loadedData = adapterOBJ.loadData(BARANG_FILE_OBJ);
+            System.out.println(loadedData);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        loadedData = null;
+
+        try {
+            loadedData = adapterOBJ.loadData(HISTORY_FILE_OBJ);
             System.out.println(loadedData);
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,27 +1,39 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataWrapper>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
-        <buyPrice>50000.0</buyPrice>
-        <image>baju.com</image>
-        <kategori>Pakaian</kategori>
+        <id>0</id>
+        <stock>2</stock>
         <name>Baju</name>
         <sellPrice>100000.0</sellPrice>
-        <stock>2</stock>
+        <buyPrice>50000.0</buyPrice>
+        <kategori>Pakaian</kategori>
+        <image>baju.com</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
-        <buyPrice>100000.0</buyPrice>
-        <image>celana.com</image>
-        <kategori>Pakaian</kategori>
+        <id>1</id>
+        <stock>-37</stock>
         <name>Celana</name>
         <sellPrice>200000.0</sellPrice>
-        <stock>3</stock>
+        <buyPrice>100000.0</buyPrice>
+        <kategori>Pakaian</kategori>
+        <image>celana.com</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
-        <buyPrice>150000.0</buyPrice>
-        <image>sepatu.com</image>
-        <kategori>Pakaian</kategori>
+        <id>2</id>
+        <stock>-12</stock>
         <name>Sepatu</name>
         <sellPrice>300000.0</sellPrice>
-        <stock>4</stock>
+        <buyPrice>150000.0</buyPrice>
+        <kategori>Pakaian</kategori>
+        <image>sepatu.com</image>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <id>4</id>
+        <stock>5</stock>
+        <name>Kemeja</name>
+        <sellPrice>400000.0</sellPrice>
+        <buyPrice>200000.0</buyPrice>
+        <kategori>Pakaian</kategori>
+        <image>kemeja.com</image>
     </item>
 </dataWrapper>

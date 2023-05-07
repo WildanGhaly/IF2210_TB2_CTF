@@ -1,9 +1,12 @@
 package datastore;
 
 import java.io.IOException;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.JAXBException;
 
@@ -12,6 +15,8 @@ import com.google.gson.internal.LinkedTreeMap;
 import customer.Customer;
 import customer.Member;
 import customer.VIP;
+import sistemusahabarang.Barang;
+import sistemusahabarang.History;
 
 /**
  * <p>
@@ -239,12 +244,269 @@ public class DataStoreMechanism {
 
         return false;
     }
-    
+
+    /** 
+     * <p>The following method can be used to calculate the total price of a set of items based on their respective ids and amounts,
+     * and decrease the stock of the items in a database file located at the specified path.</p>
+     * <p>The database file must be in XML, JSON, or OBJ format, and the method uses the <code>DataAdapter</code> interface class, as well as <code>XmlDataAdapter</code>, <code>JsonDataAdapter</code>, and <code>ObjDataAdapter</code> classes.</p>
+     * <p>To use this method, simply provide the path to the database file and a map of item ids and amounts to calculate the total price of the items. The method returns the total price of the items based on their sell prices in the database.</p>
+     * <p>Note that this method updates the stock of items in the database based on the amount sold.</p>
+     * <ul>
+     *     <li><code>path</code>: The path to the database file.</li>
+     *     <li><code>items</code>: A map of item ids and their respective amounts.</li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *     <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     *     <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     *     <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *     <li><code>DataAdapter</code></li>
+     *     <li><code>XmlDataAdapter</code></li>
+     *     <li><code>JsonDataAdapter</code></li>
+     *     <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public double calculateTotalPrice(String path, Map&lt;String, Integer&gt; items) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>The method returns the total price of the items as a <code>double</code> value.</p>
+     */
+    public static double getItemsPrice(String path, Map<Integer, Integer> items) throws ClassNotFoundException, IOException, JAXBException{
+        double price = 0;
+        int amount = 0;
+        int stock = 0;
+        List<Barang> barang = new ArrayList<>();
+        int id;
+        double itemPrice = 0;
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+        
+        List<?> data = adapter.loadData(path);
+
+        for (Object obj : data){
+            if (obj instanceof LinkedTreeMap){
+                LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
+                id = (int) (double) map.get("id");
+                stock = (int) (double) map.get("stock");
+                if (items.containsKey(id)){
+                    amount = items.get(id);
+                    itemPrice = (double) map.get("sellPrice");
+                    price += itemPrice * amount;
+                    barang.add(new Barang(id, stock - amount, (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                } else {
+                    barang.add(new Barang(id, (int) (double) map.get("stock"), (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                }
+            } else if (obj instanceof Barang){
+                if (items.containsKey(((Barang) obj).getId())){
+                    price += ((Barang) obj).getSellPrice() * items.get(((Barang) obj).getId());
+                    barang.add(new Barang(((Barang) obj).getId(), ((Barang) obj).getStock() - items.get(((Barang) obj).getId()), ((Barang) obj).getName(), ((Barang) obj).getSellPrice(), ((Barang) obj).getBuyPrice(), ((Barang) obj).getKategori(), ((Barang) obj).getImage()));
+                } else {
+                    barang.add((Barang) obj);
+                }
+            } 
+        }
+        adapter.saveData(path, barang);
+        return price;
+    }
+
+
+    /**
+     * <p>The following method can be used to get the history of transactions for a customer with the specified name from a database file located at the specified path.</p>
+     * <p>The database file must be in XML, JSON, or OBJ format, and the method uses the <code>DataAdapter</code> interface class, as well as <code>XmlDataAdapter</code>, <code>JsonDataAdapter</code>, and <code>ObjDataAdapter</code> classes.</p>
+     * <p>To use this method, simply provide the path to the database file and the name of the customer. The method returns a 2D array of strings containing the history of transactions for the customer.</p>
+     * <p>Note that this method does not update the database file.</p>
+     * <ul>
+     *    <li><code>path</code>: The path to the database file.</li>
+     *   <li><code>name</code>: The name of the customer.</li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *    <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     *   <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     *  <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *   <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     *  <li><code>JsonDataAdapter</code></li>
+     *  <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public String[][] getHistoryTransaction(String path, String name) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>The method returns a 2D array of strings containing the history of transactions for the customer.</p>
+     * <p>The first dimension of the array represents the transaction, and the second dimension represents the following information:</p>
+     * <ul>
+     *  <li><code>0</code>: The name of the name of item.</li>
+     * <li><code>1</code>: The date of the transaction.</li>
+     * <li><code>2</code>: The time of the transaction.</li>
+     * <li><code>3</code>: The items purchased in the transaction.</li>
+     * <li><code>4</code>: The total price of the transaction.</li>
+     * </ul>
+     * <p>For example, the following code can be used to get the history of transactions for a customer with the name <code>"Wildan Ghaly"</code> from a database file located at <code>"./database.xml"</code>:</p>
+     * <pre>
+     * String[][] history = getHistoryTransaction("./database.xml", "Wildan Ghaly");
+     * </pre>
+     * @param path The path to the database file.
+     * @param name The name of the customer.
+     * @return A 2D array of strings containing the history of transactions for the customer.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see #getHistoryTransaction(String path, String name)
+     */
+    public static String[][] getHistoryTransaction(String path, String name) throws ClassNotFoundException, IOException, JAXBException{
+        ArrayList<String[]> history = new ArrayList<>();
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+        
+        List<?> data = adapter.loadData(path);
+
+        for (Object obj : data){
+            if (obj instanceof LinkedTreeMap){
+                LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
+                if (map.get("name").equals(name)){
+                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), (String) map.get("time"), (String) map.get("items"), (String) map.get("totalPrice")});
+                }
+            } else if (obj instanceof History){
+                if (((History) obj).getName().equals(name)){
+                    history.add(new String[]{((History) obj).getItemName(), ((History) obj).getDate(), Integer.toString(((History) obj).getQuantity()), Double.toString(((History) obj).getPrice()), Double.toString(((History) obj).getTotal())});
+                }
+            } 
+        }
+        String[][] result = new String[history.size()][5];
+        for (int i = 0; i < history.size(); i++){
+            result[i] = history.get(i);
+        }
+        return result;
+    }
+
+
+    /**
+     * <p>The following method can be used to save a transaction history to a database file located at the specified path.</p>
+     * <p>The database file must be in XML, JSON, or OBJ format, and the method uses the <code>DataAdapter</code> interface class, as well as <code>XmlDataAdapter</code>, <code>JsonDataAdapter</code>, and <code>ObjDataAdapter</code> classes.</p>
+     * <p>To use this method, simply provide the path to the database file, the path to the item database file, a map of item ids and amounts, the name of the customer, and the id of the customer. The method returns <code>true</code> if the history was saved successfully, and <code>false</code> otherwise.</p>
+     * <p>Note that this method DOES NOT updates the stock of items in the database based on the amount sold.</p>
+     * <ul>
+     *    <li><code>path</code>: The path to the database file.</li>
+     *   <li><code>itemPath</code>: The path to the item database file.</li>
+     *  <li><code>items</code>: A map of item ids and their respective amounts.</li>
+     * <li><code>name</code>: The name of the customer.</li>
+     * <li><code>id</code>: The id of the customer.</li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *    <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     *  <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *   <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public boolean saveHistory(String path, String itemPath, Map&lt;Integer, Integer&gt; items, String name, int id) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ... // Assume that the following variables are declared and initialized:
+     * String path = "history.xml";
+     * String itemPath = "items.xml";
+     * Map&lt;Integer, Integer&gt; items = new HashMap&lt;&gt;();
+     * ... // Add items to the map
+     * String name = "Wildan Ghaly";
+     * int id = 1;
+     * ...
+     * DataStoreMechanism.saveHistory(path, itemPath,items, name, id)
+     * </pre>
+     * @param path The path to the database file.
+     * @param itemPath The path to the item database file.
+     * @param items A map of item ids and their respective amounts.
+     * @param name The name of the customer.
+     * @param id The id of the customer.
+     * @return <code>true</code> if the history was saved successfully, and <code>false</code> otherwise.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see #saveHistory(String, String, Map, String, int)
+     */
+    public static boolean saveHistory(String path, String itemPath, Map<Integer, Integer> items, String name, int id) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+            
+        List<History> history = new ArrayList<>();
+        List<?> data = adapter.loadData(itemPath);
+
+        for (Object obj : data){
+            if (obj instanceof Barang && items.containsKey(((Barang) obj).getId())){
+                history.add(new History(id, name, ((Barang) obj).getName(), LocalDate.now().toString(), items.get(((Barang) obj).getId()), ((Barang) obj).getSellPrice(), ((Barang) obj).getSellPrice() * items.get(((Barang) obj).getId())));
+            } else if (obj instanceof LinkedTreeMap && items.containsKey((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id"))){
+                history.add(new History(id, name, (String) ((LinkedTreeMap<?, ?>) obj).get("name"), LocalDate.now().toString(), items.get((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id")), (double) ((LinkedTreeMap<?, ?>) obj).get("sellPrice"), (double) ((LinkedTreeMap<?, ?>) obj).get("sellPrice") * items.get((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id"))));
+            }
+        }
+
+        for (History h : history){
+            System.out.println(h);
+            adapter.addData(path, h);
+        }
+
+        return true;
+    }
+
+
+
+    /**
+     * <p> Main method for testing the DataStoreMechanism class. </p>
+     * @param args
+     * @throws ClassNotFoundException
+     * @throws IOException
+     * @throws JAXBException
+     */
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, JAXBException {
         String path         = "src/main/java/datastore/database/VIP/vip.json";
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
+        String path2        = "src/main/java/datastore/database/Barang/barang.xml";
+        String historyPath  = "src/main/java/datastore/database/History/history.xml";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
+        double barangPrice = getItemsPrice(path2, new HashMap<Integer, Integer>(){{
+            put(1, 10);
+            put(2, 4);
+        }});
+        System.out.println(barangPrice);
+
+        System.out.println("\n===================================================\n");
+
+        String[][] data = DataStoreMechanism.getHistoryTransaction(historyPath, "Willy");
+        for (String[] s : data){
+            for (String s2 : s){
+                System.out.print(s2 + " ");
+            }
+            System.out.println();
+        }
     }
 }
