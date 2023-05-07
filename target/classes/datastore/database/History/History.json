@@ -1,0 +1,26 @@
+[
+  {
+    "nama": "Willy",
+    "namaBarang": "Ayam Goreng",
+    "tanggal": "2023-05-07",
+    "kuantitas": 2,
+    "harga": 5000.0,
+    "total": 10000.0
+  },
+  {
+    "nama": "Willy",
+    "namaBarang": "Ayam Bakar",
+    "tanggal": "2023-05-07",
+    "kuantitas": 3,
+    "harga": 5000.0,
+    "total": 15000.0
+  },
+  {
+    "nama": "Wildan",
+    "namaBarang": "Ayam Geprek",
+    "tanggal": "2023-05-07",
+    "kuantitas": 4,
+    "harga": 3000.0,
+    "total": 12000.0
+  }
+]

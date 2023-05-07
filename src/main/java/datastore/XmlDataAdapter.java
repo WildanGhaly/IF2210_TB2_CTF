@@ -17,6 +17,8 @@ import customer.Customer;
 import customer.Member;
 import customer.VIP;
 import sistemusahabarang.Barang;
+import sistemusahabarang.History;
+// import sistemusahabarang.UserHistory;
 
 /**
  * <p>Class to save and load data from an XML file using JAXB.
@@ -81,7 +83,7 @@ public class XmlDataAdapter implements DataAdapter {
     public List<?> loadData(String path) throws IOException {
         try {
             File file = new File(path);
-            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, Customer.class, Member.class, VIP.class, Barang.class);
+            JAXBContext jaxbContext = JAXBContext.newInstance(DataWrapper.class, Customer.class, Member.class, VIP.class, Barang.class, History.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
             DataWrapper dataWrapper = (DataWrapper) unmarshaller.unmarshal(file);
             return (List<Object>) dataWrapper.getData();
