@@ -379,7 +379,7 @@ public class DataStoreMechanism {
             if (obj instanceof LinkedTreeMap){
                 LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
                 if (map.get("name").equals(name)){
-                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), (String) map.get("time"), (String) map.get("items"), (String) map.get("totalPrice")});
+                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), Double.toString((Double) map.get("quantity")), Double.toString((Double) map.get("price")), Double.toString((Double) map.get("total"))});
                 }
             } else if (obj instanceof History){
                 if (((History) obj).getName().equals(name)){
@@ -477,7 +477,76 @@ public class DataStoreMechanism {
     }
 
 
+    /**
+     * <p>Reads the names of all the items in the database file and returns them as an array of strings.</p>
+     * <p>If there is no item that has attribute <code>name</code>, the method returns array of string of <code>id</code>.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *   <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *  <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static String[] readName(String path) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "items.xml";
+     * 
+     * // read the names of all the items in the database file
+     * String[] names = DataStoreMechanism.readName(path);
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @return An array of strings containing the names of all the items in the database.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see #readName(String)
+     */
+    public static String[] readName(String path) throws ClassNotFoundException, IOException, JAXBException {
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
 
+        List<?> data = adapter.loadData(path);
+        String[] names = new String[data.size()];
+
+        for (int i = 0; i < data.size(); i++){
+            if (data.get(i) instanceof Member){
+                names[i] = ((Member) data.get(i)).getName();
+            } else if (data.get(i) instanceof VIP){
+                names[i] = ((VIP) data.get(i)).getName();
+            } else if (data.get(i) instanceof Barang){
+                names[i] = ((Barang) data.get(i)).getName();
+            } else if (data.get(i) instanceof History){
+                names[i] = ((History) data.get(i)).getName();
+            } else if (data.get(i) instanceof Customer){
+                names[i] = Integer.toString(((Customer) data.get(i)).getId());
+            } else if (data.get(i) instanceof LinkedTreeMap && ((LinkedTreeMap<?, ?>) data.get(i)).containsKey("name")){
+                names[i] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("name");
+            } else if (data.get(i) instanceof LinkedTreeMap && ((LinkedTreeMap<?, ?>) data.get(i)).containsKey("id")){
+                names[i] = Integer.toString((int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("id"));
+            }
+        }
+
+        return names;
+    }
     /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args
@@ -487,10 +556,11 @@ public class DataStoreMechanism {
      */
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, JAXBException {
-        String path         = "src/main/java/datastore/database/VIP/vip.json";
+        String path         = "src/main/java/datastore/database/VIP/vip.xml";
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
         String path2        = "src/main/java/datastore/database/Barang/barang.xml";
-        String historyPath  = "src/main/java/datastore/database/History/history.xml";
+        String path3        = "src/main/java/datastore/database/Customer/customer.json";
+        String historyPath  = "src/main/java/datastore/database/History/history.json";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
         double barangPrice = getItemsPrice(path2, new HashMap<Integer, Integer>(){{
@@ -507,6 +577,12 @@ public class DataStoreMechanism {
                 System.out.print(s2 + " ");
             }
             System.out.println();
+        }
+
+        System.out.println("\n===================================================\n");
+        String[] nameList = DataStoreMechanism.readName(path3);
+        for (String s : nameList){
+            System.out.println(s);
         }
     }
 }
