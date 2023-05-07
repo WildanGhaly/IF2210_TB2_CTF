@@ -13,9 +13,17 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
     /**
      * Creates new form LaporanPenjualanGUI
      */
-    public LaporanPenjualanGUI() {
+    private static final LaporanPenjualanGUI LAPORAN_PENJUALAN_GUI = new LaporanPenjualanGUI();
+    
+    private LaporanPenjualanGUI() {
         initComponents();
     }
+
+    public static LaporanPenjualanGUI getInstance(){
+        return LaporanPenjualanGUI.LAPORAN_PENJUALAN_GUI;
+    }
+
+
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

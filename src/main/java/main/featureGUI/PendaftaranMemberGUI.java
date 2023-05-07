@@ -18,10 +18,16 @@ import javax.swing.JPanel;
  */
 public class PendaftaranMemberGUI extends javax.swing.JPanel {
 
+    private static final PendaftaranMemberGUI PENDAFTARAN_MEMBER_GUI = new PendaftaranMemberGUI();
+
     private final Image boxPendaftaranImg = RequestImage.requestImage("pendaftaranmember/boxPendaftaranMember.png");
     
-    public PendaftaranMemberGUI() {
+    private PendaftaranMemberGUI() {
         initComponents();
+    }
+
+    public static PendaftaranMemberGUI getInstance(){
+        return PendaftaranMemberGUI.PENDAFTARAN_MEMBER_GUI;
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

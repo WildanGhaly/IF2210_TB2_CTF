@@ -58,18 +58,14 @@
               <Group type="102" attributes="0">
                   <Component id="leftBarPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                  <Component id="mainPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="mainTab" pref="904" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="leftBarPanel" max="32767" attributes="0"/>
-              <Group type="102" attributes="0">
-                  <Component id="mainPanel" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
+              <Component id="mainTab" alignment="0" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
@@ -101,9 +97,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="dateTime2" min="-2" max="-2" attributes="0"/>
+                          <Component id="dateTime" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="jLabel1" alignment="0" max="32767" attributes="0"/>
+                              <Component id="logoKecil" alignment="0" max="32767" attributes="0"/>
                               <Component id="buttonContainer" alignment="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
@@ -114,12 +110,12 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="15" max="32767" attributes="0"/>
+                      <Component id="logoKecil" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                       <Component id="buttonContainer" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Component id="dateTime2" min="-2" max="-2" attributes="0"/>
+                      <Component id="dateTime" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -251,11 +247,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[229, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Pendaftaran Member.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Pendaftaran member.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Pendaftaran Member.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -290,11 +286,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[153, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Pembayaran.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Pembayaran.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Pembayaran.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -329,11 +325,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[169, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Update Member.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Update member.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Update Member.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -369,11 +365,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[194, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Histori Transaksi.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Histori transaksi.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Histori Transaksi.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -408,11 +404,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[88, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Gudang.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Gudang.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Gudang.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -447,11 +443,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[144, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Pengaturan.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Pengaturan.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Pengaturan.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -489,11 +485,11 @@
                     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
                       <Dimension value="[216, 37]"/>
                     </Property>
+                    <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/img/ButtonSelected/Laporan Penjualan.png"/>
+                    </Property>
                     <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                       <Image iconType="3" name="/img/ButtonHover/Laporan penjualan.png"/>
-                    </Property>
-                    <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="3" name="/img/ButtonSelected/Laporan Penjualan.png"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -502,12 +498,12 @@
                 </Component>
               </SubComponents>
             </Container>
-            <Component class="main.featureGUI.Util.DateTime" name="dateTime2">
+            <Component class="main.featureGUI.Util.DateTime" name="dateTime">
               <Properties>
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JLabel" name="jLabel1">
+            <Component class="javax.swing.JLabel" name="logoKecil">
               <Properties>
                 <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
@@ -517,17 +513,20 @@
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="mainPanel">
+        <Container class="main.featureGUI.Util.customtabbedpane.CustomTabbedPane" name="mainTab">
           <Properties>
-            <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-              <Dimension value="[904, 720]"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="3d" green="29" red="28" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
             </Property>
           </Properties>
           <AuxValues>
-            <AuxValue name="JavaCodeGenerator_allCodePost" type="java.lang.String" value="setForm(new main.featureGUI.HalamanUtamaGUI());"/>
+            <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="mainTab.addTab(&quot;Home&quot;, halamanUtamaGUI);  "/>
           </AuxValues>
 
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JTabbedPaneSupportLayout"/>
         </Container>
       </SubComponents>
     </Container>
