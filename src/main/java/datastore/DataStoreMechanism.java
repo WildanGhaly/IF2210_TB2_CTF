@@ -379,7 +379,7 @@ public class DataStoreMechanism {
             if (obj instanceof LinkedTreeMap){
                 LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
                 if (map.get("name").equals(name)){
-                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), Double.toString((Double) map.get("quantity")), Double.toString((Double) map.get("price")), Double.toString((Double) map.get("total"))});
+                    history.add(new String[]{(String) map.get("itemName"), (String) map.get("date"), Double.toString((Double) map.get("quantity")), Double.toString((Double) map.get("price")), Double.toString((Double) map.get("total"))});
                 }
             } else if (obj instanceof History){
                 if (((History) obj).getName().equals(name)){
