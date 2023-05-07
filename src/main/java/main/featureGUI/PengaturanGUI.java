@@ -6,7 +6,11 @@ package main.featureGUI;
 
 import java.awt.Graphics;
 import java.awt.Image;
+
+import javax.swing.JFrame;
 import javax.swing.JPanel;
+
+import main.featureGUI.Util.AddPluginFrame;
 import main.featureGUI.Util.RequestImage;
 
 /**
@@ -60,6 +64,7 @@ public class PengaturanGUI extends javax.swing.JPanel {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pengaturan/plugin.png"))); // NOI18N
         jButton1.setBorderPainted(false);
         jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -89,6 +94,7 @@ public class PengaturanGUI extends javax.swing.JPanel {
         comboBoxFile.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxFile.setForeground(new java.awt.Color(217, 217, 217));
         comboBoxFile.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "xml", "json", "obj" }));
+        comboBoxFile.setSelectedIndex(-1);
         comboBoxFile.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxFile.setLabelText("File");
         comboBoxFile.setOpaque(false);
@@ -158,7 +164,9 @@ public class PengaturanGUI extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        AddPluginFrame addPluginFrame = new AddPluginFrame();
+        addPluginFrame.setVisible(true);
+        addPluginFrame.getFilePath();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void comboBoxFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxFileActionPerformed

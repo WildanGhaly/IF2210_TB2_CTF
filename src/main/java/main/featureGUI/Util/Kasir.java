@@ -362,14 +362,7 @@ public class Kasir extends javax.swing.JPanel {
     }//GEN-LAST:event_comboBoxCustomerActionPerformed
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
-        /*TODO masukkin data */
-        try {
-            String[][] itemData = DataStoreMechanism.getBarangAsString(pathItem);
-        } catch (ClassNotFoundException | IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-
-        JFrame popUpPayment = new PopUpPayment(new String[][] {});
+        JFrame popUpPayment = new PopUpPayment(null);
         popUpPayment.setVisible(true);
     }//GEN-LAST:event_payButtonActionPerformed
 
