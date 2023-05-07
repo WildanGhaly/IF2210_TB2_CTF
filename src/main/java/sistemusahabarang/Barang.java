@@ -50,8 +50,22 @@ public class Barang implements Serializable {
     private String kategori;
     private String image;
 
+    /**
+     * Constructs a new Barang object with default values for all attributes.
+     * @see Barang
+     */
     public Barang() {}
 
+    /**
+     * Constructs a new Barang object with the specified values for all attributes.
+     * @param id the unique identifier for this item
+     * @param stock the number of available units of this item in stock
+     * @param name the name of this item
+     * @param sellPrice the price at which this item can be sold
+     * @param buyPrice the price at which this item was purchased
+     * @param kategori the category to which this item belongs
+     * @param image the file path to the image associated with this item
+     */
     public Barang(int id, int stock, String name, double sellPrice, double buyPrice, String kategori, String image) {
         this.id = id;
         this.stock = stock;
