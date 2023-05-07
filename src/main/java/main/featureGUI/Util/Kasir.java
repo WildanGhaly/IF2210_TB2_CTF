@@ -348,7 +348,8 @@ public class Kasir extends javax.swing.JPanel {
     }//GEN-LAST:event_comboBoxCustomerActionPerformed
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
-        JFrame popUpPayment = new PopUpPayment();
+        /*TODO masukkin data */
+        JFrame popUpPayment = new PopUpPayment(new String[][] {});
         popUpPayment.setVisible(true);
     }//GEN-LAST:event_payButtonActionPerformed
 
