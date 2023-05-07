@@ -1,17 +1,57 @@
 [
   {
+    "id": 1,
+    "points": 0,
+    "totalSpent": 1000
+  },
+  {
+    "id": 2,
+    "points": 0,
+    "totalSpent": 2000
+  },
+  {
+    "id": 3,
+    "points": 0,
+    "totalSpent": 3000
+  },
+  {
     "id": 4,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 3000
   },
   {
     "id": 5,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 3000
   },
   {
     "id": 6,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 3000
+  },
+  {
+    "id": 7,
+    "points": 0,
+    "totalSpent": 3000
+  },
+  {
+    "id": 8,
+    "points": 0,
+    "totalSpent": 3000
+  },
+  {
+    "id": 9,
+    "points": 0,
+    "totalSpent": 3000
+  },
+  {
+    "id": 10,
+    "points": 0,
+    "totalSpent": 3000
+  },
+  {
+    "id": 11,
+    "points": 0,
+    "totalSpent": 8000
   }
 ]

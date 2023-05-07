@@ -1,18 +1,59 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataWrapper>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>1</id>
+        <points>0</points>
+        <totalSpent>1000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>2</id>
+        <points>0</points>
+        <totalSpent>2000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>3</id>
+        <points>0</points>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
         <id>4</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
+        <totalSpent>3000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
         <id>5</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
+        <totalSpent>3000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
         <id>6</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>7</id>
+        <points>0</points>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>8</id>
+        <points>0</points>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>9</id>
+        <points>0</points>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>10</id>
+        <points>0</points>
+        <totalSpent>3000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="customer">
+        <id>11</id>
+        <points>0</points>
+        <totalSpent>8000</totalSpent>
     </item>
 </dataWrapper>
+

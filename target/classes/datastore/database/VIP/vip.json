@@ -3,24 +3,88 @@
     "vipMember": 1,
     "name": "WillyVIP",
     "phoneNumber": "1234567890",
-    "id": 7,
+    "id": 200,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 200000
   },
   {
     "vipMember": 1,
     "name": "WildanVIP",
     "phoneNumber": "32422222222",
-    "id": 8,
+    "id": 201,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 200000
   },
   {
     "vipMember": 1,
-    "name": "GhalyVIP",
+    "name": "JitterVIP",
     "phoneNumber": "00000000000",
-    "id": 9,
+    "id": 202,
     "points": 0,
-    "totalSpent": 0.0
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Zeta Woman",
+    "phoneNumber": "0123470000",
+    "id": 203,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Omega Man",
+    "phoneNumber": "00000000000",
+    "id": 204,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Delta Woman",
+    "phoneNumber": "00000000000",
+    "id": 205,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Theta Man",
+    "phoneNumber": "0999999000",
+    "id": 206,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Gamma Woman",
+    "phoneNumber": "0000293120",
+    "id": 207,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Beta Man",
+    "phoneNumber": "0099998888",
+    "id": 208,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Alpha Man",
+    "phoneNumber": "8263700000",
+    "id": 209,
+    "points": 0,
+    "totalSpent": 200000
+  },
+  {
+    "vipMember": 1,
+    "name": "Sigma Man",
+    "phoneNumber": "8263700000",
+    "id": 210,
+    "points": 0,
+    "totalSpent": 200000
   }
 ]
