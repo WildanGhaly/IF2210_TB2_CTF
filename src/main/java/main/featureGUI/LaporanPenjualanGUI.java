@@ -234,11 +234,11 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
                 boolean[] canEdit = new boolean [] {
                     false, false, false, false, false
                 };
-
+                @Override
                 public Class<?> getColumnClass(int columnIndex) {
                     return types [columnIndex];
                 }
-
+                @Override
                 public boolean isCellEditable(int rowIndex, int columnIndex) {
                     return canEdit [columnIndex];
                 }
@@ -270,11 +270,11 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
                 boolean[] canEdit = new boolean [] {
                     false, false, false, false, false
                 };
-
+                @Override
                 public Class<?> getColumnClass(int columnIndex) {
                     return types [columnIndex];
                 }
-
+                @Override
                 public boolean isCellEditable(int rowIndex, int columnIndex) {
                     return canEdit [columnIndex];
                 }
