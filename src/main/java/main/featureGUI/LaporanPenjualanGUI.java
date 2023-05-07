@@ -4,6 +4,20 @@
  */
 package main.featureGUI;
 
+import javax.swing.border.Border;
+import javax.xml.bind.JAXBException;
+import datastore.DataStoreMechanism;
+import java.awt.Component;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.Insets;
+import java.io.IOException;
+
+import javax.swing.JPanel;
+import main.featureGUI.Util.RequestImage;
+// import javax.xml.bind.JAXBException;
+// import datastore.DataStoreMechanism;
+
 /**
  *
  * @author user
@@ -13,8 +27,10 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
     /**
      * Creates new form LaporanPenjualanGUI
      */
+    private String historyPath = "src/main/java/datastore/database/History/history.xml";
+
     private static final LaporanPenjualanGUI LAPORAN_PENJUALAN_GUI = new LaporanPenjualanGUI();
-    
+
     private LaporanPenjualanGUI() {
         initComponents();
     }
@@ -23,98 +39,267 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
         return LaporanPenjualanGUI.LAPORAN_PENJUALAN_GUI;
     }
 
+    private final Image statusBoxPanelImg = RequestImage.requestImage("updatemember/boxStatus.png");
 
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        gudangPanel = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        comboBoxStatus = new main.featureGUI.Util.customcombobox.Combobox<>();
-        comboBoxStatus1 = new main.featureGUI.Util.customcombobox.Combobox<>();
+        laporanPanel = new javax.swing.JPanel();
+        logoLaporan = new javax.swing.JLabel();
+        statusPanel = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(statusBoxPanelImg, 0, 0, null);
+            }
+        };
+        comboBoxBulan = new main.featureGUI.Util.customcombobox.Combobox<>();
+        statusPanel4 = new JPanel() {
+            @Override
+            protected void paintComponent(Graphics g) {
+                super.paintComponent(g);
+                g.drawImage(statusBoxPanelImg, 0, 0, null);
+            }
+        };
+        comboBoxTahun = new main.featureGUI.Util.customcombobox.Combobox<>();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jScrollPane1.getViewport().setOpaque(false);
+        jScrollPane1.setViewportBorder(new Border() {
 
-        gudangPanel.setBackground(new java.awt.Color(40, 41, 61));
+            @Override
+            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporanpenjualan/logopenjualan.png"))); // NOI18N
+            }
 
-        comboBoxStatus.setBackground(new java.awt.Color(40, 41, 60, 0));
-        comboBoxStatus.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2022", "2023" }));
-        comboBoxStatus.setSelectedIndex(-1);
-        comboBoxStatus.setFont(new java.awt.Font("Inter", 1, 22));
-        comboBoxStatus.setLabelText("Status");
-        comboBoxStatus.setOpaque(false);
-        comboBoxStatus.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public Insets getBorderInsets(Component c) {
+                return new Insets(0,0,0,0);
+            }
+
+            @Override
+            public boolean isBorderOpaque() {
+                return false;    
+            }
+
+        });
+        jTable1 = new javax.swing.JTable();
+
+        laporanPanel.setBackground(new java.awt.Color(40, 41, 61));
+
+        logoLaporan.setBackground(new java.awt.Color(40, 41, 61));
+        logoLaporan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pendaftaranmember/logoPendaftaranMember.png"))); // NOI18N
+
+        statusPanel.setOpaque(false);
+        statusPanel.setPreferredSize(new java.awt.Dimension(151, 48));
+
+        comboBoxBulan.setBackground(new java.awt.Color(40, 41, 60, 0));
+        comboBoxBulan.setForeground(new java.awt.Color(217, 217, 217));
+        comboBoxBulan.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"}));
+        comboBoxBulan.setSelectedIndex(-1);
+        comboBoxBulan.setFont(new java.awt.Font("Inter", 1, 22));
+        comboBoxBulan.setLabelText("Bulan");
+        comboBoxBulan.setOpaque(false);
+        comboBoxBulan.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxStatusActionPerformed(evt);
+                comboBoxBulanActionPerformed(evt);
             }
         });
 
-        comboBoxStatus1.setBackground(new java.awt.Color(40, 41, 60, 0));
-        comboBoxStatus1.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxStatus1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember" }));
-        comboBoxStatus1.setSelectedIndex(-1);
-        comboBoxStatus1.setFont(new java.awt.Font("Inter", 1, 22));
-        comboBoxStatus1.setLabelText("Status");
-        comboBoxStatus1.setOpaque(false);
-        comboBoxStatus1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboBoxStatus1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout gudangPanelLayout = new javax.swing.GroupLayout(gudangPanel);
-        gudangPanel.setLayout(gudangPanelLayout);
-        gudangPanelLayout.setHorizontalGroup(
-            gudangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, gudangPanelLayout.createSequentialGroup()
-                .addContainerGap(262, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(237, 237, 237))
-            .addGroup(gudangPanelLayout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(comboBoxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(47, 47, 47)
-                .addComponent(comboBoxStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        javax.swing.GroupLayout statusPanelLayout = new javax.swing.GroupLayout(statusPanel);
+        statusPanel.setLayout(statusPanelLayout);
+        statusPanelLayout.setHorizontalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusPanelLayout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(comboBoxBulan, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
-        gudangPanelLayout.setVerticalGroup(
-            gudangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(gudangPanelLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addGroup(gudangPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(comboBoxStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(comboBoxStatus1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(618, Short.MAX_VALUE))
+        statusPanelLayout.setVerticalGroup(
+            statusPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(comboBoxBulan, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        statusPanel4.setOpaque(false);
+        statusPanel4.setPreferredSize(new java.awt.Dimension(151, 48));
+
+        comboBoxTahun.setBackground(new java.awt.Color(40, 41, 60, 0));
+        comboBoxTahun.setForeground(new java.awt.Color(217, 217, 217));
+        comboBoxTahun.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2023", "2024", "2025" }));
+        comboBoxTahun.setSelectedIndex(-1);
+        comboBoxTahun.setFont(new java.awt.Font("Inter", 1, 22));
+        comboBoxTahun.setLabelText("Tahun");
+        comboBoxTahun.setOpaque(false);
+        comboBoxTahun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                comboBoxTahunActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout statusPanel4Layout = new javax.swing.GroupLayout(statusPanel4);
+        statusPanel4.setLayout(statusPanel4Layout);
+        statusPanel4Layout.setHorizontalGroup(
+            statusPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, statusPanel4Layout.createSequentialGroup()
+                .addContainerGap(15, Short.MAX_VALUE)
+                .addComponent(comboBoxTahun, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        statusPanel4Layout.setVerticalGroup(
+            statusPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(statusPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(comboBoxTahun, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+
+        jScrollPane1.setBorder(null);
+
+        jTable1.setBackground(new java.awt.Color(40, 41, 61));
+        jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTable1.setForeground(new java.awt.Color(72, 84, 254));
+        jTable1.setGridColor(new java.awt.Color(72, 84, 254));
+        jTable1.setRowHeight(50);
+        jTable1.setRowSelectionAllowed(false);
+        jTable1.setSelectionBackground(new java.awt.Color(40, 41, 61));
+        jTable1.setSelectionForeground(new java.awt.Color(40, 41, 61));
+        jTable1.setShowGrid(true);
+        jTable1.getTableHeader().setResizingAllowed(false);
+        jTable1.getTableHeader().setReorderingAllowed(false);
+        jTable1.setUpdateSelectionOnSort(false);
+        jTable1.setVerifyInputWhenFocusTarget(false);
+        jScrollPane1.setViewportView(jTable1);
+
+        javax.swing.GroupLayout laporanPanelLayout = new javax.swing.GroupLayout(laporanPanel);
+        laporanPanel.setLayout(laporanPanelLayout);
+        laporanPanelLayout.setHorizontalGroup(
+            laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laporanPanelLayout.createSequentialGroup()
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(laporanPanelLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(laporanPanelLayout.createSequentialGroup()
+                                .addGap(119, 119, 119)
+                                .addComponent(logoLaporan, javax.swing.GroupLayout.PREFERRED_SIZE, 499, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(laporanPanelLayout.createSequentialGroup()
+                        .addGap(265, 265, 265)
+                        .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(statusPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(96, Short.MAX_VALUE))
+        );
+        laporanPanelLayout.setVerticalGroup(
+            laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(laporanPanelLayout.createSequentialGroup()
+                .addComponent(logoLaporan)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(laporanPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(statusPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 86, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gudangPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laporanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(gudangPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(laporanPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void comboBoxStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxStatusActionPerformed
-        // TODO buat update status member disini
-    }//GEN-LAST:event_comboBoxStatusActionPerformed
+    private void comboBoxBulanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxBulanActionPerformed
+        try {
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                DataStoreMechanism.getTransactionReport(historyPath, comboBoxBulan.getSelectedItem().toString(), comboBoxTahun.getSelectedItem().toString())
+                ,
+                new String [] {
+                    "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
+                }
+            ) {
+                Class<?>[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+                boolean[] canEdit = new boolean [] {
+                    false, false, false, false, false
+                };
 
-    private void comboBoxStatus1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxStatus1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_comboBoxStatus1ActionPerformed
+                public Class<?> getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit [columnIndex];
+                }
+            });
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_comboBoxBulanActionPerformed
+
+    private void comboBoxTahunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxTahunActionPerformed
+        try {
+            jTable1.setModel(new javax.swing.table.DefaultTableModel(
+                DataStoreMechanism.getTransactionReport(historyPath, comboBoxBulan.getSelectedItem().toString(), comboBoxTahun.getSelectedItem().toString())
+                ,
+                new String [] {
+                    "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
+                }
+            ) {
+                Class<?>[] types = new Class [] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                };
+                boolean[] canEdit = new boolean [] {
+                    false, false, false, false, false
+                };
+
+                public Class<?> getColumnClass(int columnIndex) {
+                    return types [columnIndex];
+                }
+
+                public boolean isCellEditable(int rowIndex, int columnIndex) {
+                    return canEdit [columnIndex];
+                }
+            });
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }//GEN-LAST:event_comboBoxTahunActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxStatus;
-    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxStatus1;
-    private javax.swing.JPanel gudangPanel;
-    private javax.swing.JLabel jLabel1;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxBulan;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxTahun;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JPanel laporanPanel;
+    private javax.swing.JLabel logoLaporan;
+    private javax.swing.JPanel statusPanel;
+    private javax.swing.JPanel statusPanel4;
     // End of variables declaration//GEN-END:variables
 }
