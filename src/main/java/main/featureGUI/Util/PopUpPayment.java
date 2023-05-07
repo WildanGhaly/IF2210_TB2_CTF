@@ -429,7 +429,7 @@ public class PopUpPayment extends javax.swing.JFrame {
     private void comboBoxDiscActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxDiscActionPerformed
         total = 0.0;
         try {
-            if (namaCustomer.isBlank()){
+            if (namaCustomer.isEmpty()){
                 comboBoxDisc.setSelectedIndex(0);
                 comboBoxDisc.setLabelText("0%");
                 
@@ -454,21 +454,23 @@ public class PopUpPayment extends javax.swing.JFrame {
         String path         = "src/main/java/datastore/database/Barang/barang.xml";
         String historyPath = "src/main/java/datastore/database/History/history.xml";
         //TODO disinii wil
-        // for (int i = 0; i < listBarang.length; i++) {
-        //     fixedBill.addItem(Integer.valueOf(listBarang[i][0]), Integer.valueOf(listCountBarang.getModel().getElementAt(i)));
-        // }
-        // try {
+        for (int i = 0; i < listBarang.length; i++) {
+            fixedBill.addItem(Integer.valueOf(listBarang[i][0]), Integer.valueOf(listCountBarang.getModel().getElementAt(i)));
+            // System.out.println(listBarang[i][0] + " " + listCountBarang.getModel().getElementAt(i));
+        }
+        try {
 
-        //     if (namaCustomer.isBlank()){
-        //         FixedBill.saveHistory(historyPath, path, fixedBill, String.valueOf(customer.length), customer.length);    
-        //     } else {
-        //         FixedBill.saveHistory(historyPath, path, fixedBill, namaCustomer, customer.length);
-        //     }
+            if (namaCustomer.isEmpty()){
+                FixedBill.saveHistory(historyPath, path, fixedBill, String.valueOf(namaCustomer), customer.length);    
+            } else {
+                FixedBill.saveHistory(historyPath, path, fixedBill, namaCustomer, customer.length);
+            }
+            DataStoreMechanism.getItemsPrice(path, fixedBill.getItems());
             
-        //     JOptionPane.showMessageDialog(null, "Berhasil disimpan!");
-        // } catch (ClassNotFoundException | IOException | JAXBException e) {
-        //     e.printStackTrace();
-        // }
+            JOptionPane.showMessageDialog(null, "Berhasil disimpan!");
+        } catch (ClassNotFoundException | IOException | JAXBException e) {
+            e.printStackTrace();
+        }
 
         //TODO sampe disini
     }//GEN-LAST:event_buttonSaveBillActionPerformed
