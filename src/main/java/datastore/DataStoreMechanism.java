@@ -949,6 +949,95 @@ public class DataStoreMechanism {
 
 
     /**
+     * <p>This method is used to load all members and vip in the database file and check if the name is in the database. </p>
+     * <p>The method will load the data from the database file, then check if the name is in the database.</p>
+     * <p>The method will return 1 if the name is in the {@code VIP} database, 0 if the name is in the {@code Member} database, -1 if the name is {@code NOT IN} the database.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static int isVIPClass (String pathMember, String pathVIP, String name) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String pathMember = "members.xml";
+     * String pathVIP = "VIP.xml";
+     * String name = "John";
+     * int isVIP = DataStoreMechanism.isVIPClass(pathMember, pathVIP, name);
+     * ...
+     * </pre>
+     * @param pathMember The path to the {@code Member} database file.
+     * @param pathVIP The path to the {@code VIP} database file.
+     * @param name The name to be checked.
+     * @return 1 if the name is in the {@code VIP} database, 0 if the name is in the {@code Member} database, -1 if the name is {@code NOT IN} the database.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Member
+     * @see VIP
+     */
+    public static int isVIPClass(String pathMember, String pathVIP, String name) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            pathVIP.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            pathVIP.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(pathVIP);
+
+        for (int i = 0; i < data.size(); i++){
+            if (data.get(i) instanceof VIP){
+                if (((VIP) data.get(i)).getName().equals(name)){
+                    return 1;
+                }
+            } else if (data.get(i) instanceof LinkedTreeMap){
+                if (((LinkedTreeMap<?, ?>) data.get(i)).get("name").equals(name) && ((LinkedTreeMap<?, ?>) data.get(i)).containsKey("vipMember")){
+                    return 1;
+                }
+            }
+        }
+
+        DataAdapter adapters = 
+            pathMember.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            pathMember.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> datas = adapters.loadData(pathMember);
+
+        for (int i = 0; i < datas.size(); i++){
+            if (datas.get(i) instanceof Member){
+                if (((Member) datas.get(i)).getName().equals(name)){
+                    return 0;
+                }
+            } else if (datas.get(i) instanceof LinkedTreeMap){
+                if (((LinkedTreeMap<?, ?>) datas.get(i)).get("name").equals(name)){
+                    return 0;
+                }
+            }
+        }
+
+        return -1;
+
+    }
+
+
+    /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args
      * @throws ClassNotFoundException
@@ -1030,6 +1119,11 @@ public class DataStoreMechanism {
             System.out.println();
         }
         
+        System.out.println("\n===================================================\n");
+        
+        int isVIP = DataStoreMechanism.isVIPClass(path4, targetPath, "Willy");
+        System.out.println(isVIP);
+
         System.out.println("\n===================================================\n");
     }
     

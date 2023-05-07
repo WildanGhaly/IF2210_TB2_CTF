@@ -7,6 +7,7 @@
         <sellPrice>100000.0</sellPrice>
         <buyPrice>50000.0</buyPrice>
         <kategori>Pakaian</kategori>
+        <description>Adalah sebuah baju</description>
         <image>baju.com</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
@@ -16,6 +17,7 @@
         <sellPrice>200000.0</sellPrice>
         <buyPrice>100000.0</buyPrice>
         <kategori>Pakaian</kategori>
+        <description>Adalah sebuah celana</description>
         <image>celana.com</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
@@ -25,6 +27,7 @@
         <sellPrice>300000.0</sellPrice>
         <buyPrice>150000.0</buyPrice>
         <kategori>Pakaian</kategori>
+        <description>Adalah sebuah sepatu</description>
         <image>sepatu.com</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
@@ -34,6 +37,47 @@
         <sellPrice>400000.0</sellPrice>
         <buyPrice>200000.0</buyPrice>
         <kategori>Pakaian</kategori>
+        <description>Adalah sebuah kemejad</description>
         <image>kemeja.com</image>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <id>5</id>
+        <stock>100</stock>
+        <name>newBarangs</name>
+        <sellPrice>1000.0</sellPrice>
+        <buyPrice>500.0</buyPrice>
+        <kategori>newKategori</kategori>
+        <description>newDesc</description>
+        <image>newImage</image>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <id>6</id>
+        <stock>100</stock>
+        <name>newBarangs</name>
+        <sellPrice>1000.0</sellPrice>
+        <buyPrice>500.0</buyPrice>
+        <kategori>newKategori</kategori>
+        <description>newDesc</description>
+        <image>newImage</image>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <id>7</id>
+        <stock>100</stock>
+        <name>newBarangs</name>
+        <sellPrice>1000.0</sellPrice>
+        <buyPrice>500.0</buyPrice>
+        <kategori>newKategori</kategori>
+        <description>newDesc</description>
+        <image>newImage</image>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
+        <id>8</id>
+        <stock>100</stock>
+        <name>newBarangs</name>
+        <sellPrice>1000.0</sellPrice>
+        <buyPrice>500.0</buyPrice>
+        <kategori>newKategori</kategori>
+        <description>newDesc</description>
+        <image>newImage</image>
     </item>
 </dataWrapper>
