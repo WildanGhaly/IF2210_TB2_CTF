@@ -64,22 +64,24 @@
                           <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                           <Component id="labelPopUp" min="-2" pref="670" max="-2" attributes="0"/>
                       </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                          <Component id="popUpScrollPanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                          <Component id="scrollBarCustom" min="-2" pref="14" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton2" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="buttonPrintBill" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="buttonSaveBill" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="discPanel" pref="190" max="32767" attributes="0"/>
+                                  <Component id="taxPanel" min="-2" pref="190" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" pref="215" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="statusPanel3" pref="190" max="32767" attributes="0"/>
-                              <Component id="statusPanel" min="-2" pref="190" max="-2" attributes="0"/>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                              <Component id="popUpScrollPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -92,25 +94,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="labelPopUp" min="-2" pref="55" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="popUpScrollPanel" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
-                          <Component id="scrollBarCustom" min="-2" pref="245" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="popUpScrollPanel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="statusPanel3" min="-2" pref="59" max="-2" attributes="0"/>
-                      <Component id="jButton1" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="discPanel" min="-2" pref="59" max="-2" attributes="0"/>
+                      <Component id="buttonSaveBill" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="0" min="-2" pref="42" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="jButton2" min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="statusPanel" min="-2" pref="63" max="-2" attributes="0"/>
+                      <Component id="buttonPrintBill" min="-2" pref="42" max="-2" attributes="0"/>
+                      <Component id="taxPanel" min="-2" pref="63" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="61" max="32767" attributes="0"/>
               </Group>
@@ -145,25 +140,30 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
-                      <Component id="scrollPaneNama" min="-2" pref="167" max="-2" attributes="0"/>
+                      <Component id="scrollPaneNama" pref="241" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPaneHarga" min="-2" pref="167" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="scrollPaneQuantity" min="-2" pref="167" max="-2" attributes="0"/>
-                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="scrollBarCustom" min="-2" pref="14" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="scrollPaneQuantity" min="-2" pref="244" max="-2" attributes="0"/>
-                          <Component id="scrollPaneNama" min="-2" pref="244" max="-2" attributes="0"/>
-                          <Component id="scrollPaneHarga" min="-2" pref="244" max="-2" attributes="0"/>
+                          <Component id="scrollBarCustom" min="-2" pref="245" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="scrollPaneNama" min="-2" pref="244" max="-2" attributes="0"/>
+                              <Component id="scrollPaneHarga" alignment="1" min="-2" pref="244" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
-                      <EmptySpace pref="30" max="32767" attributes="0"/>
+                      <EmptySpace pref="4" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -317,7 +317,7 @@
                   <ComponentRef name="scrollBarCustom"/>
                 </Property>
                 <Property name="viewportView" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
-                  <ComponentRef name="listBarangTerbeli3"/>
+                  <ComponentRef name="listCountBarang"/>
                 </Property>
               </Properties>
               <AuxValues>
@@ -326,7 +326,7 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
               <SubComponents>
-                <Component class="javax.swing.JList" name="listBarangTerbeli3">
+                <Component class="javax.swing.JList" name="listCountBarang">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                       <Connection code="new java.awt.Color(0, 0, 0, 0)" type="code"/>
@@ -362,6 +362,9 @@
                       <Color blue="3d" green="29" red="28" type="rgb"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="listCountBarangMouseClicked"/>
+                  </Events>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_CreateCodePost" type="java.lang.String" value="        scrollPaneQuantity.getViewport().setOpaque(false);&#xd;&#xa;        scrollPaneQuantity.setViewportBorder(new Border() {&#xd;&#xa;&#xd;&#xa;            @Override&#xd;&#xa;            public void paintBorder(Component c, Graphics g, int x, int y, int width, int height) {&#xd;&#xa;&#xd;&#xa;            }&#xd;&#xa;&#xd;&#xa;            @Override&#xd;&#xa;            public Insets getBorderInsets(Component c) {&#xd;&#xa;                return new Insets(0,0,0,0);&#xd;&#xa;            }&#xd;&#xa;&#xd;&#xa;            @Override&#xd;&#xa;            public boolean isBorderOpaque() {&#xd;&#xa;                return false;    &#xd;&#xa;            }&#xd;&#xa;        });"/>
                     <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
@@ -369,11 +372,11 @@
                 </Component>
               </SubComponents>
             </Container>
+            <Component class="main.featureGUI.Util.customcombobox.ScrollBarCustom" name="scrollBarCustom">
+            </Component>
           </SubComponents>
         </Container>
-        <Component class="main.featureGUI.Util.customcombobox.ScrollBarCustom" name="scrollBarCustom">
-        </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="buttonSaveBill">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/pembayaran/popuppayment/buttonSaveBill.png"/>
@@ -390,8 +393,11 @@
               <Image iconType="3" name="/img/pembayaran/popuppayment/buttonSaveBillClicked.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonSaveBillActionPerformed"/>
+          </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton2">
+        <Component class="javax.swing.JButton" name="buttonPrintBill">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/img/pembayaran/popuppayment/buttonPrintBill.png"/>
@@ -411,8 +417,11 @@
               <Image iconType="3" name="/img/pembayaran/popuppayment/buttonPrintBillClicked.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonPrintBillActionPerformed"/>
+          </Events>
         </Component>
-        <Container class="javax.swing.JPanel" name="statusPanel">
+        <Container class="javax.swing.JPanel" name="taxPanel">
           <Properties>
             <Property name="opaque" type="boolean" value="false"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -428,7 +437,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="comboBoxStatus" min="-2" pref="137" max="-2" attributes="0"/>
+                      <Component id="comboBoxTax" min="-2" pref="137" max="-2" attributes="0"/>
                       <EmptySpace pref="47" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -436,14 +445,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="comboBoxStatus" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="comboBoxTax" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="18" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="main.featureGUI.Util.customcombobox.Combobox" name="comboBoxStatus">
+            <Component class="main.featureGUI.Util.customcombobox.Combobox" name="comboBoxTax">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new java.awt.Color(40, 41, 60, 0)" type="code"/>
@@ -468,12 +477,12 @@
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxStatusActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxTaxActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
-        <Container class="javax.swing.JPanel" name="statusPanel3">
+        <Container class="javax.swing.JPanel" name="discPanel">
           <Properties>
             <Property name="opaque" type="boolean" value="false"/>
             <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -489,7 +498,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="comboBoxStatus4" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="comboBoxDisc" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -497,14 +506,14 @@
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <Component id="comboBoxStatus4" min="-2" pref="45" max="-2" attributes="0"/>
+                      <Component id="comboBoxDisc" min="-2" pref="45" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="14" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="main.featureGUI.Util.customcombobox.Combobox" name="comboBoxStatus4">
+            <Component class="main.featureGUI.Util.customcombobox.Combobox" name="comboBoxDisc">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
                   <Connection code="new java.awt.Color(40, 41, 60, 0)" type="code"/>
@@ -529,11 +538,22 @@
                 <Property name="opaque" type="boolean" value="false"/>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxStatus4ActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="comboBoxDiscActionPerformed"/>
               </Events>
             </Component>
           </SubComponents>
         </Container>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="new java.awt.Font(&quot;Inter&quot;, java.awt.Font.BOLD, 18)" type="code"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="d9" green="d9" red="d9" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="Total: RpXXXXX"/>
+          </Properties>
+        </Component>
       </SubComponents>
     </Container>
   </SubComponents>
