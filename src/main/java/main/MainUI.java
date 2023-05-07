@@ -35,14 +35,6 @@ public class MainUI extends javax.swing.JFrame {
      */
     private final Image leftBarBg = RequestImage.requestImage("leftBarUtama.png");
     private final Image buttonContainerBg = RequestImage.requestImage("allButtonPanel.png");
-    private final GudangGUI gudangGUI = new GudangGUI();
-    private final HistoriTransaksiGUI historiTransaksiGUI = new HistoriTransaksiGUI();
-    private final LaporanPenjualanGUI laporanPenjualanGUI = new LaporanPenjualanGUI();
-    private final PembayaranGUI pembayaranGUI = new PembayaranGUI();
-    private final PendaftaranMemberGUI pendaftaranMemberGUI = new PendaftaranMemberGUI();
-    private final PengaturanGUI pengaturanGUI = new PengaturanGUI();
-    private final UpdateMemberGUI updateMemberGUI = new UpdateMemberGUI();
-    private final HalamanUtamaGUI halamanUtamaGUI = new HalamanUtamaGUI();
 
     public MainUI() {
         initComponents();
@@ -80,7 +72,7 @@ public class MainUI extends javax.swing.JFrame {
         dateTime = new main.featureGUI.Util.DateTime();
         logoKecil = new javax.swing.JLabel();
         mainTab = new main.featureGUI.Util.customtabbedpane.CustomTabbedPane();
-        mainTab.addTab("Home", halamanUtamaGUI);
+        mainTab.addTab("Home", HalamanUtamaGUI.getInstance());
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("TEST");
@@ -375,64 +367,64 @@ public class MainUI extends javax.swing.JFrame {
     }//GEN-LAST:event_formComponentAdded
 
     private void buttonHalamanUtamaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHalamanUtamaActionPerformed
-        mainTab.setSelectedComponent(halamanUtamaGUI);
+        mainTab.setSelectedComponent(HalamanUtamaGUI.getInstance());
         
     }//GEN-LAST:event_buttonHalamanUtamaActionPerformed
 
     private void buttonPendaftaranMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPendaftaranMemberActionPerformed
-        if (mainTab.indexOfComponent(pendaftaranMemberGUI) == -1){
-            addTab(pendaftaranMemberGUI, "Daftar");
+        if (mainTab.indexOfComponent(PendaftaranMemberGUI.getInstance()) == -1){
+            addTab(PendaftaranMemberGUI.getInstance(), "Daftar");
         }
-        mainTab.setSelectedComponent(pendaftaranMemberGUI);
+        mainTab.setSelectedComponent(PendaftaranMemberGUI.getInstance());
         
     }//GEN-LAST:event_buttonPendaftaranMemberActionPerformed
 
     private void buttonPembayaranActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonPembayaranActionPerformed
-        if (mainTab.indexOfComponent(pembayaranGUI) == -1){
-            addTab(pembayaranGUI, "Bayar");
+        if (mainTab.indexOfComponent(PembayaranGUI.getInstance()) == -1){
+            addTab(PembayaranGUI.getInstance(), "Bayar");
         }
-        mainTab.setSelectedComponent(pembayaranGUI);
+        mainTab.setSelectedComponent(PembayaranGUI.getInstance());
     }//GEN-LAST:event_buttonPembayaranActionPerformed
 
     private void buttonUpdateMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonUpdateMemberActionPerformed
-        if (mainTab.indexOfComponent(updateMemberGUI) == -1){
-            addTab(updateMemberGUI, "Update");
+        if (mainTab.indexOfComponent(UpdateMemberGUI.getInstance()) == -1){
+            addTab(UpdateMemberGUI.getInstance(), "Update");
         }
-        mainTab.setSelectedComponent(updateMemberGUI);
+        mainTab.setSelectedComponent(UpdateMemberGUI.getInstance());
         
         
     }//GEN-LAST:event_buttonUpdateMemberActionPerformed
 
     private void buttonHistoriTransaksiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonHistoriTransaksiActionPerformed
-        if (mainTab.indexOfComponent(historiTransaksiGUI) == -1){
-            addTab(historiTransaksiGUI, "Histori");
+        if (mainTab.indexOfComponent(HistoriTransaksiGUI.getInstance()) == -1){
+            addTab(HistoriTransaksiGUI.getInstance(), "Histori");
         }
-        mainTab.setSelectedComponent(historiTransaksiGUI);
+        mainTab.setSelectedComponent(HistoriTransaksiGUI.getInstance());
         
         
     }//GEN-LAST:event_buttonHistoriTransaksiActionPerformed
 
     private void buttonGudangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonGudangActionPerformed
-        if (mainTab.indexOfComponent(gudangGUI) == -1){
-            addTab(gudangGUI, "Gudang");
+        if (mainTab.indexOfComponent(GudangGUI.getInstance()) == -1){
+            addTab(GudangGUI.getInstance(), "Gudang");
         }
-        mainTab.setSelectedComponent(gudangGUI);
+        mainTab.setSelectedComponent(GudangGUI.getInstance());
         
     }//GEN-LAST:event_buttonGudangActionPerformed
 
     private void buttonSettingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSettingActionPerformed
-        if (mainTab.indexOfComponent(pengaturanGUI) == -1){
-            addTab(pengaturanGUI, "Pengaturan");
+        if (mainTab.indexOfComponent(PengaturanGUI.getInstance()) == -1){
+            addTab(PengaturanGUI.getInstance(), "Pengaturan");
         }
-        mainTab.setSelectedComponent(pengaturanGUI);
+        mainTab.setSelectedComponent(PengaturanGUI.getInstance());
         
     }//GEN-LAST:event_buttonSettingActionPerformed
 
     private void buttonLaporanPenjualanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonLaporanPenjualanActionPerformed
-        if (mainTab.indexOfComponent(laporanPenjualanGUI) == -1){
-            addTab(laporanPenjualanGUI, "Laporan");
+        if (mainTab.indexOfComponent(LaporanPenjualanGUI.getInstance()) == -1){
+            addTab(LaporanPenjualanGUI.getInstance(), "Laporan");
         }
-        mainTab.setSelectedComponent(laporanPenjualanGUI);
+        mainTab.setSelectedComponent(LaporanPenjualanGUI.getInstance());
         
     }//GEN-LAST:event_buttonLaporanPenjualanActionPerformed
     

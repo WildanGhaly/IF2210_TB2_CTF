@@ -22,10 +22,18 @@ import main.featureGUI.Util.Kasir;
  */
 public class PembayaranGUI extends javax.swing.JPanel {
 
-    
-    public PembayaranGUI() {
+    private static final PembayaranGUI PEMBAYARAN_GUI = new PembayaranGUI();
+
+
+    private PembayaranGUI() {
         initComponents();
     }
+
+    public static PembayaranGUI getInstance(){
+        return PembayaranGUI.PEMBAYARAN_GUI;
+    }
+
+
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 

@@ -13,8 +13,14 @@ public class PengaturanGUI extends javax.swing.JPanel {
     /**
      * Creates new form Setting
      */
-    public PengaturanGUI() {
+    private static final PengaturanGUI PENGATURAN_GUI = new PengaturanGUI();
+
+    private PengaturanGUI() {
         initComponents();
+    }
+
+    public static PengaturanGUI getInstance(){
+        return PengaturanGUI.PENGATURAN_GUI;
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
