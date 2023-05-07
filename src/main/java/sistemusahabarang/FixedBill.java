@@ -1,13 +1,17 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package sistemusahabarang;
+
 
 /**
  *
  * @author user
  */
-public class FixedBill {
-    
+public class FixedBill extends Bill {
+
+    public double getTotalPrice(String path) {
+        double totalPrice = 0;
+        
+        return totalPrice;
+    }
+
+
 }

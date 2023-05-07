@@ -2,13 +2,17 @@ package sistemusahabarang;
 
 import java.io.Serializable;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import lombok.Data;
 
 @Data
 @XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Barang implements Serializable {
+    private int id;
     private int stock;
     private String name;
     private double sellPrice;
@@ -18,7 +22,8 @@ public class Barang implements Serializable {
 
     public Barang() {}
 
-    public Barang(int stock, String name, double sellPrice, double buyPrice, String kategori, String image) {
+    public Barang(int id, int stock, String name, double sellPrice, double buyPrice, String kategori, String image) {
+        this.id = id;
         this.stock = stock;
         this.name = name;
         this.sellPrice = sellPrice;
