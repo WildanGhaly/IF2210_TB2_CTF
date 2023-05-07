@@ -1,27 +1,91 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataWrapper>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
-        <id>7</id>
-        <points>0</points>
-        <totalSpent>0.0</totalSpent>
+        <vipMember>1</vipMember>
         <name>WillyVIP</name>
         <phoneNumber>1234567890</phoneNumber>
-        <vipMember>1</vipMember>
+        <id>200</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
-        <id>8</id>
-        <points>0</points>
-        <totalSpent>0.0</totalSpent>
+        <vipMember>1</vipMember>
         <name>WildanVIP</name>
         <phoneNumber>32422222222</phoneNumber>
-        <vipMember>1</vipMember>
+        <id>201</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
-        <id>9</id>
-        <points>0</points>
-        <totalSpent>0.0</totalSpent>
-        <name>GhalyVIP</name>
-        <phoneNumber>00000000000</phoneNumber>
         <vipMember>1</vipMember>
+        <name>JitterVIP</name>
+        <phoneNumber>00000000000</phoneNumber>
+        <id>202</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Zeta Woman</name>
+        <phoneNumber>0123470000</phoneNumber>
+        <id>203</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Omega Man</name>
+        <phoneNumber>00000000000</phoneNumber>
+        <id>204</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Delta Woman</name>
+        <phoneNumber>00000000000</phoneNumber>
+        <id>205</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Theta Man</name>
+        <phoneNumber>0999999000</phoneNumber>
+        <id>206</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Gamma Woman</name>
+        <phoneNumber>0000293120</phoneNumber>
+        <id>207</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Beta Man</name>
+        <phoneNumber>0099998888</phoneNumber>
+        <id>208</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Alpha Man</name>
+        <phoneNumber>8263700000</phoneNumber>
+        <id>209</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <vipMember>1</vipMember>
+        <name>Sigma Man</name>
+        <phoneNumber>8263700000</phoneNumber>
+        <id>210</id>
+        <points>0</points>
+        <totalSpent>200000</totalSpent>
     </item>
 </dataWrapper>
