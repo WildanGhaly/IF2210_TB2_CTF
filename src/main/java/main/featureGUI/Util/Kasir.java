@@ -8,13 +8,16 @@ import java.awt.Component;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
+import javax.xml.bind.JAXBException;
 
+import datastore.DataStoreMechanism;
 import sistemusahabarang.Barang;
 
 /**
@@ -26,6 +29,11 @@ public class Kasir extends javax.swing.JPanel {
     private final Image boxKatalogImg = RequestImage.requestImage("pembayaran/boxKatalogBarang.png");
     private final Image boxKatalog2Img = RequestImage.requestImage("pembayaran/boxHapusBarang.png");
     private final Image boxKatalog3Img = RequestImage.requestImage("pembayaran/customerBox.png");
+
+    private String pathFormat = ".xml";
+    private String pathItem = "src/main/java/datastore/database/Barang/barang" + pathFormat;
+    private String pathMember = "src/main/java/datastore/database/Member/member" + pathFormat;
+    private String pathVIP = "src/main/java/datastore/database/VIP/vip" + pathFormat;
     
     private List<BarangUI> listBarang = new ArrayList<>();
 
@@ -343,13 +351,18 @@ public class Kasir extends javax.swing.JPanel {
 
     private void comboBoxCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCustomerActionPerformed
         /*TODO ganti statusnya*/
+        try {
+            String[][] members = DataStoreMechanism.getMembersAsString(pathMember);
+            String[][] vip = DataStoreMechanism.getMembersAsString(pathVIP);
+        } catch (ClassNotFoundException | IOException | JAXBException e) {
+            e.printStackTrace();
+        }
         String.valueOf(comboBoxCustomer.getSelectedItem());
         
     }//GEN-LAST:event_comboBoxCustomerActionPerformed
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
-        /*TODO masukkin data */
-        JFrame popUpPayment = new PopUpPayment(new String[][] {});
+        JFrame popUpPayment = new PopUpPayment(null);
         popUpPayment.setVisible(true);
     }//GEN-LAST:event_payButtonActionPerformed
 
