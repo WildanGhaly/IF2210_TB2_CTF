@@ -779,7 +779,175 @@ public class DataStoreMechanism {
     }
 
 
+    /**
+     * <p>Reads data from path then convert it to String[][] format.</p>
+     * <p>This method is used to get all items in the database file. </p>
+     * <p>The method will load the data from the database file, then convert it to String[][] format.</p>
+     * <p>The method will return String[][] in the following format:</p>
+     * <ul>
+     * <li><code>String[i][0] = id</code></li>
+     * <li><code>String[i][1] = name</code></li>
+     * <li><code>String[i][2] = stock</code></li>
+     * <li><code>String[i][3] = sellPrice</code></li>
+     * <li><code>String[i][4] = buyPrice</code></li>
+     * <li><code>String[i][5] = kategori</code></li>
+     * <li><code>String[i][6] = description</code></li>
+     * <li><code>String[i][7] = image</code></li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static String[][] getBarangAsString (String path) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "items.xml";
+     * String[][] barang = DataStoreMechanism.getBarangAsString(path);
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @return The data in String[][] format.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Barang
+     * @see LinkedTreeMap
+     * @see DataStoreMechanism
+     */
+    public static String[][] getBarangAsString (String path) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+
+        String[][] barang = new String[data.size()][8];
+        
+        for (int i = 0; i < data.size(); i++){
+            if (data.get(i) instanceof Barang){
+                barang[i][0] = Integer.toString(((Barang) data.get(i)).getId());
+                barang[i][1] = ((Barang) data.get(i)).getName();
+                barang[i][2] = Integer.toString(((Barang) data.get(i)).getStock());
+                barang[i][3] = Double.toString(((Barang) data.get(i)).getSellPrice());
+                barang[i][4] = Double.toString(((Barang) data.get(i)).getBuyPrice());
+                barang[i][5] = ((Barang) data.get(i)).getKategori();
+                barang[i][6] = ((Barang) data.get(i)).getDescription();
+                barang[i][7] = ((Barang) data.get(i)).getImage();
+            } else if (data.get(i) instanceof LinkedTreeMap){
+                barang[i][0] = Integer.toString((int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("id"));
+                barang[i][1] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("name");
+                barang[i][2] = Integer.toString((int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("stock"));
+                barang[i][3] = Double.toString((double) ((LinkedTreeMap<?, ?>) data.get(i)).get("sellPrice"));
+                barang[i][4] = Double.toString((double) ((LinkedTreeMap<?, ?>) data.get(i)).get("buyPrice"));
+                barang[i][5] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("kategori");
+                barang[i][6] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("description");
+                barang[i][7] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("image");
+            }
+        }
+
+        return barang;
+    }
     
+
+    /**
+     * <p>This method is used to get all members and vip in the database file. </p>
+     * <p>The method will load the data from the database file, then convert it to String[][] format.</p>
+     * <p>The method will return String[][] in the following format:</p>
+     * <ul>
+     * <li><code>String[i][0] = id</code></li>
+     * <li><code>String[i][1] = name</code></li>
+     * <li><code>String[i][2] = phoneNumber</code></li>
+     * <li><code>String[i][3] = points</code></li>
+     * <li><code>String[i][4] = totalSpent</code></li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static String[][] getMembersAsString (String path) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "members.xml";
+     * String[][] members = DataStoreMechanism.getMembersAsString(path);
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @return The data in String[][] format.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Member
+     * @see VIP
+     * @see LinkedTreeMap
+     * @see DataStoreMechanism
+     */
+    public static String[][] getMembersAsString(String path) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+
+        String[][] members = new String[data.size()][5];
+
+        for (int i = 0; i < data.size(); i++){
+            if (data.get(i) instanceof Member){
+                members[i][0] = Integer.toString(((Member) data.get(i)).getId());
+                members[i][1] = ((Member) data.get(i)).getName();
+                members[i][2] = ((Member) data.get(i)).getPhoneNumber();
+                members[i][3] = Integer.toString(((Member) data.get(i)).getPoints());
+                members[i][4] = Double.toString(((Member) data.get(i)).getTotalSpent());
+            } else if (data.get(i) instanceof LinkedTreeMap){
+                members[i][0] = Integer.toString((int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("id"));
+                members[i][1] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("name");
+                members[i][2] = (String) ((LinkedTreeMap<?, ?>) data.get(i)).get("phoneNumber");
+                members[i][3] = Integer.toString((int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("points"));
+                members[i][4] = Double.toString((double) ((LinkedTreeMap<?, ?>) data.get(i)).get("totalSpent"));
+            }
+        }
+
+        return members;
+    }
+
+
     /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args
@@ -793,6 +961,7 @@ public class DataStoreMechanism {
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
         String path2        = "src/main/java/datastore/database/Barang/barang.xml";
         String path3        = "src/main/java/datastore/database/Customer/customer.json";
+        String path4        = "src/main/java/datastore/database/Member/member.obj";
         String historyPath  = "src/main/java/datastore/database/History/history.xml";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
@@ -832,5 +1001,36 @@ public class DataStoreMechanism {
         updateBarang(path2, "newBarang", "20", "1000", "500", "newKategori", "newDescription", "newImg");
         
         System.out.println("\n===================================================\n");
+    
+        String[][] members = DataStoreMechanism.getMembersAsString(path);
+        String[][] members2 = DataStoreMechanism.getMembersAsString(path4);
+        for (String[] s : members){
+            for (String s2 : s){
+                System.out.print(s2 + " ");
+            }
+            System.out.println();
+
+        }
+
+        for (String[] ssss : members2){
+            for (String s2 : ssss){
+                System.out.print(s2 + " ");
+            }
+            System.out.println();
+
+        }
+
+        System.out.println("\n===================================================\n");
+
+        String[][] barang = DataStoreMechanism.getBarangAsString(path2);
+        for (String[] ss : barang){
+            for (String s2 : ss){
+                System.out.print(s2 + " ");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("\n===================================================\n");
     }
+    
 }
