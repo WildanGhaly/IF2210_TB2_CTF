@@ -2,28 +2,4501 @@
   {
     "id": 1,
     "name": "Willy",
-    "itemName": "Ayam Goreng",
-    "date": "2023-05-07",
+    "itemName": "Cheese",
+    "date": "2023-1-14",
+    "quantity": 4,
+    "price": 14.09,
+    "total": 56.36
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Bagel",
+    "date": "2023-12-19",
+    "quantity": 9,
+    "price": 9.32,
+    "total": 83.88
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Steak",
+    "date": "2023-9-19",
+    "quantity": 7,
+    "price": 10.52,
+    "total": 73.64
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-8-1",
     "quantity": 2,
-    "price": 5000.0,
-    "total": 10000.0
+    "price": 16.84,
+    "total": 33.68
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ice Cream",
+    "date": "2023-11-25",
+    "quantity": 1,
+    "price": 19.5,
+    "total": 19.5
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-12-20",
+    "quantity": 1,
+    "price": 14.07,
+    "total": 14.07
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-6-3",
+    "quantity": 5,
+    "price": 12.31,
+    "total": 61.55
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Grilled Chicken",
+    "date": "2023-8-28",
+    "quantity": 7,
+    "price": 7.36,
+    "total": 51.52
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Pizza",
+    "date": "2023-6-5",
+    "quantity": 7,
+    "price": 5.56,
+    "total": 38.92
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Chicken Tenders",
+    "date": "2023-11-15",
+    "quantity": 5,
+    "price": 17.52,
+    "total": 87.6
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Fried Chicken",
+    "date": "2023-10-19",
+    "quantity": 1,
+    "price": 18.75,
+    "total": 18.75
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Pasta",
+    "date": "2023-9-5",
+    "quantity": 6,
+    "price": 6.92,
+    "total": 41.52
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Chimichanga",
+    "date": "2023-10-16",
+    "quantity": 1,
+    "price": 10.19,
+    "total": 10.19
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-3-25",
+    "quantity": 4,
+    "price": 18.39,
+    "total": 73.56
   },
   {
     "id": 1,
     "name": "Willy",
-    "itemName": "Ayam Bakar",
-    "date": "2023-05-07",
+    "itemName": "Cheetos",
+    "date": "2023-11-26",
     "quantity": 3,
-    "price": 5000.0,
-    "total": 15000.0
+    "price": 17.17,
+    "total": 51.51
   },
   {
     "id": 2,
-    "name": "Wildan",
-    "itemName": "Ayam Geprek",
-    "date": "2023-05-07",
+    "name": "Salman",
+    "itemName": "Pancakes",
+    "date": "2023-2-24",
+    "quantity": 2,
+    "price": 16.06,
+    "total": 32.12
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Chicken Tenders",
+    "date": "2023-2-13",
+    "quantity": 1,
+    "price": 13.24,
+    "total": 13.24
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-12-21",
+    "quantity": 5,
+    "price": 15.71,
+    "total": 78.55
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-4-15",
+    "quantity": 3,
+    "price": 9.02,
+    "total": 27.06
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Tomato",
+    "date": "2023-6-14",
+    "quantity": 1,
+    "price": 16.24,
+    "total": 16.24
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-9-12",
+    "quantity": 6,
+    "price": 15.75,
+    "total": 94.5
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Pancakes",
+    "date": "2023-3-27",
+    "quantity": 8,
+    "price": 9.66,
+    "total": 77.28
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Tomato",
+    "date": "2023-12-10",
     "quantity": 4,
-    "price": 3000.0,
-    "total": 12000.0
+    "price": 8.13,
+    "total": 32.52
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Marinara Sauce",
+    "date": "2023-9-19",
+    "quantity": 6,
+    "price": 8.31,
+    "total": 49.86
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Bagel",
+    "date": "2023-10-16",
+    "quantity": 1,
+    "price": 13.71,
+    "total": 13.71
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "French Fries",
+    "date": "2023-11-21",
+    "quantity": 1,
+    "price": 10.89,
+    "total": 10.89
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Sausage",
+    "date": "2023-4-7",
+    "quantity": 9,
+    "price": 11.4,
+    "total": 102.6
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-10-4",
+    "quantity": 10,
+    "price": 5.94,
+    "total": 59.4
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Salad",
+    "date": "2023-1-26",
+    "quantity": 2,
+    "price": 16.82,
+    "total": 33.64
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pasta",
+    "date": "2023-1-15",
+    "quantity": 10,
+    "price": 8.3,
+    "total": 83.0
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-5-27",
+    "quantity": 7,
+    "price": 18.32,
+    "total": 128.24
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Cookies",
+    "date": "2023-10-26",
+    "quantity": 1,
+    "price": 5.03,
+    "total": 5.03
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-9-6",
+    "quantity": 3,
+    "price": 11.01,
+    "total": 33.03
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Stuffing",
+    "date": "2023-3-20",
+    "quantity": 9,
+    "price": 14.55,
+    "total": 130.95
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Pancakes",
+    "date": "2023-2-2",
+    "quantity": 4,
+    "price": 19.66,
+    "total": 78.64
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-1-8",
+    "quantity": 1,
+    "price": 18.63,
+    "total": 18.63
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-7-10",
+    "quantity": 3,
+    "price": 8.37,
+    "total": 25.11
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Fried Rice",
+    "date": "2023-4-9",
+    "quantity": 7,
+    "price": 10.63,
+    "total": 74.41
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-10-2",
+    "quantity": 10,
+    "price": 10.99,
+    "total": 109.9
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Salsa",
+    "date": "2023-3-1",
+    "quantity": 6,
+    "price": 7.37,
+    "total": 44.22
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Steak",
+    "date": "2023-6-13",
+    "quantity": 8,
+    "price": 6.54,
+    "total": 52.32
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-1-13",
+    "quantity": 4,
+    "price": 6.37,
+    "total": 25.48
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Banana",
+    "date": "2023-5-18",
+    "quantity": 9,
+    "price": 13.99,
+    "total": 125.91
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Salad",
+    "date": "2023-12-3",
+    "quantity": 2,
+    "price": 11.74,
+    "total": 23.48
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Tacos",
+    "date": "2023-9-19",
+    "quantity": 6,
+    "price": 14.84,
+    "total": 89.04
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-9-9",
+    "quantity": 6,
+    "price": 18.95,
+    "total": 113.7
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-1-19",
+    "quantity": 3,
+    "price": 16.43,
+    "total": 49.29
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-6-25",
+    "quantity": 3,
+    "price": 18.68,
+    "total": 56.04
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Potato Chips",
+    "date": "2023-10-9",
+    "quantity": 5,
+    "price": 11.75,
+    "total": 58.75
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Grilled Chicken",
+    "date": "2023-9-23",
+    "quantity": 4,
+    "price": 7.97,
+    "total": 31.88
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Sausage",
+    "date": "2023-7-3",
+    "quantity": 4,
+    "price": 10.09,
+    "total": 40.36
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Pancakes",
+    "date": "2023-12-23",
+    "quantity": 10,
+    "price": 7.26,
+    "total": 72.6
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Cheese",
+    "date": "2023-3-2",
+    "quantity": 2,
+    "price": 5.91,
+    "total": 11.82
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Ice Cream",
+    "date": "2023-11-24",
+    "quantity": 2,
+    "price": 12.77,
+    "total": 25.54
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-10-16",
+    "quantity": 5,
+    "price": 18.87,
+    "total": 94.35
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Bread",
+    "date": "2023-8-25",
+    "quantity": 8,
+    "price": 18.33,
+    "total": 146.64
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Ice Cream",
+    "date": "2023-11-3",
+    "quantity": 7,
+    "price": 10.1,
+    "total": 70.7
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-2-18",
+    "quantity": 5,
+    "price": 8.13,
+    "total": 40.65
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Burritos",
+    "date": "2023-7-8",
+    "quantity": 1,
+    "price": 18.35,
+    "total": 18.35
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Fried Chicken",
+    "date": "2023-2-7",
+    "quantity": 9,
+    "price": 11.56,
+    "total": 104.04
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Bread",
+    "date": "2023-1-1",
+    "quantity": 8,
+    "price": 6.55,
+    "total": 52.4
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Muffins",
+    "date": "2023-2-13",
+    "quantity": 7,
+    "price": 6.12,
+    "total": 42.84
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Muffins",
+    "date": "2023-10-21",
+    "quantity": 3,
+    "price": 19.78,
+    "total": 59.34
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Salad",
+    "date": "2023-2-28",
+    "quantity": 6,
+    "price": 12.67,
+    "total": 76.02
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-6-26",
+    "quantity": 3,
+    "price": 11.72,
+    "total": 35.16
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Bread",
+    "date": "2023-3-9",
+    "quantity": 3,
+    "price": 15.73,
+    "total": 47.19
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Submarine Sandwiches",
+    "date": "2023-11-13",
+    "quantity": 9,
+    "price": 14.7,
+    "total": 132.3
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Cheetos",
+    "date": "2023-2-1",
+    "quantity": 9,
+    "price": 18.78,
+    "total": 169.02
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Apple Pie",
+    "date": "2023-8-15",
+    "quantity": 8,
+    "price": 9.44,
+    "total": 75.52
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Banana Bread",
+    "date": "2023-4-24",
+    "quantity": 9,
+    "price": 17.46,
+    "total": 157.14
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Hot Dogs",
+    "date": "2023-9-26",
+    "quantity": 4,
+    "price": 11.74,
+    "total": 46.96
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Salsa",
+    "date": "2023-11-19",
+    "quantity": 6,
+    "price": 17.03,
+    "total": 102.18
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "CheeseCake",
+    "date": "2023-12-20",
+    "quantity": 4,
+    "price": 14.88,
+    "total": 59.52
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Eggs",
+    "date": "2023-2-15",
+    "quantity": 3,
+    "price": 9.29,
+    "total": 27.87
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-10-14",
+    "quantity": 8,
+    "price": 11.95,
+    "total": 95.6
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Chicken Tenders",
+    "date": "2023-2-6",
+    "quantity": 6,
+    "price": 12.77,
+    "total": 76.62
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Muffins",
+    "date": "2023-9-25",
+    "quantity": 2,
+    "price": 19.08,
+    "total": 38.16
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Chimichanga",
+    "date": "2023-7-2",
+    "quantity": 10,
+    "price": 11.89,
+    "total": 118.9
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Pasta",
+    "date": "2023-3-24",
+    "quantity": 4,
+    "price": 18.57,
+    "total": 74.28
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Fried Rice",
+    "date": "2023-7-12",
+    "quantity": 9,
+    "price": 17.71,
+    "total": 159.39
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Cheese",
+    "date": "2023-8-27",
+    "quantity": 7,
+    "price": 13.99,
+    "total": 97.93
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Muffins",
+    "date": "2023-8-24",
+    "quantity": 2,
+    "price": 11.37,
+    "total": 22.74
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-6-12",
+    "quantity": 4,
+    "price": 8.65,
+    "total": 34.6
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Cheetos",
+    "date": "2023-6-3",
+    "quantity": 9,
+    "price": 10.13,
+    "total": 91.17
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Pancakes",
+    "date": "2023-5-15",
+    "quantity": 5,
+    "price": 7.56,
+    "total": 37.8
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Brownies",
+    "date": "2023-6-23",
+    "quantity": 2,
+    "price": 6.36,
+    "total": 12.72
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Broccoli",
+    "date": "2023-11-11",
+    "quantity": 7,
+    "price": 16.0,
+    "total": 112.0
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-5-2",
+    "quantity": 7,
+    "price": 5.03,
+    "total": 35.21
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Cookies",
+    "date": "2023-2-12",
+    "quantity": 8,
+    "price": 13.25,
+    "total": 106.0
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Echilada",
+    "date": "2023-8-24",
+    "quantity": 4,
+    "price": 9.79,
+    "total": 39.16
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Ice Cream",
+    "date": "2023-9-7",
+    "quantity": 2,
+    "price": 19.54,
+    "total": 39.08
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Bagel",
+    "date": "2023-10-7",
+    "quantity": 6,
+    "price": 13.06,
+    "total": 78.36
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-10-9",
+    "quantity": 2,
+    "price": 12.58,
+    "total": 25.16
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "CheeseCake",
+    "date": "2023-10-2",
+    "quantity": 3,
+    "price": 12.55,
+    "total": 37.65
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-9-5",
+    "quantity": 9,
+    "price": 16.04,
+    "total": 144.36
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Grilled Chicken",
+    "date": "2023-7-18",
+    "quantity": 7,
+    "price": 11.89,
+    "total": 83.23
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Sausage",
+    "date": "2023-9-28",
+    "quantity": 4,
+    "price": 11.22,
+    "total": 44.88
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Chicken Tenders",
+    "date": "2023-10-4",
+    "quantity": 7,
+    "price": 13.15,
+    "total": 92.05
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Bread",
+    "date": "2023-7-19",
+    "quantity": 3,
+    "price": 8.85,
+    "total": 26.55
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-10-2",
+    "quantity": 9,
+    "price": 14.24,
+    "total": 128.16
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Cheetos",
+    "date": "2023-12-16",
+    "quantity": 5,
+    "price": 14.17,
+    "total": 70.85
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "French Fries",
+    "date": "2023-11-13",
+    "quantity": 1,
+    "price": 14.22,
+    "total": 14.22
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Hot Dogs",
+    "date": "2023-8-5",
+    "quantity": 4,
+    "price": 11.76,
+    "total": 47.04
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-3-1",
+    "quantity": 8,
+    "price": 7.41,
+    "total": 59.28
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Cookies",
+    "date": "2023-11-2",
+    "quantity": 10,
+    "price": 8.45,
+    "total": 84.5
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Cheetos",
+    "date": "2023-11-3",
+    "quantity": 4,
+    "price": 16.96,
+    "total": 67.84
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Cheetos",
+    "date": "2023-12-27",
+    "quantity": 1,
+    "price": 15.84,
+    "total": 15.84
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Chicken Tenders",
+    "date": "2023-2-16",
+    "quantity": 6,
+    "price": 10.53,
+    "total": 63.18
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Tacos",
+    "date": "2023-4-28",
+    "quantity": 7,
+    "price": 12.98,
+    "total": 90.86
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Broccoli",
+    "date": "2023-3-3",
+    "quantity": 6,
+    "price": 10.49,
+    "total": 62.94
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Ribs",
+    "date": "2023-1-21",
+    "quantity": 5,
+    "price": 12.03,
+    "total": 60.15
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "CheeseCake",
+    "date": "2023-5-15",
+    "quantity": 1,
+    "price": 7.14,
+    "total": 7.14
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Eggs",
+    "date": "2023-3-15",
+    "quantity": 9,
+    "price": 13.14,
+    "total": 118.26
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Burger",
+    "date": "2023-1-7",
+    "quantity": 5,
+    "price": 5.36,
+    "total": 26.8
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Pancakes",
+    "date": "2023-7-3",
+    "quantity": 4,
+    "price": 17.14,
+    "total": 68.56
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-2-24",
+    "quantity": 3,
+    "price": 6.23,
+    "total": 18.69
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Chicken Tenders",
+    "date": "2023-8-27",
+    "quantity": 8,
+    "price": 18.99,
+    "total": 151.92
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Bacon",
+    "date": "2023-8-3",
+    "quantity": 5,
+    "price": 15.53,
+    "total": 77.65
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Chicken Tenders",
+    "date": "2023-1-8",
+    "quantity": 10,
+    "price": 15.5,
+    "total": 155.0
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Salad",
+    "date": "2023-10-18",
+    "quantity": 8,
+    "price": 13.17,
+    "total": 105.36
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-4-8",
+    "quantity": 2,
+    "price": 12.91,
+    "total": 25.82
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Bread",
+    "date": "2023-7-25",
+    "quantity": 5,
+    "price": 8.03,
+    "total": 40.15
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-8-8",
+    "quantity": 7,
+    "price": 15.99,
+    "total": 111.93
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Apple Pie",
+    "date": "2023-11-20",
+    "quantity": 1,
+    "price": 5.89,
+    "total": 5.89
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Cookies",
+    "date": "2023-6-21",
+    "quantity": 9,
+    "price": 11.09,
+    "total": 99.81
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Bread",
+    "date": "2023-12-2",
+    "quantity": 3,
+    "price": 9.31,
+    "total": 27.93
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Sausage",
+    "date": "2023-12-5",
+    "quantity": 1,
+    "price": 14.34,
+    "total": 14.34
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-4-6",
+    "quantity": 10,
+    "price": 9.61,
+    "total": 96.1
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Doritos",
+    "date": "2023-6-19",
+    "quantity": 1,
+    "price": 10.17,
+    "total": 10.17
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Burritos",
+    "date": "2023-2-21",
+    "quantity": 10,
+    "price": 11.1,
+    "total": 111.0
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Brownies",
+    "date": "2023-8-24",
+    "quantity": 4,
+    "price": 9.34,
+    "total": 37.36
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-4-19",
+    "quantity": 10,
+    "price": 17.28,
+    "total": 172.8
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Steak",
+    "date": "2023-11-11",
+    "quantity": 3,
+    "price": 16.74,
+    "total": 50.22
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Fried Rice",
+    "date": "2023-3-10",
+    "quantity": 4,
+    "price": 14.77,
+    "total": 59.08
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Banana Bread",
+    "date": "2023-4-25",
+    "quantity": 7,
+    "price": 19.37,
+    "total": 135.59
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-11-12",
+    "quantity": 7,
+    "price": 5.51,
+    "total": 38.57
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Doritos",
+    "date": "2023-9-7",
+    "quantity": 10,
+    "price": 5.32,
+    "total": 53.2
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Ribs",
+    "date": "2023-5-19",
+    "quantity": 1,
+    "price": 19.27,
+    "total": 19.27
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-9-11",
+    "quantity": 7,
+    "price": 13.96,
+    "total": 97.72
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Salad",
+    "date": "2023-9-27",
+    "quantity": 3,
+    "price": 19.52,
+    "total": 58.56
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "French Fries",
+    "date": "2023-8-25",
+    "quantity": 9,
+    "price": 19.51,
+    "total": 175.59
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Cheese",
+    "date": "2023-3-15",
+    "quantity": 7,
+    "price": 17.3,
+    "total": 121.1
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Banana Bread",
+    "date": "2023-11-22",
+    "quantity": 10,
+    "price": 10.42,
+    "total": 104.2
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Banana",
+    "date": "2023-4-23",
+    "quantity": 9,
+    "price": 19.4,
+    "total": 174.6
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-3-4",
+    "quantity": 6,
+    "price": 14.67,
+    "total": 88.02
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Bread",
+    "date": "2023-6-25",
+    "quantity": 1,
+    "price": 16.43,
+    "total": 16.43
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-6-8",
+    "quantity": 3,
+    "price": 6.06,
+    "total": 18.18
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Eggs",
+    "date": "2023-11-28",
+    "quantity": 3,
+    "price": 10.49,
+    "total": 31.47
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "French Fries",
+    "date": "2023-7-19",
+    "quantity": 5,
+    "price": 16.18,
+    "total": 80.9
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Banana",
+    "date": "2023-7-2",
+    "quantity": 4,
+    "price": 18.52,
+    "total": 74.08
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-8-12",
+    "quantity": 5,
+    "price": 9.39,
+    "total": 46.95
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Grilled Chicken",
+    "date": "2023-3-6",
+    "quantity": 5,
+    "price": 14.36,
+    "total": 71.8
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Broccoli",
+    "date": "2023-10-24",
+    "quantity": 10,
+    "price": 7.83,
+    "total": 78.3
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Burritos",
+    "date": "2023-6-22",
+    "quantity": 10,
+    "price": 15.03,
+    "total": 150.3
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-10-13",
+    "quantity": 6,
+    "price": 15.26,
+    "total": 91.56
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Apple Pie",
+    "date": "2023-7-13",
+    "quantity": 1,
+    "price": 16.29,
+    "total": 16.29
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Eggs",
+    "date": "2023-2-24",
+    "quantity": 4,
+    "price": 13.94,
+    "total": 55.76
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Burritos",
+    "date": "2023-12-22",
+    "quantity": 6,
+    "price": 8.4,
+    "total": 50.4
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Stuffing",
+    "date": "2023-6-14",
+    "quantity": 4,
+    "price": 6.45,
+    "total": 25.8
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "French Fries",
+    "date": "2023-6-24",
+    "quantity": 4,
+    "price": 13.0,
+    "total": 52.0
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Hot Dogs",
+    "date": "2023-1-19",
+    "quantity": 5,
+    "price": 18.84,
+    "total": 94.2
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "French Fries",
+    "date": "2023-9-18",
+    "quantity": 10,
+    "price": 13.39,
+    "total": 133.9
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Bread",
+    "date": "2023-3-5",
+    "quantity": 7,
+    "price": 18.54,
+    "total": 129.78
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Steak",
+    "date": "2023-10-21",
+    "quantity": 7,
+    "price": 16.79,
+    "total": 117.53
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Broccoli",
+    "date": "2023-10-20",
+    "quantity": 2,
+    "price": 5.17,
+    "total": 10.34
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Pancakes",
+    "date": "2023-3-23",
+    "quantity": 2,
+    "price": 5.09,
+    "total": 10.18
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Bacon",
+    "date": "2023-6-2",
+    "quantity": 7,
+    "price": 6.04,
+    "total": 42.28
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-4-16",
+    "quantity": 6,
+    "price": 16.39,
+    "total": 98.34
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-10-19",
+    "quantity": 10,
+    "price": 9.46,
+    "total": 94.6
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-5-22",
+    "quantity": 10,
+    "price": 15.07,
+    "total": 150.7
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Potato Chips",
+    "date": "2023-3-18",
+    "quantity": 5,
+    "price": 18.69,
+    "total": 93.45
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pizza",
+    "date": "2023-5-10",
+    "quantity": 1,
+    "price": 16.65,
+    "total": 16.65
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Bagel",
+    "date": "2023-2-27",
+    "quantity": 6,
+    "price": 10.99,
+    "total": 65.94
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Ice Cream",
+    "date": "2023-3-27",
+    "quantity": 5,
+    "price": 12.48,
+    "total": 62.4
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Brownies",
+    "date": "2023-2-27",
+    "quantity": 4,
+    "price": 11.94,
+    "total": 47.76
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-6-7",
+    "quantity": 7,
+    "price": 11.42,
+    "total": 79.94
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Banana",
+    "date": "2023-11-21",
+    "quantity": 5,
+    "price": 7.95,
+    "total": 39.75
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Salad",
+    "date": "2023-8-18",
+    "quantity": 1,
+    "price": 12.88,
+    "total": 12.88
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-3-10",
+    "quantity": 10,
+    "price": 17.53,
+    "total": 175.3
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-6-4",
+    "quantity": 10,
+    "price": 11.2,
+    "total": 112.0
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Marinara Sauce",
+    "date": "2023-1-26",
+    "quantity": 7,
+    "price": 9.75,
+    "total": 68.25
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Banana Bread",
+    "date": "2023-10-13",
+    "quantity": 1,
+    "price": 8.55,
+    "total": 8.55
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Echilada",
+    "date": "2023-8-10",
+    "quantity": 2,
+    "price": 5.93,
+    "total": 11.86
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Muffins",
+    "date": "2023-2-18",
+    "quantity": 2,
+    "price": 12.96,
+    "total": 25.92
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Grilled Chicken",
+    "date": "2023-5-23",
+    "quantity": 1,
+    "price": 8.2,
+    "total": 8.2
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Steak",
+    "date": "2023-1-23",
+    "quantity": 3,
+    "price": 5.27,
+    "total": 15.81
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ribs",
+    "date": "2023-4-14",
+    "quantity": 3,
+    "price": 6.1,
+    "total": 18.3
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Broccoli",
+    "date": "2023-10-9",
+    "quantity": 10,
+    "price": 5.29,
+    "total": 52.9
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Stuffing",
+    "date": "2023-2-28",
+    "quantity": 3,
+    "price": 15.72,
+    "total": 47.16
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Ice Cream",
+    "date": "2023-8-18",
+    "quantity": 7,
+    "price": 13.86,
+    "total": 97.02
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "CheeseCake",
+    "date": "2023-6-21",
+    "quantity": 6,
+    "price": 9.26,
+    "total": 55.56
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Echilada",
+    "date": "2023-12-4",
+    "quantity": 5,
+    "price": 14.08,
+    "total": 70.4
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "French Fries",
+    "date": "2023-3-15",
+    "quantity": 9,
+    "price": 12.96,
+    "total": 116.64
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Eggs",
+    "date": "2023-8-16",
+    "quantity": 9,
+    "price": 5.23,
+    "total": 47.07
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Tacos",
+    "date": "2023-12-19",
+    "quantity": 10,
+    "price": 16.57,
+    "total": 165.7
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-9-17",
+    "quantity": 6,
+    "price": 11.06,
+    "total": 66.36
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Banana",
+    "date": "2023-8-12",
+    "quantity": 10,
+    "price": 9.6,
+    "total": 96.0
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pasta",
+    "date": "2023-7-26",
+    "quantity": 10,
+    "price": 16.85,
+    "total": 168.5
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Ribs",
+    "date": "2023-5-21",
+    "quantity": 2,
+    "price": 10.44,
+    "total": 20.88
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Kiwi",
+    "date": "2023-2-7",
+    "quantity": 10,
+    "price": 6.55,
+    "total": 65.5
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Banana Bread",
+    "date": "2023-3-21",
+    "quantity": 8,
+    "price": 19.47,
+    "total": 155.76
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Pasta",
+    "date": "2023-8-17",
+    "quantity": 6,
+    "price": 11.99,
+    "total": 71.94
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Chicken Tenders",
+    "date": "2023-9-23",
+    "quantity": 4,
+    "price": 13.47,
+    "total": 53.88
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Brownies",
+    "date": "2023-9-28",
+    "quantity": 2,
+    "price": 11.19,
+    "total": 22.38
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Salad",
+    "date": "2023-7-7",
+    "quantity": 7,
+    "price": 14.22,
+    "total": 99.54
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Steak",
+    "date": "2023-3-27",
+    "quantity": 7,
+    "price": 6.52,
+    "total": 45.64
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "CheeseCake",
+    "date": "2023-9-2",
+    "quantity": 10,
+    "price": 13.32,
+    "total": 133.2
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Burger",
+    "date": "2023-6-1",
+    "quantity": 2,
+    "price": 9.74,
+    "total": 19.48
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Potato Chips",
+    "date": "2023-1-17",
+    "quantity": 8,
+    "price": 14.89,
+    "total": 119.12
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Sausage",
+    "date": "2023-8-12",
+    "quantity": 1,
+    "price": 5.41,
+    "total": 5.41
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Marinara Sauce",
+    "date": "2023-10-22",
+    "quantity": 4,
+    "price": 16.19,
+    "total": 64.76
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-5-17",
+    "quantity": 10,
+    "price": 10.18,
+    "total": 101.8
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-12-16",
+    "quantity": 4,
+    "price": 15.54,
+    "total": 62.16
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Sausage",
+    "date": "2023-12-15",
+    "quantity": 8,
+    "price": 8.54,
+    "total": 68.32
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Burritos",
+    "date": "2023-12-12",
+    "quantity": 6,
+    "price": 19.87,
+    "total": 119.22
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Brownies",
+    "date": "2023-2-20",
+    "quantity": 1,
+    "price": 12.04,
+    "total": 12.04
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Bread",
+    "date": "2023-4-4",
+    "quantity": 2,
+    "price": 11.46,
+    "total": 22.92
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-9-18",
+    "quantity": 5,
+    "price": 6.39,
+    "total": 31.95
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Apple Pie",
+    "date": "2023-9-3",
+    "quantity": 10,
+    "price": 14.44,
+    "total": 144.4
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Ice Cream",
+    "date": "2023-12-21",
+    "quantity": 8,
+    "price": 9.08,
+    "total": 72.64
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Chicken Tenders",
+    "date": "2023-3-11",
+    "quantity": 4,
+    "price": 13.88,
+    "total": 55.52
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-5-25",
+    "quantity": 2,
+    "price": 6.68,
+    "total": 13.36
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Stuffing",
+    "date": "2023-6-21",
+    "quantity": 6,
+    "price": 10.22,
+    "total": 61.32
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Hot Dogs",
+    "date": "2023-8-27",
+    "quantity": 3,
+    "price": 17.27,
+    "total": 51.81
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Ribs",
+    "date": "2023-5-21",
+    "quantity": 7,
+    "price": 8.06,
+    "total": 56.42
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Potato Chips",
+    "date": "2023-5-17",
+    "quantity": 2,
+    "price": 15.29,
+    "total": 30.58
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-1-15",
+    "quantity": 7,
+    "price": 14.67,
+    "total": 102.69
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Chicken Tenders",
+    "date": "2023-12-6",
+    "quantity": 4,
+    "price": 7.25,
+    "total": 29.0
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-1-26",
+    "quantity": 5,
+    "price": 8.5,
+    "total": 42.5
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-2-14",
+    "quantity": 9,
+    "price": 14.82,
+    "total": 133.38
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-9-23",
+    "quantity": 1,
+    "price": 6.86,
+    "total": 6.86
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-4-11",
+    "quantity": 10,
+    "price": 9.0,
+    "total": 90.0
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Submarine Sandwiches",
+    "date": "2023-1-3",
+    "quantity": 10,
+    "price": 15.89,
+    "total": 158.9
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Ice Cream",
+    "date": "2023-10-6",
+    "quantity": 10,
+    "price": 13.8,
+    "total": 138.0
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-5-1",
+    "quantity": 5,
+    "price": 12.59,
+    "total": 62.95
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Pancakes",
+    "date": "2023-8-1",
+    "quantity": 5,
+    "price": 19.52,
+    "total": 97.6
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-7-19",
+    "quantity": 9,
+    "price": 15.85,
+    "total": 142.65
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "CheeseCake",
+    "date": "2023-12-26",
+    "quantity": 7,
+    "price": 6.36,
+    "total": 44.52
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Grilled Chicken",
+    "date": "2023-1-18",
+    "quantity": 1,
+    "price": 19.95,
+    "total": 19.95
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Steak",
+    "date": "2023-6-25",
+    "quantity": 6,
+    "price": 7.93,
+    "total": 47.58
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-12-6",
+    "quantity": 6,
+    "price": 18.46,
+    "total": 110.76
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-8-1",
+    "quantity": 7,
+    "price": 15.74,
+    "total": 110.18
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "CheeseCake",
+    "date": "2023-7-15",
+    "quantity": 4,
+    "price": 10.67,
+    "total": 42.68
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Doritos",
+    "date": "2023-11-27",
+    "quantity": 1,
+    "price": 14.76,
+    "total": 14.76
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Banana Bread",
+    "date": "2023-11-21",
+    "quantity": 10,
+    "price": 18.49,
+    "total": 184.9
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Marinara Sauce",
+    "date": "2023-9-3",
+    "quantity": 9,
+    "price": 10.52,
+    "total": 94.68
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-4-20",
+    "quantity": 6,
+    "price": 10.71,
+    "total": 64.26
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Banana",
+    "date": "2023-10-1",
+    "quantity": 1,
+    "price": 13.44,
+    "total": 13.44
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Chimichanga",
+    "date": "2023-7-16",
+    "quantity": 4,
+    "price": 11.28,
+    "total": 45.12
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Doritos",
+    "date": "2023-8-23",
+    "quantity": 7,
+    "price": 13.33,
+    "total": 93.31
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Fried Chicken",
+    "date": "2023-1-26",
+    "quantity": 4,
+    "price": 6.13,
+    "total": 24.52
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Muffins",
+    "date": "2023-5-13",
+    "quantity": 3,
+    "price": 13.77,
+    "total": 41.31
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Chicken Tenders",
+    "date": "2023-4-2",
+    "quantity": 5,
+    "price": 7.71,
+    "total": 38.55
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "CheeseCake",
+    "date": "2023-8-22",
+    "quantity": 10,
+    "price": 18.48,
+    "total": 184.8
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Tomato",
+    "date": "2023-11-26",
+    "quantity": 10,
+    "price": 6.79,
+    "total": 67.9
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-10-16",
+    "quantity": 6,
+    "price": 14.5,
+    "total": 87.0
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Eggs",
+    "date": "2023-10-26",
+    "quantity": 4,
+    "price": 5.84,
+    "total": 23.36
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Apple Pie",
+    "date": "2023-6-10",
+    "quantity": 10,
+    "price": 16.26,
+    "total": 162.6
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Ribs",
+    "date": "2023-10-26",
+    "quantity": 8,
+    "price": 9.39,
+    "total": 75.12
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Salsa",
+    "date": "2023-9-24",
+    "quantity": 3,
+    "price": 14.77,
+    "total": 44.31
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Burritos",
+    "date": "2023-9-5",
+    "quantity": 6,
+    "price": 17.83,
+    "total": 106.98
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Brownies",
+    "date": "2023-9-22",
+    "quantity": 3,
+    "price": 13.8,
+    "total": 41.4
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Eggs",
+    "date": "2023-7-26",
+    "quantity": 9,
+    "price": 8.81,
+    "total": 79.29
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Doritos",
+    "date": "2023-9-6",
+    "quantity": 10,
+    "price": 15.09,
+    "total": 150.9
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-12-11",
+    "quantity": 1,
+    "price": 12.32,
+    "total": 12.32
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Cheese",
+    "date": "2023-6-6",
+    "quantity": 9,
+    "price": 13.89,
+    "total": 125.01
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Salsa",
+    "date": "2023-4-27",
+    "quantity": 10,
+    "price": 5.24,
+    "total": 52.4
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Marinara Sauce",
+    "date": "2023-10-24",
+    "quantity": 3,
+    "price": 5.28,
+    "total": 15.84
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Bagel",
+    "date": "2023-11-8",
+    "quantity": 3,
+    "price": 19.33,
+    "total": 57.99
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Pasta",
+    "date": "2023-2-18",
+    "quantity": 4,
+    "price": 12.41,
+    "total": 49.64
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Salad",
+    "date": "2023-9-15",
+    "quantity": 2,
+    "price": 12.05,
+    "total": 24.1
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Submarine Sandwiches",
+    "date": "2023-12-26",
+    "quantity": 1,
+    "price": 19.7,
+    "total": 19.7
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-12-6",
+    "quantity": 4,
+    "price": 17.53,
+    "total": 70.12
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Submarine Sandwiches",
+    "date": "2023-6-3",
+    "quantity": 8,
+    "price": 18.32,
+    "total": 146.56
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-12-5",
+    "quantity": 10,
+    "price": 7.7,
+    "total": 77.0
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Steak",
+    "date": "2023-8-19",
+    "quantity": 3,
+    "price": 5.2,
+    "total": 15.6
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Fried Chicken",
+    "date": "2023-3-17",
+    "quantity": 8,
+    "price": 19.57,
+    "total": 156.56
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-8-24",
+    "quantity": 8,
+    "price": 12.8,
+    "total": 102.4
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Fried Chicken",
+    "date": "2023-1-13",
+    "quantity": 7,
+    "price": 12.4,
+    "total": 86.8
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-1-24",
+    "quantity": 7,
+    "price": 13.8,
+    "total": 96.6
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Tacos",
+    "date": "2023-6-25",
+    "quantity": 4,
+    "price": 11.52,
+    "total": 46.08
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Sausage",
+    "date": "2023-12-18",
+    "quantity": 5,
+    "price": 19.88,
+    "total": 99.4
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Pancakes",
+    "date": "2023-12-9",
+    "quantity": 9,
+    "price": 10.92,
+    "total": 98.28
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Steak",
+    "date": "2023-6-21",
+    "quantity": 7,
+    "price": 11.82,
+    "total": 82.74
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Kiwi",
+    "date": "2023-6-3",
+    "quantity": 9,
+    "price": 18.7,
+    "total": 168.3
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Marinara Sauce",
+    "date": "2023-11-12",
+    "quantity": 5,
+    "price": 16.93,
+    "total": 84.65
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Cookies",
+    "date": "2023-2-28",
+    "quantity": 9,
+    "price": 19.08,
+    "total": 171.72
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-3-10",
+    "quantity": 7,
+    "price": 5.18,
+    "total": 36.26
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Hot Dogs",
+    "date": "2023-5-13",
+    "quantity": 9,
+    "price": 11.87,
+    "total": 106.83
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Ribs",
+    "date": "2023-4-22",
+    "quantity": 1,
+    "price": 12.13,
+    "total": 12.13
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-9-21",
+    "quantity": 8,
+    "price": 11.32,
+    "total": 90.56
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Fried Chicken",
+    "date": "2023-5-1",
+    "quantity": 8,
+    "price": 17.65,
+    "total": 141.2
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Grilled Chicken",
+    "date": "2023-2-21",
+    "quantity": 7,
+    "price": 14.46,
+    "total": 101.22
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Salsa",
+    "date": "2023-3-19",
+    "quantity": 3,
+    "price": 10.49,
+    "total": 31.47
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "CheeseCake",
+    "date": "2023-4-8",
+    "quantity": 5,
+    "price": 6.55,
+    "total": 32.75
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Brownies",
+    "date": "2023-11-16",
+    "quantity": 2,
+    "price": 17.85,
+    "total": 35.7
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Tacos",
+    "date": "2023-2-15",
+    "quantity": 4,
+    "price": 14.73,
+    "total": 58.92
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Apple Pie",
+    "date": "2023-9-12",
+    "quantity": 2,
+    "price": 15.42,
+    "total": 30.84
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Burritos",
+    "date": "2023-3-3",
+    "quantity": 8,
+    "price": 10.32,
+    "total": 82.56
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Cheese",
+    "date": "2023-3-1",
+    "quantity": 5,
+    "price": 14.13,
+    "total": 70.65
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-2-12",
+    "quantity": 3,
+    "price": 7.8,
+    "total": 23.4
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Ribs",
+    "date": "2023-5-15",
+    "quantity": 7,
+    "price": 7.36,
+    "total": 51.52
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Chimichanga",
+    "date": "2023-4-8",
+    "quantity": 7,
+    "price": 11.74,
+    "total": 82.18
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Eggs",
+    "date": "2023-2-15",
+    "quantity": 1,
+    "price": 14.49,
+    "total": 14.49
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Eggs",
+    "date": "2023-12-28",
+    "quantity": 10,
+    "price": 12.58,
+    "total": 125.8
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-10-13",
+    "quantity": 2,
+    "price": 7.33,
+    "total": 14.66
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-11-24",
+    "quantity": 8,
+    "price": 12.43,
+    "total": 99.44
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Banana Bread",
+    "date": "2023-1-28",
+    "quantity": 1,
+    "price": 15.72,
+    "total": 15.72
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-8-16",
+    "quantity": 2,
+    "price": 19.26,
+    "total": 38.52
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Apple Pie",
+    "date": "2023-3-11",
+    "quantity": 6,
+    "price": 11.32,
+    "total": 67.92
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Broccoli",
+    "date": "2023-11-10",
+    "quantity": 9,
+    "price": 12.83,
+    "total": 115.47
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Cookies",
+    "date": "2023-5-19",
+    "quantity": 1,
+    "price": 10.58,
+    "total": 10.58
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-4-14",
+    "quantity": 3,
+    "price": 8.04,
+    "total": 24.12
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Bread",
+    "date": "2023-2-23",
+    "quantity": 9,
+    "price": 17.75,
+    "total": 159.75
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Ribs",
+    "date": "2023-9-4",
+    "quantity": 4,
+    "price": 14.07,
+    "total": 56.28
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Salsa",
+    "date": "2023-2-28",
+    "quantity": 6,
+    "price": 12.23,
+    "total": 73.38
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Stuffing",
+    "date": "2023-10-2",
+    "quantity": 1,
+    "price": 7.86,
+    "total": 7.86
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Fried Chicken",
+    "date": "2023-1-25",
+    "quantity": 5,
+    "price": 17.33,
+    "total": 86.65
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Hot Dogs",
+    "date": "2023-2-19",
+    "quantity": 9,
+    "price": 12.81,
+    "total": 115.29
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-1-21",
+    "quantity": 9,
+    "price": 16.09,
+    "total": 144.81
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Banana Bread",
+    "date": "2023-12-9",
+    "quantity": 4,
+    "price": 8.83,
+    "total": 35.32
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-7-7",
+    "quantity": 9,
+    "price": 14.07,
+    "total": 126.63
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Chicken Pot Pie",
+    "date": "2023-3-27",
+    "quantity": 6,
+    "price": 5.71,
+    "total": 34.26
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pizza",
+    "date": "2023-3-12",
+    "quantity": 1,
+    "price": 9.63,
+    "total": 9.63
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Banana Bread",
+    "date": "2023-2-16",
+    "quantity": 6,
+    "price": 17.43,
+    "total": 104.58
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Tacos",
+    "date": "2023-9-8",
+    "quantity": 4,
+    "price": 18.18,
+    "total": 72.72
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Pasta",
+    "date": "2023-1-23",
+    "quantity": 9,
+    "price": 6.07,
+    "total": 54.63
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-8-23",
+    "quantity": 1,
+    "price": 8.28,
+    "total": 8.28
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Fried Rice",
+    "date": "2023-8-2",
+    "quantity": 7,
+    "price": 10.2,
+    "total": 71.4
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "French Fries",
+    "date": "2023-2-23",
+    "quantity": 9,
+    "price": 10.33,
+    "total": 92.97
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Hot Dogs",
+    "date": "2023-6-9",
+    "quantity": 4,
+    "price": 7.86,
+    "total": 31.44
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Cheese",
+    "date": "2023-8-25",
+    "quantity": 1,
+    "price": 14.1,
+    "total": 14.1
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Burritos",
+    "date": "2023-5-26",
+    "quantity": 10,
+    "price": 7.06,
+    "total": 70.6
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Fried Rice",
+    "date": "2023-7-24",
+    "quantity": 10,
+    "price": 16.86,
+    "total": 168.6
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Stuffing",
+    "date": "2023-2-12",
+    "quantity": 6,
+    "price": 19.25,
+    "total": 115.5
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Fried Rice",
+    "date": "2023-6-19",
+    "quantity": 1,
+    "price": 10.68,
+    "total": 10.68
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Banana Bread",
+    "date": "2023-7-12",
+    "quantity": 8,
+    "price": 12.85,
+    "total": 102.8
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Doritos",
+    "date": "2023-9-17",
+    "quantity": 10,
+    "price": 16.32,
+    "total": 163.2
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Cheese",
+    "date": "2023-11-11",
+    "quantity": 6,
+    "price": 19.06,
+    "total": 114.36
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "French Fries",
+    "date": "2023-7-22",
+    "quantity": 6,
+    "price": 12.85,
+    "total": 77.1
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Muffins",
+    "date": "2023-3-11",
+    "quantity": 10,
+    "price": 9.03,
+    "total": 90.3
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Alfredo Sauce",
+    "date": "2023-9-6",
+    "quantity": 1,
+    "price": 13.79,
+    "total": 13.79
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Broccoli",
+    "date": "2023-7-21",
+    "quantity": 2,
+    "price": 9.92,
+    "total": 19.84
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Burritos",
+    "date": "2023-5-27",
+    "quantity": 4,
+    "price": 17.76,
+    "total": 71.04
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Broccoli",
+    "date": "2023-7-2",
+    "quantity": 6,
+    "price": 16.24,
+    "total": 97.44
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Tomato",
+    "date": "2023-2-26",
+    "quantity": 2,
+    "price": 18.58,
+    "total": 37.16
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Salad",
+    "date": "2023-6-24",
+    "quantity": 10,
+    "price": 11.0,
+    "total": 110.0
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-1-25",
+    "quantity": 3,
+    "price": 18.77,
+    "total": 56.31
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Chicken Tenders",
+    "date": "2023-2-26",
+    "quantity": 2,
+    "price": 14.01,
+    "total": 28.02
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Chicken Tenders",
+    "date": "2023-9-21",
+    "quantity": 2,
+    "price": 13.51,
+    "total": 27.02
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Doritos",
+    "date": "2023-7-28",
+    "quantity": 3,
+    "price": 18.13,
+    "total": 54.39
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Chimichanga",
+    "date": "2023-7-3",
+    "quantity": 7,
+    "price": 11.77,
+    "total": 82.39
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Tomato",
+    "date": "2023-4-1",
+    "quantity": 1,
+    "price": 11.69,
+    "total": 11.69
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Echilada",
+    "date": "2023-6-14",
+    "quantity": 9,
+    "price": 13.72,
+    "total": 123.48
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Burritos",
+    "date": "2023-3-28",
+    "quantity": 10,
+    "price": 10.13,
+    "total": 101.3
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Ice Cream",
+    "date": "2023-4-3",
+    "quantity": 10,
+    "price": 8.58,
+    "total": 85.8
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Ice Cream",
+    "date": "2023-6-4",
+    "quantity": 3,
+    "price": 7.3,
+    "total": 21.9
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-2-5",
+    "quantity": 4,
+    "price": 7.48,
+    "total": 29.92
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-4-18",
+    "quantity": 8,
+    "price": 8.48,
+    "total": 67.84
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Steak",
+    "date": "2023-6-1",
+    "quantity": 4,
+    "price": 10.54,
+    "total": 42.16
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Salsa",
+    "date": "2023-11-18",
+    "quantity": 7,
+    "price": 8.57,
+    "total": 59.99
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Potato Chips",
+    "date": "2023-2-13",
+    "quantity": 3,
+    "price": 13.62,
+    "total": 40.86
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Burger",
+    "date": "2023-1-25",
+    "quantity": 10,
+    "price": 5.08,
+    "total": 50.8
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Steak",
+    "date": "2023-3-4",
+    "quantity": 2,
+    "price": 10.0,
+    "total": 20.0
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Burger",
+    "date": "2023-1-9",
+    "quantity": 1,
+    "price": 13.8,
+    "total": 13.8
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-3-24",
+    "quantity": 5,
+    "price": 17.45,
+    "total": 87.25
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Banana Bread",
+    "date": "2023-10-19",
+    "quantity": 2,
+    "price": 5.3,
+    "total": 10.6
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Cheese",
+    "date": "2023-3-10",
+    "quantity": 1,
+    "price": 16.43,
+    "total": 16.43
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Banana Bread",
+    "date": "2023-4-2",
+    "quantity": 7,
+    "price": 15.4,
+    "total": 107.8
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-4-5",
+    "quantity": 4,
+    "price": 10.24,
+    "total": 40.96
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-9-17",
+    "quantity": 4,
+    "price": 5.99,
+    "total": 23.96
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Hot Dogs",
+    "date": "2023-11-4",
+    "quantity": 10,
+    "price": 15.08,
+    "total": 150.8
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "CheeseCake",
+    "date": "2023-11-9",
+    "quantity": 4,
+    "price": 5.03,
+    "total": 20.12
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Salsa",
+    "date": "2023-12-2",
+    "quantity": 8,
+    "price": 6.03,
+    "total": 48.24
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Hot Dogs",
+    "date": "2023-6-12",
+    "quantity": 8,
+    "price": 19.96,
+    "total": 159.68
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-2-24",
+    "quantity": 1,
+    "price": 13.14,
+    "total": 13.14
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Ribs",
+    "date": "2023-12-4",
+    "quantity": 8,
+    "price": 6.87,
+    "total": 54.96
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-9-18",
+    "quantity": 2,
+    "price": 11.88,
+    "total": 23.76
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-10-1",
+    "quantity": 1,
+    "price": 12.35,
+    "total": 12.35
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Banana",
+    "date": "2023-11-6",
+    "quantity": 3,
+    "price": 18.84,
+    "total": 56.52
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Fried Chicken",
+    "date": "2023-7-22",
+    "quantity": 2,
+    "price": 16.58,
+    "total": 33.16
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Cheetos",
+    "date": "2023-7-3",
+    "quantity": 2,
+    "price": 10.49,
+    "total": 20.98
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Steak",
+    "date": "2023-4-21",
+    "quantity": 1,
+    "price": 17.94,
+    "total": 17.94
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Ribs",
+    "date": "2023-2-9",
+    "quantity": 4,
+    "price": 19.47,
+    "total": 77.88
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-10-14",
+    "quantity": 3,
+    "price": 10.67,
+    "total": 32.01
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Ribs",
+    "date": "2023-11-17",
+    "quantity": 5,
+    "price": 13.54,
+    "total": 67.7
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Bacon",
+    "date": "2023-6-13",
+    "quantity": 4,
+    "price": 8.56,
+    "total": 34.24
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Steak",
+    "date": "2023-3-25",
+    "quantity": 7,
+    "price": 16.27,
+    "total": 113.89
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Doritos",
+    "date": "2023-3-10",
+    "quantity": 5,
+    "price": 14.45,
+    "total": 72.25
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "CheeseCake",
+    "date": "2023-9-9",
+    "quantity": 1,
+    "price": 9.69,
+    "total": 9.69
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Brownies",
+    "date": "2023-12-21",
+    "quantity": 9,
+    "price": 11.06,
+    "total": 99.54
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Kiwi",
+    "date": "2023-3-19",
+    "quantity": 2,
+    "price": 14.05,
+    "total": 28.1
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Pasta",
+    "date": "2023-7-8",
+    "quantity": 1,
+    "price": 18.68,
+    "total": 18.68
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Bread",
+    "date": "2023-9-10",
+    "quantity": 2,
+    "price": 16.89,
+    "total": 33.78
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Tacos",
+    "date": "2023-1-15",
+    "quantity": 10,
+    "price": 15.26,
+    "total": 152.6
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "French Fries",
+    "date": "2023-9-25",
+    "quantity": 6,
+    "price": 9.97,
+    "total": 59.82
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-2-13",
+    "quantity": 8,
+    "price": 11.15,
+    "total": 89.2
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Echilada",
+    "date": "2023-8-4",
+    "quantity": 5,
+    "price": 5.81,
+    "total": 29.05
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Pancakes",
+    "date": "2023-12-8",
+    "quantity": 2,
+    "price": 16.14,
+    "total": 32.28
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-7-8",
+    "quantity": 2,
+    "price": 7.49,
+    "total": 14.98
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Hot Dogs",
+    "date": "2023-4-16",
+    "quantity": 2,
+    "price": 14.46,
+    "total": 28.92
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Bread",
+    "date": "2023-1-24",
+    "quantity": 8,
+    "price": 11.83,
+    "total": 94.64
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Banana Bread",
+    "date": "2023-12-19",
+    "quantity": 5,
+    "price": 16.37,
+    "total": 81.85
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Brownies",
+    "date": "2023-2-8",
+    "quantity": 5,
+    "price": 7.85,
+    "total": 39.25
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Ribs",
+    "date": "2023-10-5",
+    "quantity": 7,
+    "price": 11.11,
+    "total": 77.77
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "French Fries",
+    "date": "2023-6-14",
+    "quantity": 6,
+    "price": 17.38,
+    "total": 104.28
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Tacos",
+    "date": "2023-4-28",
+    "quantity": 5,
+    "price": 14.11,
+    "total": 70.55
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Eggs",
+    "date": "2023-5-11",
+    "quantity": 5,
+    "price": 16.86,
+    "total": 84.3
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Salad",
+    "date": "2023-8-16",
+    "quantity": 9,
+    "price": 10.21,
+    "total": 91.89
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Ice Cream",
+    "date": "2023-10-17",
+    "quantity": 4,
+    "price": 18.58,
+    "total": 74.32
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Pizza",
+    "date": "2023-7-15",
+    "quantity": 6,
+    "price": 8.68,
+    "total": 52.08
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Chicken Tenders",
+    "date": "2023-11-14",
+    "quantity": 4,
+    "price": 11.26,
+    "total": 45.04
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Chocolate Covered Strawberries",
+    "date": "2023-12-2",
+    "quantity": 10,
+    "price": 5.57,
+    "total": 55.7
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Banana Bread",
+    "date": "2023-8-25",
+    "quantity": 3,
+    "price": 18.96,
+    "total": 56.88
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Hot Dogs",
+    "date": "2023-2-8",
+    "quantity": 10,
+    "price": 6.74,
+    "total": 67.4
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Bacon",
+    "date": "2023-12-1",
+    "quantity": 6,
+    "price": 18.25,
+    "total": 109.5
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Bacon",
+    "date": "2023-1-22",
+    "quantity": 4,
+    "price": 12.11,
+    "total": 48.44
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-3-18",
+    "quantity": 9,
+    "price": 19.75,
+    "total": 177.75
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Cheese",
+    "date": "2023-11-23",
+    "quantity": 6,
+    "price": 17.72,
+    "total": 106.32
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Pumpkin Pie",
+    "date": "2023-2-2",
+    "quantity": 9,
+    "price": 17.39,
+    "total": 156.51
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Marinara Sauce",
+    "date": "2023-9-18",
+    "quantity": 5,
+    "price": 14.26,
+    "total": 71.3
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Burritos",
+    "date": "2023-12-25",
+    "quantity": 9,
+    "price": 13.34,
+    "total": 120.06
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Fried Rice",
+    "date": "2023-10-22",
+    "quantity": 1,
+    "price": 18.94,
+    "total": 18.94
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Broccoli",
+    "date": "2023-10-3",
+    "quantity": 10,
+    "price": 6.34,
+    "total": 63.4
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Burger",
+    "date": "2023-10-1",
+    "quantity": 1,
+    "price": 8.49,
+    "total": 8.49
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Echilada",
+    "date": "2023-3-23",
+    "quantity": 4,
+    "price": 10.11,
+    "total": 40.44
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Banana",
+    "date": "2023-7-20",
+    "quantity": 1,
+    "price": 5.9,
+    "total": 5.9
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Stuffing",
+    "date": "2023-7-8",
+    "quantity": 4,
+    "price": 16.13,
+    "total": 64.52
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Pasta",
+    "date": "2023-6-22",
+    "quantity": 2,
+    "price": 17.34,
+    "total": 34.68
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Echilada",
+    "date": "2023-5-28",
+    "quantity": 6,
+    "price": 14.56,
+    "total": 87.36
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Doritos",
+    "date": "2023-3-4",
+    "quantity": 1,
+    "price": 9.96,
+    "total": 9.96
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Brownies",
+    "date": "2023-9-18",
+    "quantity": 3,
+    "price": 14.18,
+    "total": 42.54
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Sausage",
+    "date": "2023-6-28",
+    "quantity": 10,
+    "price": 11.09,
+    "total": 110.9
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-6-2",
+    "quantity": 1,
+    "price": 14.27,
+    "total": 14.27
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Steak",
+    "date": "2023-9-3",
+    "quantity": 8,
+    "price": 7.24,
+    "total": 57.92
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Hot Dogs",
+    "date": "2023-11-19",
+    "quantity": 6,
+    "price": 15.26,
+    "total": 91.56
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Ice Cream Cake",
+    "date": "2023-12-7",
+    "quantity": 3,
+    "price": 15.06,
+    "total": 45.18
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Marinara Sauce",
+    "date": "2023-7-15",
+    "quantity": 6,
+    "price": 9.1,
+    "total": 54.6
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Salad",
+    "date": "2023-11-18",
+    "quantity": 10,
+    "price": 9.31,
+    "total": 93.1
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "French Fries",
+    "date": "2023-8-13",
+    "quantity": 8,
+    "price": 13.36,
+    "total": 106.88
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Doritos",
+    "date": "2023-12-23",
+    "quantity": 8,
+    "price": 6.64,
+    "total": 53.12
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Eggs",
+    "date": "2023-7-19",
+    "quantity": 2,
+    "price": 18.0,
+    "total": 36.0
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Brownies",
+    "date": "2023-5-27",
+    "quantity": 7,
+    "price": 12.73,
+    "total": 89.11
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Tomato",
+    "date": "2023-5-25",
+    "quantity": 6,
+    "price": 8.33,
+    "total": 49.98
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Doritos",
+    "date": "2023-5-10",
+    "quantity": 7,
+    "price": 12.47,
+    "total": 87.29
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Marinara Sauce",
+    "date": "2023-7-25",
+    "quantity": 9,
+    "price": 7.23,
+    "total": 65.07
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Kiwi",
+    "date": "2023-8-12",
+    "quantity": 2,
+    "price": 7.17,
+    "total": 14.34
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Pizza",
+    "date": "2023-2-2",
+    "quantity": 2,
+    "price": 14.45,
+    "total": 28.9
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Sausage",
+    "date": "2023-3-23",
+    "quantity": 9,
+    "price": 10.31,
+    "total": 92.79
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Steak",
+    "date": "2023-10-6",
+    "quantity": 3,
+    "price": 11.11,
+    "total": 33.33
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Pasta",
+    "date": "2023-5-8",
+    "quantity": 3,
+    "price": 13.51,
+    "total": 40.53
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Marinara Sauce",
+    "date": "2023-4-15",
+    "quantity": 7,
+    "price": 14.58,
+    "total": 102.06
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Bread",
+    "date": "2023-12-20",
+    "quantity": 7,
+    "price": 16.11,
+    "total": 112.77
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Steak",
+    "date": "2023-5-28",
+    "quantity": 1,
+    "price": 16.94,
+    "total": 16.94
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Fried Chicken",
+    "date": "2023-9-26",
+    "quantity": 6,
+    "price": 19.22,
+    "total": 115.32
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Stuffing",
+    "date": "2023-3-25",
+    "quantity": 1,
+    "price": 10.55,
+    "total": 10.55
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Ice Cream",
+    "date": "2023-8-26",
+    "quantity": 10,
+    "price": 6.0,
+    "total": 60.0
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-7-4",
+    "quantity": 5,
+    "price": 13.8,
+    "total": 69.0
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Pizza",
+    "date": "2023-1-7",
+    "quantity": 9,
+    "price": 10.39,
+    "total": 93.51
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Ice Cream",
+    "date": "2023-9-14",
+    "quantity": 6,
+    "price": 17.56,
+    "total": 105.36
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Hot Dogs",
+    "date": "2023-9-7",
+    "quantity": 7,
+    "price": 11.37,
+    "total": 79.59
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Roasted Chicken and Garlic",
+    "date": "2023-4-15",
+    "quantity": 10,
+    "price": 15.14,
+    "total": 151.4
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Chicken Tenders",
+    "date": "2023-10-20",
+    "quantity": 4,
+    "price": 18.92,
+    "total": 75.68
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Salsa",
+    "date": "2023-5-7",
+    "quantity": 6,
+    "price": 5.03,
+    "total": 30.18
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Brownies",
+    "date": "2023-5-10",
+    "quantity": 5,
+    "price": 6.21,
+    "total": 31.05
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Cheetos",
+    "date": "2023-9-1",
+    "quantity": 7,
+    "price": 17.48,
+    "total": 122.36
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Banana",
+    "date": "2023-7-4",
+    "quantity": 10,
+    "price": 9.24,
+    "total": 92.4
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Echilada",
+    "date": "2023-9-6",
+    "quantity": 6,
+    "price": 15.86,
+    "total": 95.16
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Sausage",
+    "date": "2023-2-7",
+    "quantity": 10,
+    "price": 19.42,
+    "total": 194.2
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Burger",
+    "date": "2023-10-22",
+    "quantity": 1,
+    "price": 16.44,
+    "total": 16.44
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Salad",
+    "date": "2023-7-21",
+    "quantity": 1,
+    "price": 19.49,
+    "total": 19.49
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Grilled Chicken",
+    "date": "2023-11-22",
+    "quantity": 2,
+    "price": 12.1,
+    "total": 24.2
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Chimichanga",
+    "date": "2023-1-20",
+    "quantity": 10,
+    "price": 13.88,
+    "total": 138.8
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Burritos",
+    "date": "2023-10-7",
+    "quantity": 6,
+    "price": 15.52,
+    "total": 93.12
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Broccoli",
+    "date": "2023-5-28",
+    "quantity": 4,
+    "price": 12.28,
+    "total": 49.12
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Potato Chips",
+    "date": "2023-12-16",
+    "quantity": 7,
+    "price": 9.66,
+    "total": 67.62
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Tomato",
+    "date": "2023-10-15",
+    "quantity": 10,
+    "price": 18.63,
+    "total": 186.3
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Ice Cream",
+    "date": "2023-7-17",
+    "quantity": 3,
+    "price": 7.99,
+    "total": 23.97
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Burritos",
+    "date": "2023-12-2",
+    "quantity": 8,
+    "price": 14.28,
+    "total": 114.24
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-8-3",
+    "quantity": 1,
+    "price": 5.34,
+    "total": 5.34
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Biscuits and Gravy",
+    "date": "2023-2-25",
+    "quantity": 3,
+    "price": 19.88,
+    "total": 59.64
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-12-11",
+    "quantity": 8,
+    "price": 17.6,
+    "total": 140.8
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Reece's Peanut Cups",
+    "date": "2023-5-21",
+    "quantity": 5,
+    "price": 15.57,
+    "total": 77.85
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Pizza",
+    "date": "2023-6-12",
+    "quantity": 9,
+    "price": 16.54,
+    "total": 148.86
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Muffins",
+    "date": "2023-10-2",
+    "quantity": 1,
+    "price": 15.93,
+    "total": 15.93
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Salad",
+    "date": "2023-10-1",
+    "quantity": 8,
+    "price": 5.93,
+    "total": 47.44
+  },
+  {
+    "id": 11,
+    "name": "Ghaly",
+    "itemName": "Burger",
+    "date": "2023-5-28",
+    "quantity": 10,
+    "price": 12.94,
+    "total": 129.4
+  },
+  {
+    "id": 12,
+    "name": "WildanVIP",
+    "itemName": "Pasta",
+    "date": "2023-5-27",
+    "quantity": 5,
+    "price": 9.3,
+    "total": 46.5
+  },
+  {
+    "id": 13,
+    "name": "WillyVIP",
+    "itemName": "Apple Pie",
+    "date": "2023-9-27",
+    "quantity": 1,
+    "price": 17.47,
+    "total": 17.47
+  },
+  {
+    "id": 14,
+    "name": "GhalyVIP",
+    "itemName": "Submarine Sandwiches",
+    "date": "2023-6-27",
+    "quantity": 6,
+    "price": 5.16,
+    "total": 30.96
+  },
+  {
+    "id": 1,
+    "name": "Willy",
+    "itemName": "Grilled Chicken",
+    "date": "2023-5-16",
+    "quantity": 6,
+    "price": 15.1,
+    "total": 90.6
+  },
+  {
+    "id": 2,
+    "name": "Salman",
+    "itemName": "Apple Pie",
+    "date": "2023-9-9",
+    "quantity": 1,
+    "price": 15.51,
+    "total": 15.51
+  },
+  {
+    "id": 3,
+    "name": "Afnan",
+    "itemName": "Burritos",
+    "date": "2023-3-2",
+    "quantity": 9,
+    "price": 16.94,
+    "total": 152.46
+  },
+  {
+    "id": 4,
+    "name": "Haidar",
+    "itemName": "Mashed Potatoes",
+    "date": "2023-9-5",
+    "quantity": 10,
+    "price": 8.65,
+    "total": 86.5
+  },
+  {
+    "id": 5,
+    "name": "Haikal",
+    "itemName": "Steak",
+    "date": "2023-10-20",
+    "quantity": 2,
+    "price": 18.08,
+    "total": 36.16
+  },
+  {
+    "id": 6,
+    "name": "Copa",
+    "itemName": "Chimichanga",
+    "date": "2023-9-12",
+    "quantity": 8,
+    "price": 12.48,
+    "total": 99.84
+  },
+  {
+    "id": 7,
+    "name": "4",
+    "itemName": "Echilada",
+    "date": "2023-7-6",
+    "quantity": 9,
+    "price": 12.77,
+    "total": 114.93
+  },
+  {
+    "id": 8,
+    "name": "2",
+    "itemName": "Burger",
+    "date": "2023-3-10",
+    "quantity": 5,
+    "price": 8.65,
+    "total": 43.25
+  },
+  {
+    "id": 9,
+    "name": "6",
+    "itemName": "Tacos",
+    "date": "2023-7-17",
+    "quantity": 2,
+    "price": 19.87,
+    "total": 39.74
+  },
+  {
+    "id": 10,
+    "name": "Wildan",
+    "itemName": "Banana",
+    "date": "2023-5-5",
+    "quantity": 2,
+    "price": 5.05,
+    "total": 10.1
   }
 ]

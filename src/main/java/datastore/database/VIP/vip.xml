@@ -9,6 +9,14 @@
         <vipMember>1</vipMember>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
+        <id>8</id>
+        <points>0</points>
+        <totalSpent>0.0</totalSpent>
+        <name>WildanVIP</name>
+        <phoneNumber>32422222222</phoneNumber>
+        <vipMember>1</vipMember>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="vip">
         <id>9</id>
         <points>0</points>
         <totalSpent>0.0</totalSpent>

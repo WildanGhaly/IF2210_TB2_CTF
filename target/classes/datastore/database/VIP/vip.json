@@ -22,13 +22,5 @@
     "id": 9,
     "points": 0,
     "totalSpent": 0.0
-  },
-  {
-    "vipMember": 1,
-    "name": "newName",
-    "phoneNumber": "newNumber",
-    "id": 8,
-    "points": 9,
-    "totalSpent": 900.0
   }
 ]

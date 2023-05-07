@@ -1,42 +1,502 @@
 [
   {
-    "id": 0.0,
-    "stock": 2.0,
-    "name": "Baju",
-    "sellPrice": 100000.0,
-    "buyPrice": 50000.0,
-    "kategori": "Pakaian",
-    "description": "Adalah sebuah baju",
-    "image": "baju.com"
+    "id": 1,
+    "stock": 100,
+    "name": "Pasta",
+    "sellPrice": 18.76,
+    "buyPrice": 12.29,
+    "kategori": "Food",
+    "description": "Pasta is a food",
+    "image": "/img/Pasta.png"
   },
   {
-    "id": 1.0,
-    "stock": 3.0,
-    "name": "Celana",
-    "sellPrice": 200000.0,
-    "buyPrice": 100000.0,
-    "kategori": "Pakaian",
-    "description": "Adalah sebuah celana",
-    "image": "celana.com"
-  },
-  {
-    "id": 2.0,
-    "stock": 4.0,
-    "name": "Sepatu",
-    "sellPrice": 300000.0,
-    "buyPrice": 150000.0,
-    "kategori": "Pakaian",
-    "description": "Adalah sebuah sepatu",
-    "image": "sepatu.com"
+    "id": 2,
+    "stock": 100,
+    "name": "French Fries",
+    "sellPrice": 9.53,
+    "buyPrice": 6.51,
+    "kategori": "Food",
+    "description": "French Fries is a food",
+    "image": "/img/French Fries.png"
   },
   {
     "id": 3,
-    "stock": 5,
-    "name": "Kemeja",
-    "sellPrice": 400000.0,
-    "buyPrice": 200000.0,
-    "kategori": "Pakaian",
-    "description": "Adalah sebuah kemeja",
-    "image": "kemeja.com"
+    "stock": 100,
+    "name": "Ice Cream",
+    "sellPrice": 16.34,
+    "buyPrice": 10.25,
+    "kategori": "Food",
+    "description": "Ice Cream is a food",
+    "image": "/img/Ice Cream.png"
+  },
+  {
+    "id": 4,
+    "stock": 100,
+    "name": "Bread",
+    "sellPrice": 17.44,
+    "buyPrice": 10.73,
+    "kategori": "Food",
+    "description": "Bread is a food",
+    "image": "/img/Bread.png"
+  },
+  {
+    "id": 5,
+    "stock": 100,
+    "name": "Fried Rice",
+    "sellPrice": 5.95,
+    "buyPrice": 4.23,
+    "kategori": "Food",
+    "description": "Fried Rice is a food",
+    "image": "/img/Fried Rice.png"
+  },
+  {
+    "id": 6,
+    "stock": 100,
+    "name": "Pancakes",
+    "sellPrice": 10.14,
+    "buyPrice": 8.35,
+    "kategori": "Food",
+    "description": "Pancakes is a food",
+    "image": "/img/Pancakes.png"
+  },
+  {
+    "id": 7,
+    "stock": 100,
+    "name": "Burger",
+    "sellPrice": 11.84,
+    "buyPrice": 5.94,
+    "kategori": "Food",
+    "description": "Burger is a food",
+    "image": "/img/Burger.png"
+  },
+  {
+    "id": 8,
+    "stock": 100,
+    "name": "Pizza",
+    "sellPrice": 19.86,
+    "buyPrice": 10.14,
+    "kategori": "Food",
+    "description": "Pizza is a food",
+    "image": "/img/Pizza.png"
+  },
+  {
+    "id": 9,
+    "stock": 100,
+    "name": "Pumpkin Pie",
+    "sellPrice": 7.39,
+    "buyPrice": 4.66,
+    "kategori": "Food",
+    "description": "Pumpkin Pie is a food",
+    "image": "/img/Pumpkin Pie.png"
+  },
+  {
+    "id": 10,
+    "stock": 100,
+    "name": "Chicken Pot Pie",
+    "sellPrice": 13.08,
+    "buyPrice": 6.71,
+    "kategori": "Food",
+    "description": "Chicken Pot Pie is a food",
+    "image": "/img/Chicken Pot Pie.png"
+  },
+  {
+    "id": 11,
+    "stock": 100,
+    "name": "Banana",
+    "sellPrice": 19.51,
+    "buyPrice": 14.47,
+    "kategori": "Food",
+    "description": "Banana is a food",
+    "image": "/img/Banana.png"
+  },
+  {
+    "id": 12,
+    "stock": 100,
+    "name": "Apple Pie",
+    "sellPrice": 6.21,
+    "buyPrice": 3.97,
+    "kategori": "Food",
+    "description": "Apple Pie is a food",
+    "image": "/img/Apple Pie.png"
+  },
+  {
+    "id": 13,
+    "stock": 100,
+    "name": "Bagel",
+    "sellPrice": 16.66,
+    "buyPrice": 13.42,
+    "kategori": "Food",
+    "description": "Bagel is a food",
+    "image": "/img/Bagel.png"
+  },
+  {
+    "id": 14,
+    "stock": 100,
+    "name": "Muffins",
+    "sellPrice": 11.36,
+    "buyPrice": 6.75,
+    "kategori": "Food",
+    "description": "Muffins is a food",
+    "image": "/img/Muffins.png"
+  },
+  {
+    "id": 15,
+    "stock": 100,
+    "name": "Alfredo Sauce",
+    "sellPrice": 15.1,
+    "buyPrice": 12.95,
+    "kategori": "Food",
+    "description": "Alfredo Sauce is a food",
+    "image": "/img/Alfredo Sauce.png"
+  },
+  {
+    "id": 16,
+    "stock": 100,
+    "name": "Reece's Peanut Cups",
+    "sellPrice": 13.77,
+    "buyPrice": 10.32,
+    "kategori": "Food",
+    "description": "Reece's Peanut Cups is a food",
+    "image": "/img/Reece's Peanut Cups.png"
+  },
+  {
+    "id": 17,
+    "stock": 100,
+    "name": "Ice Cream Cake",
+    "sellPrice": 15.38,
+    "buyPrice": 9.84,
+    "kategori": "Food",
+    "description": "Ice Cream Cake is a food",
+    "image": "/img/Ice Cream Cake.png"
+  },
+  {
+    "id": 18,
+    "stock": 100,
+    "name": "CheeseCake",
+    "sellPrice": 9.33,
+    "buyPrice": 5.55,
+    "kategori": "Food",
+    "description": "CheeseCake is a food",
+    "image": "/img/CheeseCake.png"
+  },
+  {
+    "id": 19,
+    "stock": 100,
+    "name": "Cheese",
+    "sellPrice": 18.22,
+    "buyPrice": 9.95,
+    "kategori": "Food",
+    "description": "Cheese is a food",
+    "image": "/img/Cheese.png"
+  },
+  {
+    "id": 20,
+    "stock": 100,
+    "name": "Banana Bread",
+    "sellPrice": 17.56,
+    "buyPrice": 14.46,
+    "kategori": "Food",
+    "description": "Banana Bread is a food",
+    "image": "/img/Banana Bread.png"
+  },
+  {
+    "id": 21,
+    "stock": 100,
+    "name": "Potato Chips",
+    "sellPrice": 12.31,
+    "buyPrice": 10.32,
+    "kategori": "Food",
+    "description": "Potato Chips is a food",
+    "image": "/img/Potato Chips.png"
+  },
+  {
+    "id": 22,
+    "stock": 100,
+    "name": "Cheetos",
+    "sellPrice": 7.32,
+    "buyPrice": 3.92,
+    "kategori": "Food",
+    "description": "Cheetos is a food",
+    "image": "/img/Cheetos.png"
+  },
+  {
+    "id": 23,
+    "stock": 100,
+    "name": "Doritos",
+    "sellPrice": 14.04,
+    "buyPrice": 8.62,
+    "kategori": "Food",
+    "description": "Doritos is a food",
+    "image": "/img/Doritos.png"
+  },
+  {
+    "id": 24,
+    "stock": 100,
+    "name": "Tacos",
+    "sellPrice": 11.12,
+    "buyPrice": 8.05,
+    "kategori": "Food",
+    "description": "Tacos is a food",
+    "image": "/img/Tacos.png"
+  },
+  {
+    "id": 25,
+    "stock": 100,
+    "name": "Burritos",
+    "sellPrice": 19.9,
+    "buyPrice": 16.21,
+    "kategori": "Food",
+    "description": "Burritos is a food",
+    "image": "/img/Burritos.png"
+  },
+  {
+    "id": 26,
+    "stock": 100,
+    "name": "Chimichanga",
+    "sellPrice": 10.2,
+    "buyPrice": 7.47,
+    "kategori": "Food",
+    "description": "Chimichanga is a food",
+    "image": "/img/Chimichanga.png"
+  },
+  {
+    "id": 27,
+    "stock": 100,
+    "name": "Echilada",
+    "sellPrice": 15.02,
+    "buyPrice": 11.81,
+    "kategori": "Food",
+    "description": "Echilada is a food",
+    "image": "/img/Echilada.png"
+  },
+  {
+    "id": 28,
+    "stock": 100,
+    "name": "Salsa",
+    "sellPrice": 11.96,
+    "buyPrice": 6.37,
+    "kategori": "Food",
+    "description": "Salsa is a food",
+    "image": "/img/Salsa.png"
+  },
+  {
+    "id": 29,
+    "stock": 100,
+    "name": "Marinara Sauce",
+    "sellPrice": 10.71,
+    "buyPrice": 5.95,
+    "kategori": "Food",
+    "description": "Marinara Sauce is a food",
+    "image": "/img/Marinara Sauce.png"
+  },
+  {
+    "id": 30,
+    "stock": 100,
+    "name": "Broccoli",
+    "sellPrice": 18.04,
+    "buyPrice": 14.4,
+    "kategori": "Food",
+    "description": "Broccoli is a food",
+    "image": "/img/Broccoli.png"
+  },
+  {
+    "id": 31,
+    "stock": 100,
+    "name": "Chocolate Covered Strawberries",
+    "sellPrice": 11.42,
+    "buyPrice": 7.39,
+    "kategori": "Food",
+    "description": "Chocolate Covered Strawberries is a food",
+    "image": "/img/Chocolate Covered Strawberries.png"
+  },
+  {
+    "id": 32,
+    "stock": 100,
+    "name": "Kiwi",
+    "sellPrice": 11.45,
+    "buyPrice": 10.03,
+    "kategori": "Food",
+    "description": "Kiwi is a food",
+    "image": "/img/Kiwi.png"
+  },
+  {
+    "id": 33,
+    "stock": 100,
+    "name": "Tomato",
+    "sellPrice": 12.8,
+    "buyPrice": 8.21,
+    "kategori": "Food",
+    "description": "Tomato is a food",
+    "image": "/img/Tomato.png"
+  },
+  {
+    "id": 34,
+    "stock": 100,
+    "name": "Salad",
+    "sellPrice": 16.57,
+    "buyPrice": 8.65,
+    "kategori": "Food",
+    "description": "Salad is a food",
+    "image": "/img/Salad.png"
+  },
+  {
+    "id": 35,
+    "stock": 100,
+    "name": "Steak",
+    "sellPrice": 12.45,
+    "buyPrice": 9.81,
+    "kategori": "Food",
+    "description": "Steak is a food",
+    "image": "/img/Steak.png"
+  },
+  {
+    "id": 36,
+    "stock": 100,
+    "name": "Chicken Tenders",
+    "sellPrice": 7.61,
+    "buyPrice": 5.04,
+    "kategori": "Food",
+    "description": "Chicken Tenders is a food",
+    "image": "/img/Chicken Tenders.png"
+  },
+  {
+    "id": 37,
+    "stock": 100,
+    "name": "Grilled Chicken",
+    "sellPrice": 5.23,
+    "buyPrice": 3.18,
+    "kategori": "Food",
+    "description": "Grilled Chicken is a food",
+    "image": "/img/Grilled Chicken.png"
+  },
+  {
+    "id": 38,
+    "stock": 100,
+    "name": "Ribs",
+    "sellPrice": 5.91,
+    "buyPrice": 3.26,
+    "kategori": "Food",
+    "description": "Ribs is a food",
+    "image": "/img/Ribs.png"
+  },
+  {
+    "id": 39,
+    "stock": 100,
+    "name": "Biscuits and Gravy",
+    "sellPrice": 19.1,
+    "buyPrice": 14.25,
+    "kategori": "Food",
+    "description": "Biscuits and Gravy is a food",
+    "image": "/img/Biscuits and Gravy.png"
+  },
+  {
+    "id": 40,
+    "stock": 100,
+    "name": "Hot Dogs",
+    "sellPrice": 6.99,
+    "buyPrice": 4.24,
+    "kategori": "Food",
+    "description": "Hot Dogs is a food",
+    "image": "/img/Hot Dogs.png"
+  },
+  {
+    "id": 41,
+    "stock": 100,
+    "name": "Fried Chicken",
+    "sellPrice": 12.51,
+    "buyPrice": 7.05,
+    "kategori": "Food",
+    "description": "Fried Chicken is a food",
+    "image": "/img/Fried Chicken.png"
+  },
+  {
+    "id": 42,
+    "stock": 100,
+    "name": "Roasted Chicken and Garlic",
+    "sellPrice": 19.51,
+    "buyPrice": 10.88,
+    "kategori": "Food",
+    "description": "Roasted Chicken and Garlic is a food",
+    "image": "/img/Roasted Chicken and Garlic.png"
+  },
+  {
+    "id": 43,
+    "stock": 100,
+    "name": "Eggs",
+    "sellPrice": 18.25,
+    "buyPrice": 9.93,
+    "kategori": "Food",
+    "description": "Eggs is a food",
+    "image": "/img/Eggs.png"
+  },
+  {
+    "id": 44,
+    "stock": 100,
+    "name": "Bacon",
+    "sellPrice": 14.94,
+    "buyPrice": 8.66,
+    "kategori": "Food",
+    "description": "Bacon is a food",
+    "image": "/img/Bacon.png"
+  },
+  {
+    "id": 45,
+    "stock": 100,
+    "name": "Sausage",
+    "sellPrice": 14.95,
+    "buyPrice": 13.29,
+    "kategori": "Food",
+    "description": "Sausage is a food",
+    "image": "/img/Sausage.png"
+  },
+  {
+    "id": 46,
+    "stock": 100,
+    "name": "Mashed Potatoes",
+    "sellPrice": 7.58,
+    "buyPrice": 5.15,
+    "kategori": "Food",
+    "description": "Mashed Potatoes is a food",
+    "image": "/img/Mashed Potatoes.png"
+  },
+  {
+    "id": 47,
+    "stock": 100,
+    "name": "Stuffing",
+    "sellPrice": 8.64,
+    "buyPrice": 5.09,
+    "kategori": "Food",
+    "description": "Stuffing is a food",
+    "image": "/img/Stuffing.png"
+  },
+  {
+    "id": 48,
+    "stock": 100,
+    "name": "Brownies",
+    "sellPrice": 16.08,
+    "buyPrice": 8.25,
+    "kategori": "Food",
+    "description": "Brownies is a food",
+    "image": "/img/Brownies.png"
+  },
+  {
+    "id": 49,
+    "stock": 100,
+    "name": "Cookies",
+    "sellPrice": 16.9,
+    "buyPrice": 9.64,
+    "kategori": "Food",
+    "description": "Cookies is a food",
+    "image": "/img/Cookies.png"
+  },
+  {
+    "id": 50,
+    "stock": 100,
+    "name": "Submarine Sandwiches",
+    "sellPrice": 5.45,
+    "buyPrice": 4.73,
+    "kategori": "Food",
+    "description": "Submarine Sandwiches is a food",
+    "image": "/img/Submarine Sandwiches.png"
   }
 ]
