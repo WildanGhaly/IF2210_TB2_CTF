@@ -11,6 +11,7 @@ import java.awt.Insets;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.Border;
 
@@ -41,6 +42,7 @@ public class Kasir extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         boxKasir = new javax.swing.JPanel();
         boxTambahBarang = new JPanel() {
             @Override
@@ -108,8 +110,19 @@ public class Kasir extends javax.swing.JPanel {
                 g.drawImage(boxKatalog3Img, 0, 0, null);
             }
         };
-        comboBoxCustomer = new main.featureGUI.Util.customcombobox.Combobox();
+        comboBoxCustomer = new main.featureGUI.Util.customcombobox.Combobox<>();
         payButton = new javax.swing.JButton();
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 748, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 558, Short.MAX_VALUE)
+        );
 
         setOpaque(false);
         setPreferredSize(new java.awt.Dimension(730, 447));
@@ -198,6 +211,8 @@ public class Kasir extends javax.swing.JPanel {
             public String getElementAt(int i) { return strings[i]; }
         });
         listHapusBarang.setOpaque(false);
+        listHapusBarang.setSelectionBackground(new java.awt.Color(62, 231, 188));
+        listHapusBarang.setSelectionForeground(new java.awt.Color(40, 41, 61));
         listHapusBarang.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 listHapusBarangMouseClicked(evt);
@@ -217,7 +232,7 @@ public class Kasir extends javax.swing.JPanel {
                         .addComponent(scrollHapusBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scrollBarCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(28, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
         boxHapusBarangLayout.setVerticalGroup(
             boxHapusBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -236,7 +251,7 @@ public class Kasir extends javax.swing.JPanel {
 
         comboBoxCustomer.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxCustomer.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxCustomer.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Member1", "Member2", "VIP1", "VIP2", "VIP3" }));
+        comboBoxCustomer.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Member1", "Member2", "VIP1", "VIP2", "VIP3" }));
         comboBoxCustomer.setSelectedIndex(-1);
         comboBoxCustomer.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxCustomer.setLabelText("Customer");
@@ -261,7 +276,7 @@ public class Kasir extends javax.swing.JPanel {
             .addGroup(customerPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(comboBoxCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(11, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         payButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Utility/payButton.png"))); // NOI18N
@@ -280,7 +295,7 @@ public class Kasir extends javax.swing.JPanel {
             .addGroup(boxKasirLayout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addComponent(boxTambahBarang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(boxKasirLayout.createSequentialGroup()
                         .addComponent(boxHapusBarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -295,20 +310,15 @@ public class Kasir extends javax.swing.JPanel {
             boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(boxKasirLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(boxKasirLayout.createSequentialGroup()
-                        .addComponent(boxTambahBarang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(boxKasirLayout.createSequentialGroup()
+                .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(boxTambahBarang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, boxKasirLayout.createSequentialGroup()
                         .addComponent(boxHapusBarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(boxKasirLayout.createSequentialGroup()
-                                .addGap(12, 12, 12)
-                                .addComponent(customerPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, boxKasirLayout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(payButton)
-                                .addContainerGap())))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(customerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(payButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -332,22 +342,23 @@ public class Kasir extends javax.swing.JPanel {
     }//GEN-LAST:event_listHapusBarangMouseClicked
 
     private void comboBoxCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCustomerActionPerformed
-        /*TODO find membernya didatabse*/
         /*TODO ganti statusnya*/
-        comboBoxCustomer.getSelectedItem();
+        String.valueOf(comboBoxCustomer.getSelectedItem());
+        
     }//GEN-LAST:event_comboBoxCustomerActionPerformed
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
-        // TODO add your handling code here:
+        JFrame popUpPayment = new PopUpPayment();
+        popUpPayment.setVisible(true);
     }//GEN-LAST:event_payButtonActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel boxHapusBarang;
     private javax.swing.JPanel boxKasir;
     private javax.swing.JPanel boxTambahBarang;
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxCustomer;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxCustomer;
     private javax.swing.JPanel customerPanel;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelHapusBarang;
     private javax.swing.JLabel labelTambahBarang;
     private javax.swing.JList<String> listHapusBarang;

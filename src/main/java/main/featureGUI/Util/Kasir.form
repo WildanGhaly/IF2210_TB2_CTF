@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="748" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <EmptySpace min="0" pref="558" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="opaque" type="boolean" value="false"/>
     <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
@@ -46,7 +63,7 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
                   <Component id="boxTambahBarang" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="boxHapusBarang" max="32767" attributes="0"/>
@@ -66,26 +83,18 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="boxTambahBarang" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" attributes="0">
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="boxTambahBarang" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="1" attributes="0">
                           <Component id="boxHapusBarang" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace min="12" pref="12" max="-2" attributes="0"/>
-                                  <Component id="customerPanel" min="-2" pref="53" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="-2" attributes="0"/>
-                                  <Component id="payButton" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="-2" attributes="0"/>
-                              </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="customerPanel" max="32767" attributes="0"/>
+                              <Component id="payButton" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
+                  <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -241,7 +250,7 @@
                               <Component id="scrollBarCustom2" min="-2" pref="14" max="-2" attributes="0"/>
                           </Group>
                       </Group>
-                      <EmptySpace pref="28" max="32767" attributes="0"/>
+                      <EmptySpace pref="40" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -315,6 +324,12 @@
                       </StringArray>
                     </Property>
                     <Property name="opaque" type="boolean" value="false"/>
+                    <Property name="selectionBackground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="bc" green="e7" red="3e" type="rgb"/>
+                    </Property>
+                    <Property name="selectionForeground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="3d" green="29" red="28" type="rgb"/>
+                    </Property>
                   </Properties>
                   <Events>
                     <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="listHapusBarangMouseClicked"/>
@@ -356,7 +371,7 @@
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="comboBoxCustomer" min="-2" pref="36" max="-2" attributes="0"/>
-                      <EmptySpace pref="11" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
