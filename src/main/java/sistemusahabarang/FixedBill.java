@@ -43,6 +43,23 @@ public class FixedBill extends Bill {
         double totalPrice = DataStoreMechanism.getItemsPrice(path, this.items);
         return totalPrice;
     }
+
+    /**
+     * Saves the items in the bill to an XML, JSON, or OBJ file.
+     * @param path the path of the XML, JSON, or OBJ file to save the items to
+     * @param itemPath the path of the XML, JSON, or OBJ file containing the items
+     * @param bill the bill containing the items to be saved
+     * @param name the name of the <strong>customer</strong>
+     * @param id the ID of the <strong>customer</strong>
+     * @return {@code true} if the items are saved successfully, {@code false} otherwise
+     * @throws IOException if an I/O exception occurs while reading the XML, JSON, or OBJ file
+     * @throws JAXBException if an error occurs while unmarshalling the XML, JSON, or OBJ file
+     * @throws ClassNotFoundException if the class specified in the XML, JSON, or OBJ file cannot be found
+     * @see DataStoreMechanism
+     */
+    public static boolean saveHistory(String path, String itemPath, FixedBill bill, String name, int id) throws IOException, JAXBException, ClassNotFoundException {
+        return DataStoreMechanism.saveHistory(path, itemPath, bill.getItems(), name, id);
+    }
     
     /**
      * A main method to test the functionality of the FixedBill class.
@@ -63,6 +80,12 @@ public class FixedBill extends Bill {
 
         double totalPrice = bill.getTotalPrice(path);
         System.out.println(totalPrice);
+
+        System.out.println("\n=========================================\n");
+
+        String historyPath = "src/main/java/datastore/database/History/history.xml";
+
+        FixedBill.saveHistory(historyPath, path, bill, "Wildan", 1);
     }
 
 }

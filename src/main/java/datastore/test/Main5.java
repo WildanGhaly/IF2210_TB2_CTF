@@ -87,9 +87,9 @@ public class Main5 {
         barangs.add(new Barang(1, 3, "Celana", 200_000, 100_000, "Pakaian", "celana.com"));
         barangs.add(new Barang(2, 4, "Sepatu", 300_000, 150_000, "Pakaian", "sepatu.com"));
 
-        histories.add(new History("Willy", "Ayam Goreng", LocalDate.now().toString(), 2, 5000, 10000));
-        histories.add(new History("Willy", "Ayam Bakar", LocalDate.now().toString(), 3, 5000, 15000));
-        histories.add(new History("Wildan", "Ayam Geprek", LocalDate.now().toString(), 4, 3000, 12000));
+        histories.add(new History(1, "Willy", "Ayam Goreng", LocalDate.now().toString(), 2, 5000, 10000));
+        histories.add(new History(1, "Willy", "Ayam Bakar", LocalDate.now().toString(), 3, 5000, 15000));
+        histories.add(new History(2, "Wildan", "Ayam Geprek", LocalDate.now().toString(), 4, 3000, 12000));
 
         DataAdapter adapterJSON     = new JsonDataAdapter();
         DataAdapter adapterXML      = new XmlDataAdapter();
