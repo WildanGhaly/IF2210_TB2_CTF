@@ -4,12 +4,6 @@
  */
 package main.featureGUI;
 
-import java.awt.Image;
-import main.featureGUI.Util.RequestImage;
-import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.Insets;
-import javax.swing.JPanel;
 /**
  *
  * @author user
@@ -33,7 +27,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
         gudangPanel.setBackground(new java.awt.Color(40, 41, 61));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/main/featureGUI/logopenjualan.png"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporanpenjualan/logopenjualan.png"))); // NOI18N
 
         comboBoxStatus.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxStatus.setForeground(new java.awt.Color(217, 217, 217));

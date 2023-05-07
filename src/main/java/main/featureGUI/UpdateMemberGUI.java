@@ -53,9 +53,9 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
                 g.drawImage(statusBoxPanelImg, 0, 0, null);
             }
         };
-        comboBoxStatus = new main.featureGUI.Util.customcombobox.Combobox();
+        comboBoxStatus = new main.featureGUI.Util.customcombobox.Combobox<>();
         buttonSaveUpdateMember = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        buttonActivation = new javax.swing.JButton();
         comboBoxPanel = new JPanel() {
             @Override
             protected void paintComponent(Graphics g) {
@@ -63,7 +63,7 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
                 g.drawImage(comboBoxUpdateImg, 0, 0, null);
             }
         };
-        comboBoxCariMember = new main.featureGUI.Util.customcombobox.Combobox();
+        comboBoxCariMember = new main.featureGUI.Util.customcombobox.Combobox<>();
         polygonCariMember = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(904, 680));
@@ -132,7 +132,7 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
 
         comboBoxStatus.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxStatus.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "VIP", "Member" }));
+        comboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "VIP", "Member" }));
         comboBoxStatus.setSelectedIndex(-1);
         comboBoxStatus.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxStatus.setLabelText("Status");
@@ -171,7 +171,14 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("jButton1");
+        buttonActivation.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/updatemember/boxActive.png"))); // NOI18N
+        buttonActivation.setBorder(null);
+        buttonActivation.setContentAreaFilled(false);
+        buttonActivation.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonActivationActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout updateBoxPanelLayout = new javax.swing.GroupLayout(updateBoxPanel);
         updateBoxPanel.setLayout(updateBoxPanelLayout);
@@ -184,15 +191,17 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
             .addGroup(updateBoxPanelLayout.createSequentialGroup()
                 .addGap(87, 87, 87)
                 .addGroup(updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(updateBoxPanelLayout.createSequentialGroup()
+                        .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(81, 81, 81)
+                        .addComponent(buttonActivation))
                     .addGroup(updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(labelNama, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(labelNoTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 419, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(ubahNama, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(ubahNoTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(ubahNoTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 425, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(254, Short.MAX_VALUE))
         );
         updateBoxPanelLayout.setVerticalGroup(
             updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -206,9 +215,9 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ubahNoTelepon, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addGroup(updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(statusPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE))
+                .addGroup(updateBoxPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(statusPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonActivation))
                 .addGap(5, 5, 5)
                 .addComponent(buttonSaveUpdateMember, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(39, Short.MAX_VALUE))
@@ -219,7 +228,7 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
 
         comboBoxCariMember.setBackground(new java.awt.Color(0,0,0,0));
         comboBoxCariMember.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Salman", "Willy", "Copa", "Haidar", "Haikal", "Afnan" }));
+        comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Salman", "Willy", "Copa", "Haidar", "Haikal", "Afnan" }));
         comboBoxCariMember.setSelectedIndex(-1);
         comboBoxCariMember.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxCariMember.setLabelText("Cari member...");
@@ -306,7 +315,10 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
     }//GEN-LAST:event_ubahNoTeleponMouseClicked
 
     private void comboBoxStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxStatusActionPerformed
-        // TODO buat update status member disini
+        /*TODO find membernya didatabse*/
+        comboBoxCariMember.getSelectedItem();
+        /*TODO ganti statusnya*/
+        comboBoxStatus.getSelectedItem();
     }//GEN-LAST:event_comboBoxStatusActionPerformed
 
     private void buttonSaveUpdateMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonSaveUpdateMemberActionPerformed
@@ -346,13 +358,17 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_ubahNoTeleponFocusLost
 
+    private void buttonActivationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActivationActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonActivationActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton buttonActivation;
     private javax.swing.JButton buttonSaveUpdateMember;
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxCariMember;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxCariMember;
     private javax.swing.JPanel comboBoxPanel;
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxStatus;
-    private javax.swing.JButton jButton1;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxStatus;
     private javax.swing.JLabel labelNama;
     private javax.swing.JLabel labelNoTelepon;
     private javax.swing.JLabel logoUpdateMember;

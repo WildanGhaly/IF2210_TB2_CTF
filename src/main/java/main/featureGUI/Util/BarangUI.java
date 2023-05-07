@@ -20,7 +20,7 @@ public class BarangUI extends javax.swing.JPanel {
 
     public BarangUI(Barang barang) {
         initComponents();
-        this.barang = barang;
+        this.barang = new Barang();
     }
 
     
@@ -28,38 +28,36 @@ public class BarangUI extends javax.swing.JPanel {
     private void initComponents() {
 
         panelBarang = new javax.swing.JPanel();
-        labelBarang = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        button = new javax.swing.JButton();
 
         setOpaque(false);
 
         panelBarang.setBackground(new java.awt.Color(0,0,0,0));
         panelBarang.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 0, 1, 0, new java.awt.Color(217, 217, 217)));
 
-        labelBarang.setFont(new java.awt.Font("Inter", 0, 20));
-        labelBarang.setForeground(new java.awt.Color(62, 231, 188));
-        labelBarang.setText(this.barang.getName());
-
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pembayaran/tambahBarang.png"))); // NOI18N
-        jButton1.setBorder(null);
-        jButton1.setBorderPainted(false);
-        jButton1.setContentAreaFilled(false);
-        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pembayaran/ceklistBarang.png"))); // NOI18N
+        button.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pembayaran/tambahBarang.png"))); // NOI18N
+        button.setToolTipText("");
+        button.setBorder(null);
+        button.setBorderPainted(false);
+        button.setContentAreaFilled(false);
+        button.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pembayaran/ceklistBarang.png"))); // NOI18N
+        button.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout panelBarangLayout = new javax.swing.GroupLayout(panelBarang);
         panelBarang.setLayout(panelBarangLayout);
         panelBarangLayout.setHorizontalGroup(
             panelBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelBarangLayout.createSequentialGroup()
-                .addContainerGap(34, Short.MAX_VALUE)
-                .addComponent(labelBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 224, Short.MAX_VALUE)
+                .addComponent(button, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         panelBarangLayout.setVerticalGroup(
             panelBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
-            .addComponent(labelBarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(button, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -74,10 +72,13 @@ public class BarangUI extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void buttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel labelBarang;
+    private javax.swing.JButton button;
     private javax.swing.JPanel panelBarang;
     // End of variables declaration//GEN-END:variables
 }

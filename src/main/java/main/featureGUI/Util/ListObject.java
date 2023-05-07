@@ -17,7 +17,7 @@ import sistemusahabarang.Barang;
  *
  * @author user
  */
-public class ListObject<E extends Object> extends JList<E> {
+public class ListObject<E extends Object> extends JList<E>  {
 
     private final DefaultListModel<E> model;
 

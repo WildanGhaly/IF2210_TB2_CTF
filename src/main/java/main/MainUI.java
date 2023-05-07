@@ -79,7 +79,7 @@ public class MainUI extends javax.swing.JFrame {
         buttonLaporanPenjualan = new javax.swing.JButton();
         dateTime = new main.featureGUI.Util.DateTime();
         logoKecil = new javax.swing.JLabel();
-        mainTab = new main.featureGUI.customtabbedpane.CustomTabbedPane();
+        mainTab = new main.featureGUI.Util.customtabbedpane.CustomTabbedPane();
         mainTab.addTab("Home", halamanUtamaGUI);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -335,6 +335,9 @@ public class MainUI extends javax.swing.JFrame {
                 .addGap(41, 41, 41))
         );
 
+        mainTab.setForeground(new java.awt.Color(40, 41, 61));
+        mainTab.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
         javax.swing.GroupLayout backgroundLayout = new javax.swing.GroupLayout(background);
         background.setLayout(backgroundLayout);
         backgroundLayout.setHorizontalGroup(
@@ -453,7 +456,7 @@ public class MainUI extends javax.swing.JFrame {
     private main.featureGUI.Util.DateTime dateTime;
     private javax.swing.JPanel leftBarPanel;
     private javax.swing.JLabel logoKecil;
-    private main.featureGUI.customtabbedpane.CustomTabbedPane mainTab;
+    private main.featureGUI.Util.customtabbedpane.CustomTabbedPane mainTab;
     // End of variables declaration//GEN-END:variables
     
     public class TabComponent extends javax.swing.JPanel {
