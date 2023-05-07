@@ -46,11 +46,12 @@ import lombok.Setter;
 @XmlAccessorType(XmlAccessType.FIELD)
 @Setter @Getter
 public class History implements Serializable {
-    private String nama;
-    private String namaBarang;
-    private String tanggal;
-    private int kuantitas;
-    private double harga;
+    private int id;
+    private String name;
+    private String itemName;
+    private String date;
+    private int quantity;
+    private double price;
     private double total;
 
     /**
@@ -61,20 +62,22 @@ public class History implements Serializable {
 
     /**
      * Creates a new <code>History</code> object with the specified attributes.
-     * @param nama - a string representing the name of the user who made the transaction
-     * @param namaBarang - a string representing the name of the item that was purchased
-     * @param tanggal - a string representing the date on which the transaction was made
-     * @param kuantitas - an integer value representing the number of units of the item that were purchased
-     * @param harga - a double value representing the price at which the item was purchased
+     * @param id - an integer value representing the ID of the customer who made the transaction
+     * @param name - a string representing the name of the user who made the transaction
+     * @param itemName - a string representing the name of the item that was purchased
+     * @param date - a string representing the date on which the transaction was made
+     * @param quantity - an integer value representing the number of units of the item that were purchased
+     * @param price - a double value representing the price at which the item was purchased
      * @param total - a double value representing the total price of the transaction
      * @see History
      */
-    public History(String nama, String namaBarang, String tanggal, int kuantitas, double harga, double total) {
-        this.nama  = nama;
-        this.namaBarang = namaBarang;
-        this.tanggal = tanggal;
-        this.kuantitas = kuantitas;
-        this.harga = harga;
+    public History(int id, String name, String itemName, String date, int quantity, double price, double total) {
+        this.id = id;
+        this.name = name;
+        this.itemName = itemName;
+        this.date = date;
+        this.quantity = quantity;
+        this.price = price;
         this.total = total;
     }
 
