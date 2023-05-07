@@ -71,9 +71,9 @@ public class Main5 {
         List<Barang> barangs = new ArrayList<>();
         List<History> histories = new ArrayList<>();
 
-        customers.add(new Customer(1));
-        customers.add(new Customer(2));
-        customers.add(new Customer(3));
+        customers.add(new Customer(4));
+        customers.add(new Customer(5));
+        customers.add(new Customer(6));
 
         members.add(new Member(4, "Willy", "1234567890"));
         members.add(new Member(5, "Wildan", "32422222222"));
@@ -106,6 +106,34 @@ public class Main5 {
             adapterJSON.saveData(HISTORY_FILE_JSON, histories);
             adapterJSON.addData(BARANG_FILE_JSON, new Barang(3, 5, "Kemeja", 400_000, 200_000, "Pakaian", "Adalah sebuah kemeja", "kemeja.com"));
             adapterJSON.addData(MEMBER_FILE_JSON, new Member(10, "WildanGhaly", "1234567890"));
+
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek", "2023-05-01", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang", "2023-05-01", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Bakar", "2023-05-01", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Goreng", "2023-05-01", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang Bakar", "2023-05-02", 5, 3000, 15000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang Goreng", "2023-05-02", 5, 3000, 15000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Bakar Goreng", "2023-05-02", 5, 3000, 15000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang Bakar Goreng", "2023-05-03", 6, 5000, 30000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang Bakar Goreng", "2023-05-03", 6, 5000, 30000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(3, "Ghaly", "Ayam Geprek Panggang Bakar Goreng", "2023-05-03", 6, 5000, 30000));
+
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(4, "4", "Ayam Geprek", "2023-05-04", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(4, "4", "Ayam Geprek Panggang", "2023-05-05", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(4, "4", "Ayam Geprek Bakar", "2023-05-06", 4, 3000, 12000));
+
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(5, "5", "Ayam Geprek", "2023-05-07", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(5, "5", "Ayam Geprek Panggang", "2023-05-08", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(5, "5", "Ayam Geprek Bakar", "2023-05-09", 4, 3000, 12000));
+
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(6, "6", "Ayam Geprek", "2023-05-10", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(6, "6", "Ayam Geprek Panggang", "2023-05-11", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(6, "6", "Ayam Geprek Bakar", "2023-05-12", 4, 3000, 12000));
+
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(7, "WillyVIP", "Ayam Geprek", "2023-05-13", 4, 3000, 12000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(7, "WillyVIP", "Ayam Geprek Panggang", "2023-05-14", 4, 5000, 20000));
+            adapterJSON.addData(HISTORY_FILE_JSON, new History(9, "GhalyVIP", "Setan", "2023-04-30", 100, 1000, 100000));
+
 
         } catch (Exception e) {
             e.printStackTrace();
