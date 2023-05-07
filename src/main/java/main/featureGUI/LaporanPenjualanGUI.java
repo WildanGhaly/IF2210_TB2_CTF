@@ -22,8 +22,8 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
         gudangPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        comboBoxStatus = new main.featureGUI.Util.customcombobox.Combobox();
-        comboBoxStatus1 = new main.featureGUI.Util.customcombobox.Combobox();
+        comboBoxStatus = new main.featureGUI.Util.customcombobox.Combobox<>();
+        comboBoxStatus1 = new main.featureGUI.Util.customcombobox.Combobox<>();
 
         gudangPanel.setBackground(new java.awt.Color(40, 41, 61));
 
@@ -31,7 +31,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
         comboBoxStatus.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxStatus.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "2021", "2022", "2023" }));
+        comboBoxStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "2021", "2022", "2023" }));
         comboBoxStatus.setSelectedIndex(-1);
         comboBoxStatus.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxStatus.setLabelText("Status");
@@ -44,7 +44,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
         comboBoxStatus1.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxStatus1.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxStatus1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember" }));
+        comboBoxStatus1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "November", "Desember" }));
         comboBoxStatus1.setSelectedIndex(-1);
         comboBoxStatus1.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxStatus1.setLabelText("Status");
@@ -104,8 +104,8 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxStatus;
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxStatus1;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxStatus;
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxStatus1;
     private javax.swing.JPanel gudangPanel;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables

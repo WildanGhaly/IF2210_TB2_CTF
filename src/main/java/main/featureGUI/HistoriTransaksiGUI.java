@@ -5,13 +5,16 @@
 package main.featureGUI;
 
 import javax.swing.border.Border;
+import javax.xml.bind.JAXBException;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
+import java.io.IOException;
 import javax.swing.JPanel;
 import main.featureGUI.Util.RequestImage;
+import datastore.DataStoreMechanism;
 
 /**
  *
@@ -22,6 +25,11 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
     /**
      * Creates new form HistoriTransaksiGUI
      */
+    private String historyPath  = "src/main/java/datastore/database/History/history.json";
+    private String memberPath = "src/main/java/datastore/database/Member/member.json";
+    private String customerPath = "src/main/java/datastore/database/Customer/customer.json";
+    private String vipPath = "src/main/java/datastore/database/VIP/vip.json";
+
     private final Image comboBoxUpdateImg = RequestImage.requestImage("updatemember/comboBoxUpdateMember.png");
     
     public HistoriTransaksiGUI() {
@@ -62,7 +70,7 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
                 g.drawImage(comboBoxUpdateImg, 0, 0, null);
             }
         };
-        comboBoxCariMember = new main.featureGUI.Util.customcombobox.Combobox();
+        comboBoxCariMember = new main.featureGUI.Util.customcombobox.Combobox<>();
         polygonCariMember = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(904, 720));
@@ -81,43 +89,6 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
         jTable1.setBackground(new java.awt.Color(40, 41, 61));
         jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTable1.setForeground(new java.awt.Color(72, 84, 254));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {"Ayam Goreng", "12/12/2021", "2", "10000", "20000"},
-                {"Ayam Bakar", "13/11/2021", "3", "15000", "45000"},
-                {"Ayam Geprek", "14/10/2021", "4", "12000", "48000"},
-                {"Kambing Guling", "15/09/2021", "1", "25000", "25000"},
-                {"Kambing Tongseng", "16/08/2021", "2", "20000", "40000"},
-                {"Kambing Satay", "17/07/2021", "3", "15000", "45000"},
-                {"Sapi Panggang", "18/06/2021", "1", "30000", "30000"},
-                {"Sapi Gule", "19/05/2021", "2", "25000", "50000"},
-                {"Sapi Sate", "20/04/2021", "3", "20000", "60000"},
-                {"Babi Panggang", "21/03/2021", "2", "18000", "36000"},
-                {"Babi Guling", "22/02/2021", "3", "15000", "45000"},
-                {"Babi Rica-rica", "23/01/2021", "4", "12000", "48000"},
-                {"Gajah Penyet", "24/12/2020", "1", "50000", "50000"},
-                {"Singa Bakar", "25/11/2020", "2", "40000", "80000"},
-                {"Jerapah Geprek", "26/10/2020", "3", "30000", "90000"}
-            },
-            new String [] {
-                "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
         jTable1.setGridColor(new java.awt.Color(72, 84, 254));
         jTable1.setRowHeight(50);
         jTable1.setRowSelectionAllowed(false);
@@ -147,7 +118,24 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
 
         comboBoxCariMember.setBackground(new java.awt.Color(0,0,0,0));
         comboBoxCariMember.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Salman", "Willy", "Copa", "Haidar", "Haikal", "Afnan" }));
+        try {
+            comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel<>(DataStoreMechanism.readName(vipPath)));
+            for (String i : DataStoreMechanism.readName(memberPath)) {
+                comboBoxCariMember.addItem(i);
+            }
+            for (String i : DataStoreMechanism.readName(customerPath)) {
+                comboBoxCariMember.addItem(i);
+            }
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         comboBoxCariMember.setSelectedIndex(-1);
         comboBoxCariMember.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxCariMember.setLabelText("Pilih customer");
@@ -235,12 +223,45 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void comboBoxCariMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCariMemberActionPerformed
-        // TODO add your handling code here:
+                try {
+					jTable1.setModel(new javax.swing.table.DefaultTableModel(
+					    DataStoreMechanism.getHistoryTransaction(historyPath, String.valueOf(comboBoxCariMember.getSelectedItem()))
+					,
+					    new String [] {
+					        "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
+					    }
+					) {
+					    Class<?>[] types = new Class<?>[] {
+					        java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class
+					    };
+					    boolean[] canEdit = new boolean [] {
+					        false, false, false, false, false
+					    };
+
+					    public Class<?> getColumnClass(int columnIndex) {
+					        return types [columnIndex];
+					    }
+
+					    public boolean isCellEditable(int rowIndex, int columnIndex) {
+					        return canEdit [columnIndex];
+					    }
+					});
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (JAXBException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
     }//GEN-LAST:event_comboBoxCariMemberActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private main.featureGUI.Util.customcombobox.Combobox comboBoxCariMember;
+    
+    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxCariMember;
     private javax.swing.JPanel comboBoxPanel;
     private javax.swing.JPanel historiPanel;
     private javax.swing.JLabel jLabel2;
