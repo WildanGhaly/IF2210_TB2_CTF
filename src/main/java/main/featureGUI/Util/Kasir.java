@@ -34,6 +34,7 @@ public class Kasir extends javax.swing.JPanel {
     private String pathFormat = ".xml";
     private String pathItem = "src/main/java/datastore/database/Barang/barang" + pathFormat;
     private String pathMember = "src/main/java/datastore/database/Member/member" + pathFormat;
+    private String pathCustomer = "src/main/java/datastore/database/Customer/customer" + pathFormat;
     private String pathVIP = "src/main/java/datastore/database/VIP/vip" + pathFormat;
 
     public Kasir() {
@@ -391,8 +392,14 @@ public class Kasir extends javax.swing.JPanel {
             popUpPayment.setVisible(true);
         } else {
             //TODO buat ngambil id customer terus ditambahin 1;
-            JFrame popUpPayment = new PopUpPayment(listAddedBarang, null);
-            popUpPayment.setVisible(true);
+            JFrame popUpPayment;
+            try {
+                popUpPayment = new PopUpPayment(listAddedBarang, Integer.toString(DataStoreMechanism.getLastCustomerID(pathCustomer) + 1));
+                popUpPayment.setVisible(true);
+            } catch (ClassNotFoundException | IOException | JAXBException e) {
+                e.printStackTrace();
+            }
+            
         }
         
         comboBoxCustomer.setLabelText("Customer");
