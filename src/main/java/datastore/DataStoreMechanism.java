@@ -2,8 +2,10 @@ package datastore;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Map;
 
 import javax.xml.bind.JAXBException;
 
@@ -12,6 +14,7 @@ import com.google.gson.internal.LinkedTreeMap;
 import customer.Customer;
 import customer.Member;
 import customer.VIP;
+import sistemusahabarang.Barang;
 
 /**
  * <p>
@@ -239,12 +242,86 @@ public class DataStoreMechanism {
 
         return false;
     }
-    
+
+    /** 
+     * <p>The following method can be used to calculate the total price of a set of items based on their respective ids and amounts,
+     * and decrease the stock of the items in a database file located at the specified path.</p>
+     * <p>The database file must be in XML, JSON, or OBJ format, and the method uses the <code>DataAdapter</code> interface class, as well as <code>XmlDataAdapter</code>, <code>JsonDataAdapter</code>, and <code>ObjDataAdapter</code> classes.</p>
+     * <p>To use this method, simply provide the path to the database file and a map of item ids and amounts to calculate the total price of the items. The method returns the total price of the items based on their sell prices in the database.</p>
+     * <p>Note that this method updates the stock of items in the database based on the amount sold.</p>
+     * <ul>
+     *     <li><code>path</code>: The path to the database file.</li>
+     *     <li><code>items</code>: A map of item ids and their respective amounts.</li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *     <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     *     <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     *     <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *     <li><code>DataAdapter</code></li>
+     *     <li><code>XmlDataAdapter</code></li>
+     *     <li><code>JsonDataAdapter</code></li>
+     *     <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public double calculateTotalPrice(String path, Map&lt;String, Integer&gt; items) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>The method returns the total price of the items as a <code>double</code> value.</p>
+     */
+    public static double getItemsPrice(String path, Map<Integer, Integer> items) throws ClassNotFoundException, IOException, JAXBException{
+        double price = 0;
+        int amount = 0;
+        int stock = 0;
+        List<Barang> barang = new ArrayList<>();
+        int id;
+        double itemPrice = 0;
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+        
+        List<?> data = adapter.loadData(path);
+
+        for (Object obj : data){
+            if (obj instanceof LinkedTreeMap){
+                LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
+                id = (int) (double) map.get("id");
+                stock = (int) (double) map.get("stock");
+                if (items.containsKey(id)){
+                    amount = items.get(id);
+                    itemPrice = (double) map.get("sellPrice");
+                    price += itemPrice * amount;
+                    barang.add(new Barang(id, stock - amount, (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                } else {
+                    barang.add(new Barang(id, (int) (double) map.get("stock"), (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                }
+            } else if (obj instanceof Barang){
+                if (items.containsKey(((Barang) obj).getId())){
+                    price += ((Barang) obj).getSellPrice() * items.get(((Barang) obj).getId());
+                    barang.add(new Barang(((Barang) obj).getId(), ((Barang) obj).getStock() - items.get(((Barang) obj).getId()), ((Barang) obj).getName(), ((Barang) obj).getSellPrice(), ((Barang) obj).getBuyPrice(), ((Barang) obj).getKategori(), ((Barang) obj).getImage()));
+                } else {
+                    barang.add((Barang) obj);
+                }
+            } 
+        }
+        adapter.saveData(path, barang);
+        return price;
+    }
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, JAXBException {
         String path         = "src/main/java/datastore/database/VIP/vip.json";
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
+        String path2        = "src/main/java/datastore/database/Barang/barang.xml";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
+        double barangPrice = getItemsPrice(path2, new HashMap<Integer, Integer>(){{
+            put(1, 10);
+            put(2, 4);
+        }});
+        System.out.println(barangPrice);
     }
 }
