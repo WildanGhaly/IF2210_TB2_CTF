@@ -23,6 +23,9 @@ public class VIP extends Member {
     /** The discount rate for VIP members, as a decimal value. */
     private static final double DISCOUNT_RATE_VIP = 0.1;
 
+    /* To define if this is vip */
+    private int vipMember = 1;
+
     /**
      * Default constructor for JAXB.
      */

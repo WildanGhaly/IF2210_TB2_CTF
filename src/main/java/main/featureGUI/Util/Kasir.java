@@ -9,8 +9,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -18,7 +17,6 @@ import javax.swing.border.Border;
 import javax.xml.bind.JAXBException;
 
 import datastore.DataStoreMechanism;
-import sistemusahabarang.Barang;
 
 /**
  *
@@ -30,21 +28,16 @@ public class Kasir extends javax.swing.JPanel {
     private final Image boxKatalog2Img = RequestImage.requestImage("pembayaran/boxHapusBarang.png");
     private final Image boxKatalog3Img = RequestImage.requestImage("pembayaran/customerBox.png");
 
+    private String[][] barang;
+    private String[] namaBarang;
+    private Vector<String> listAdded = new Vector<>();
     private String pathFormat = ".xml";
     private String pathItem = "src/main/java/datastore/database/Barang/barang" + pathFormat;
     private String pathMember = "src/main/java/datastore/database/Member/member" + pathFormat;
     private String pathVIP = "src/main/java/datastore/database/VIP/vip" + pathFormat;
-    
-    private List<BarangUI> listBarang = new ArrayList<>();
 
     public Kasir() {
         initComponents();
-    }
-
-    public void instantiate(){
-        for (Integer i = 0; i < 20; i++) {
-            listBarang.add(new BarangUI(new Barang(32, i, ("Barang".concat(i.toString())), 20000, 18000, "Pecahan", null, null)));
-        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -118,7 +111,7 @@ public class Kasir extends javax.swing.JPanel {
                 g.drawImage(boxKatalog3Img, 0, 0, null);
             }
         };
-        comboBoxCustomer = new main.featureGUI.Util.customcombobox.Combobox<>();
+        comboBoxCustomer = new main.featureGUI.Util.customcombobox.Combobox();
         payButton = new javax.swing.JButton();
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -151,11 +144,7 @@ public class Kasir extends javax.swing.JPanel {
         listTambahBarang.setBorder(null);
         listTambahBarang.setFont(new java.awt.Font("Inter", 0 ,20));
         listTambahBarang.setForeground(new java.awt.Color(62, 231, 188));
-        listTambahBarang.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5", "Item 6", "Item 7", "Item 8", "Item 9", "Item 10", "Item 11", "Item 12", "Item 13", "Item 14", "Item 15" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        listTambahBarang.setModel(new javax.swing.DefaultListModel<>());
         listTambahBarang.setOpaque(false);
         listTambahBarang.setSelectionBackground(new java.awt.Color(62, 231, 188));
         listTambahBarang.setSelectionForeground(new java.awt.Color(40, 41, 61));
@@ -213,11 +202,7 @@ public class Kasir extends javax.swing.JPanel {
         listHapusBarang.setBorder(null);
         listHapusBarang.setFont(new java.awt.Font("Inter", 1 ,12));
         listHapusBarang.setForeground(new java.awt.Color(62, 231, 188));
-        listHapusBarang.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
+        listHapusBarang.setModel(new javax.swing.DefaultListModel<>());
         listHapusBarang.setOpaque(false);
         listHapusBarang.setSelectionBackground(new java.awt.Color(62, 231, 188));
         listHapusBarang.setSelectionForeground(new java.awt.Color(40, 41, 61));
@@ -240,7 +225,7 @@ public class Kasir extends javax.swing.JPanel {
                         .addComponent(scrollHapusBarang, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(scrollBarCustom2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         boxHapusBarangLayout.setVerticalGroup(
             boxHapusBarangLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -259,8 +244,7 @@ public class Kasir extends javax.swing.JPanel {
 
         comboBoxCustomer.setBackground(new java.awt.Color(40, 41, 60, 0));
         comboBoxCustomer.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxCustomer.setModel(new javax.swing.DefaultComboBoxModel<String>(new String[] { "Member1", "Member2", "VIP1", "VIP2", "VIP3" }));
-        comboBoxCustomer.setSelectedIndex(-1);
+        comboBoxCustomer.setToolTipText("");
         comboBoxCustomer.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxCustomer.setLabelText("Customer");
         comboBoxCustomer.setOpaque(false);
@@ -282,10 +266,37 @@ public class Kasir extends javax.swing.JPanel {
         customerPanelLayout.setVerticalGroup(
             customerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(customerPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(comboBoxCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(comboBoxCustomer, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
+
+        try {
+
+            String[][] vip = DataStoreMechanism.getMembersAsString(pathVIP);
+            String[][] members = DataStoreMechanism.getMembersAsString(pathMember);
+
+            for (int i = 0; i < vip.length; i++) {
+                comboBoxCustomer.addItem(vip[i][1]);
+            }
+            for (int i = 0; i < members.length; i++) {
+                comboBoxCustomer.addItem(members[i][1]);
+            }
+        } catch (ClassNotFoundException | IOException | JAXBException e) {
+            e.printStackTrace();
+        }
+        comboBoxCustomer.setSelectedIndex(-1);
+
+        try {
+
+            barang = DataStoreMechanism.getBarangAsString(pathItem);
+            namaBarang = new String[barang.length];
+            for (int i = 0; i < barang.length; i++) {
+                namaBarang[i] = barang[i][1];
+            }
+            listTambahBarang.setListData(namaBarang);
+        } catch (ClassNotFoundException | IOException | JAXBException e) {
+            e.printStackTrace();
+        }
 
         payButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Utility/payButton.png"))); // NOI18N
         payButton.setContentAreaFilled(false);
@@ -318,15 +329,19 @@ public class Kasir extends javax.swing.JPanel {
             boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(boxKasirLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(boxTambahBarang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, boxKasirLayout.createSequentialGroup()
+                .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(boxKasirLayout.createSequentialGroup()
+                        .addComponent(boxTambahBarang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(boxKasirLayout.createSequentialGroup()
                         .addComponent(boxHapusBarang, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(customerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(payButton, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGroup(boxKasirLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(boxKasirLayout.createSequentialGroup()
+                                .addGap(15, 15, 15)
+                                .addComponent(payButton, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(boxKasirLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(customerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 76, Short.MAX_VALUE))))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -342,35 +357,53 @@ public class Kasir extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void listTambahBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listTambahBarangMouseClicked
-        System.out.println(listTambahBarang.getSelectedValue());
+        if (!listAdded.contains(listTambahBarang.getSelectedValue())){
+            listAdded.add(listTambahBarang.getSelectedValue());
+            listHapusBarang.setListData(listAdded);
+        }
     }//GEN-LAST:event_listTambahBarangMouseClicked
 
     private void listHapusBarangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listHapusBarangMouseClicked
-        System.out.println(listHapusBarang.getSelectedValue());
+        listAdded.remove(listHapusBarang.getSelectedValue());
+        listHapusBarang.setListData(listAdded);
     }//GEN-LAST:event_listHapusBarangMouseClicked
 
     private void comboBoxCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxCustomerActionPerformed
-        /*TODO ganti statusnya*/
-        try {
-            String[][] members = DataStoreMechanism.getMembersAsString(pathMember);
-            String[][] vip = DataStoreMechanism.getMembersAsString(pathVIP);
-        } catch (ClassNotFoundException | IOException | JAXBException e) {
-            e.printStackTrace();
-        }
-        String.valueOf(comboBoxCustomer.getSelectedItem());
         
     }//GEN-LAST:event_comboBoxCustomerActionPerformed
 
     private void payButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_payButtonActionPerformed
-        JFrame popUpPayment = new PopUpPayment(null);
-        popUpPayment.setVisible(true);
+        
+        String[][] listAddedBarang = new String[listHapusBarang.getModel().getSize()][this.barang[0].length];
+        int j = 0;
+        while (j < listHapusBarang.getModel().getSize()){
+            for (int i = 0; i < this.barang.length; i++) {
+                if (this.barang[i][1] == listHapusBarang.getModel().getElementAt(j)){
+                    listAddedBarang[j] = this.barang[i];
+                    break;
+                }
+            }
+            j++;
+        }
+        j=0;
+        if (comboBoxCustomer.getSelectedIndex()!=-1){
+            JFrame popUpPayment = new PopUpPayment(listAddedBarang, comboBoxCustomer.getSelectedItem().toString());
+            popUpPayment.setVisible(true);
+        } else {
+            //TODO buat ngambil id customer terus ditambahin 1;
+            JFrame popUpPayment = new PopUpPayment(listAddedBarang, null);
+            popUpPayment.setVisible(true);
+        }
+        
+        comboBoxCustomer.setLabelText("Customer");
+        comboBoxCustomer.setSelectedIndex(-1);
     }//GEN-LAST:event_payButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel boxHapusBarang;
     private javax.swing.JPanel boxKasir;
     private javax.swing.JPanel boxTambahBarang;
-    private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxCustomer;
+    private main.featureGUI.Util.customcombobox.Combobox comboBoxCustomer;
     private javax.swing.JPanel customerPanel;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel labelHapusBarang;
