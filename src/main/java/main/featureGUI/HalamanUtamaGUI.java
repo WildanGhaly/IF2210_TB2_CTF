@@ -20,13 +20,17 @@ public class HalamanUtamaGUI extends javax.swing.JPanel {
     /**
      * Creates new form HalamanUtama
      */
+    private static final HalamanUtamaGUI HALAMAN_UTAMA_GUI = new HalamanUtamaGUI();
     private final Image logoHalamanUtamaBg = RequestImage.requestImage("HalamanUtama.png");
     private final Image logoHalamanUtamaFg = RequestImage.requestImage("logoChizuruBesar.png");
 
-    public HalamanUtamaGUI() {
+    private HalamanUtamaGUI() {
         initComponents();
     }
 
+    public static HalamanUtamaGUI getInstance(){
+        return HalamanUtamaGUI.HALAMAN_UTAMA_GUI;
+    }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {

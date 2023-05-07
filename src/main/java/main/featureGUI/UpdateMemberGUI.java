@@ -22,12 +22,18 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
     /**
      * Creates new form UpdateMemberGUI
      */
+    private static final UpdateMemberGUI UPDATE_MEMBER_GUI = new UpdateMemberGUI();
+
     private final Image comboBoxUpdateImg = RequestImage.requestImage("updatemember/comboBoxUpdateMember.png");
     private final Image updateBoxPanelImg = RequestImage.requestImage("updatemember/boxUpdateMember.png");
     private final Image statusBoxPanelImg = RequestImage.requestImage("updatemember/boxStatus.png");
 
-    public UpdateMemberGUI() {
+    private UpdateMemberGUI() {
         initComponents();
+    }
+
+    public static UpdateMemberGUI getInstance(){
+        return UpdateMemberGUI.UPDATE_MEMBER_GUI;
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

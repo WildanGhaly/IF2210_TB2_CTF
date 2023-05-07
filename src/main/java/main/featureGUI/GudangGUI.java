@@ -15,8 +15,14 @@ public class GudangGUI extends javax.swing.JPanel {
     /**
      * Creates new form Gudang
      */
-    public GudangGUI() {
+    private static final GudangGUI GUDANG_GUI = new GudangGUI();
+
+    private GudangGUI() {
         initComponents();
+    }
+
+    public static GudangGUI getInstance(){
+        return GudangGUI.GUDANG_GUI;
     }
 
     public JPanel getPanel(){

@@ -25,6 +25,8 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
     /**
      * Creates new form HistoriTransaksiGUI
      */
+    private static final HistoriTransaksiGUI HISTORI_TRANSAKSI_GUI = new HistoriTransaksiGUI();
+
     private String historyPath  = "src/main/java/datastore/database/History/history.json";
     private String memberPath = "src/main/java/datastore/database/Member/member.json";
     private String customerPath = "src/main/java/datastore/database/Customer/customer.json";
@@ -32,8 +34,12 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
 
     private final Image comboBoxUpdateImg = RequestImage.requestImage("updatemember/comboBoxUpdateMember.png");
     
-    public HistoriTransaksiGUI() {
+    private HistoriTransaksiGUI() {
         initComponents();
+    }
+
+    public static HistoriTransaksiGUI getInstance(){
+        return HistoriTransaksiGUI.HISTORI_TRANSAKSI_GUI;
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
