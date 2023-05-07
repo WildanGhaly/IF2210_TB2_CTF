@@ -30,7 +30,7 @@ import customer.VIP;
  * // Call DeleteData to delete data
  * DeleteData(path, 4, Member.class);
  * // Call Update to update data
- * Update(8, path, targetPath, "member", "newName", "newNumber", VIP.class);
+ * Update(8, 1000, path, targetPath, "member", "newName", "newNumber", VIP.class);
  * }</pre>
  * <p>
  * @author<u1><strong>@WildanGhaly</strong></u1>
@@ -139,6 +139,7 @@ public class DataStoreMechanism {
      * <p>If the new type is 'Member' or 'VIP', the 'name' and 'phoneNumber' attributes of the customer object are also updated.</p>
      * <p>The updated customer object is returned as the result of the method.</p>
      * @param customer the {@code Customer} object to be updated
+     * @param orderAmount the amount of the order to be added to the customer's total spent (applicable only if the new type is 'Member' or 'VIP')
      * @param newType the new type of the customer: 'Customer', 'Member', or 'VIP'
      * @param newName the new name of the customer (applicable only if the new type is 'Member' or 'VIP')
      * @param newPhoneNumber the new phone number of the customer (applicable only if the new type is 'Member' or 'VIP')
@@ -147,18 +148,22 @@ public class DataStoreMechanism {
      * @see Member
      * @see VIP
      */
-    public static Customer UpdateCustomer(Customer customer, String newType, String newName, String newPhoneNumber){
+    public static Customer UpdateCustomer(Customer customer, double orderAmount, String newType, String newName, String newPhoneNumber){
         System.out.println(newType);
         if (newType.equals("member")){
             Member member = new Member(customer.getId(), customer.getPoints(), customer.getTotalSpent(), newName, newPhoneNumber);
+            double discount = member.applyPoints(orderAmount);
+            member.addOrder(orderAmount - discount);
             return member;
         } else if (newType.equals("vip")){
             System.out.println("Should be here");
             VIP vip = new VIP(customer.getId(), customer.getPoints(), customer.getTotalSpent(), newName, newPhoneNumber);
-            System.out.println(vip);
+            double discount = vip.applyPoints(orderAmount);
+            vip.addOrder(orderAmount - discount);
             return vip;
         } else { // deaktivasi
             Customer customers = new Customer(customer.getId(), customer.getId(), customer.getTotalSpent());
+            customers.addOrder(orderAmount);
             return customers;
         }
     }
@@ -179,6 +184,7 @@ public class DataStoreMechanism {
      * <p>This method calls the UpdateCustomer method to perform the update operation.</p>
      * <p>The file format supported are JSON, XML, and OBJ. The method uses the XmlDataAdapter, JsonDataAdapter, and ObjDataAdapter classes to parse the files.</p>
      * @param id the identifier of the customer, member, or VIP to be updated
+     * @param orderAmount the amount of the order to be added to the total spent of the customer
      * @param path the path of the file to be updated
      * @param targetPath the path of the target file where the updated data will be saved
      * @param newType the new type of the data: 'Customer', 'Member', or 'VIP'
@@ -199,7 +205,7 @@ public class DataStoreMechanism {
      * @see #DeleteData(String, int, Class)
      * @see #UpdateCustomer(Customer, String, String, String)
     */
-    public static boolean Update(int id, String path, String targetPath, String newType, String newName, String newPhoneNumber, Class<?> clazz) throws ClassNotFoundException, IOException, JAXBException{
+    public static boolean Update(int id, double orderAmount, String path, String targetPath, String newType, String newName, String newPhoneNumber, Class<?> clazz) throws ClassNotFoundException, IOException, JAXBException{
 
         Customer updatedCustomer = (Customer) DeleteData(path, id, clazz);
         System.out.println("Updated customer " + updatedCustomer);
@@ -226,7 +232,7 @@ public class DataStoreMechanism {
 
         if (updatedCustomer != null){
             System.out.println("Was here");
-            Customer newCust = UpdateCustomer(updatedCustomer, newType, newName, newPhoneNumber);
+            Customer newCust = UpdateCustomer(updatedCustomer, orderAmount, newType, newName, newPhoneNumber);
             customers.add(newCust);
             adapter.saveData(targetPath, customers);
         }
@@ -237,8 +243,8 @@ public class DataStoreMechanism {
 
     public static void main(String[] args) throws ClassNotFoundException, IOException, JAXBException {
         String path         = "src/main/java/datastore/database/VIP/vip.json";
-        String targetPath   = "src/main/java/datastore/database/Member/member.json";
+        String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
         // DeleteData(path, 4, Member.class);
-        Update(8, path, targetPath, "member", "newName", "newNumber", VIP.class);
+        Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
     }
 }
