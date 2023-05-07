@@ -1,31 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataWrapper>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Willy</name>
+        <phoneNumber>081234567890</phoneNumber>
+        <id>1</id>
+        <points>0</points>
+        <totalSpent>100000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Salman</name>
+        <phoneNumber>081234567890</phoneNumber>
+        <id>2</id>
+        <points>0</points>
+        <totalSpent>100000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Afnan</name>
+        <phoneNumber>081234567890</phoneNumber>
+        <id>3</id>
+        <points>0</points>
+        <totalSpent>100000</totalSpent>
+    </item>
+    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Haidar</name>
+        <phoneNumber>081234567890</phoneNumber>
         <id>4</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
-        <name>Willy</name>
-        <phoneNumber>1234567890</phoneNumber>
+        <totalSpent>100000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Haikal</name>
+        <phoneNumber>081234567890</phoneNumber>
         <id>5</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
-        <name>Wildan</name>
-        <phoneNumber>32422222222</phoneNumber>
+        <totalSpent>100000</totalSpent>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
+        <name>Copa</name>
+        <phoneNumber>081234567890</phoneNumber>
         <id>6</id>
         <points>0</points>
-        <totalSpent>0.0</totalSpent>
-        <name>Ghaly</name>
-        <phoneNumber>00000000000</phoneNumber>
-    </item>
-    <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="member">
-        <id>10</id>
-        <points>0</points>
-        <totalSpent>0.0</totalSpent>
-        <name>WildanGhaly</name>
-        <phoneNumber>1234567890</phoneNumber>
+        <totalSpent>100000</totalSpent>
     </item>
 </dataWrapper>
+
