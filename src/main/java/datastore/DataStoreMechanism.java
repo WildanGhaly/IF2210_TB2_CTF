@@ -379,7 +379,7 @@ public class DataStoreMechanism {
             if (obj instanceof LinkedTreeMap){
                 LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
                 if (map.get("name").equals(name)){
-                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), (String) map.get("time"), (String) map.get("items"), (String) map.get("totalPrice")});
+                    history.add(new String[]{(String) map.get("name"), (String) map.get("date"), Double.toString((Double) map.get("quantity")), Double.toString((Double) map.get("price")), Double.toString((Double) map.get("total"))});
                 }
             } else if (obj instanceof History){
                 if (((History) obj).getName().equals(name)){
@@ -490,7 +490,7 @@ public class DataStoreMechanism {
         String path         = "src/main/java/datastore/database/VIP/vip.json";
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
         String path2        = "src/main/java/datastore/database/Barang/barang.xml";
-        String historyPath  = "src/main/java/datastore/database/History/history.xml";
+        String historyPath  = "src/main/java/datastore/database/History/history.json";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
         double barangPrice = getItemsPrice(path2, new HashMap<Integer, Integer>(){{
