@@ -2,6 +2,7 @@ package datastore;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.JAXBContext;
@@ -87,6 +88,25 @@ public class XmlDataAdapter implements DataAdapter {
         } catch (JAXBException e) {
             throw new IOException(e);
         }
+    }
+
+    /**
+     * Adds the given data to the XML file at the specified path using JAXB.
+     * The data must be a list of objects that are annotated with JAXB annotations.
+     * The data is added to the existing data in the file.
+     * @param path The path to the file where the data will be saved.
+     * @param data The data to be added to the file.
+     * @throws IOException If an I/O error occurs while saving the data.
+     * @throws PropertyException If there is an error with the JAXB properties.
+     * @throws JAXBException If there is an error with the JAXB context.
+     * @see #saveData(String, List)
+     * @see #loadData(String)
+     */
+    public void addData(String path, Object data) throws IOException, PropertyException, JAXBException {
+        List<?> existingData = loadData(path);
+        List<Object> newData = new ArrayList<>(existingData);
+        newData.add(data);
+        saveData(path, newData);
     }
 
     /**

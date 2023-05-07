@@ -79,5 +79,12 @@ public class XmlDataAdapter2 implements DataAdapter {
             return wrapper.items;
         }
     }
+
+    public void addData(String path, Object data) throws IOException, ClassNotFoundException, JAXBException {
+        List<?> existingData = loadData(path);
+        List<Object> newData = new ArrayList<>(existingData);
+        newData.add(data);
+        saveData(path, newData);
+    }
 }
 

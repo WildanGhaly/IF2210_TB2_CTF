@@ -64,4 +64,12 @@ public class VIP extends Member {
         double fixedDiscount = amount * DISCOUNT_RATE_VIP;
         return discount + fixedDiscount;
     }
+
+    public static void main(String[] args) {
+        VIP vip = new VIP(1,100,1000, "Wildan", "12345678");
+        double discount = vip.applyPoints(1_000);
+        vip.addOrder(1_000  - discount);
+        System.out.println(vip.getTotalSpent());
+        System.out.println(vip.getPoints());
+    }
 }

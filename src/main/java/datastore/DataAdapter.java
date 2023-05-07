@@ -51,4 +51,15 @@ public interface DataAdapter {
      * @throws JAXBException if there is an issue with the JAXB implementation
     */
     List<?> loadData(String path) throws IOException, ClassNotFoundException, JAXBException;
+
+    /**
+     * The addData method adds an object to a List of objects stored in a file.
+     * @param path - the path to the file where the data is stored
+     * @param data - the object to be added to the file
+     * @throws IOException if there is an issue reading the file
+     * @throws PropertyException if there is an issue with the Java Architecture for XML Binding (JAXB)
+     * @throws JAXBException if there is an issue with the JAXB implementation
+     * @throws ClassNotFoundException if the class of the serialized object cannot be found
+     */
+    void addData(String path, Object data) throws IOException, PropertyException, JAXBException, ClassNotFoundException;
 }
