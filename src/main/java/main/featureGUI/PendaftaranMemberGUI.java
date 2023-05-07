@@ -9,9 +9,14 @@ import main.featureGUI.Util.UtilFunction;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.xml.bind.JAXBException;
+
+import customer.Member;
+import datastore.DataStoreMechanism;
 /**
  *
  * @author user
@@ -19,6 +24,10 @@ import javax.swing.JPanel;
 public class PendaftaranMemberGUI extends javax.swing.JPanel {
 
     private static final PendaftaranMemberGUI PENDAFTARAN_MEMBER_GUI = new PendaftaranMemberGUI();
+    private String fileFormat = ".xml";
+    private String customerPath = "src/main/java/datastore/database/Customer/customer" + fileFormat;
+    private String memberPath = "src/main/java/datastore/database/Member/member" + fileFormat;
+    private String vipPath = "src/main/java/datastore/database/VIP/vip" + fileFormat;
 
     private final Image boxPendaftaranImg = RequestImage.requestImage("pendaftaranmember/boxPendaftaranMember.png");
     
@@ -207,13 +216,25 @@ public class PendaftaranMemberGUI extends javax.swing.JPanel {
         else if (!UtilFunction.isNumeric(inputNoTelepon.getText())){
             JOptionPane.showMessageDialog(null, "invalid telephone number");
         } else {
-            /*TODO data masuk disini*/
             inputNama.getText();
             inputNoTelepon.getText();
+            
             /*data masuk disini*/
-            JOptionPane.showMessageDialog(null, "Member Added");
-            inputNama.setText(" Ketikkan nama...");
-            inputNoTelepon.setText(" Ketik nomor telepon...");
+            try {
+                int id = 0; // TODO change id to customer id
+                boolean updateStatus = DataStoreMechanism.Update(id, 0, customerPath, memberPath, "member", inputNama.getText(), inputNoTelepon.getText(), Member.class);
+                if (updateStatus){
+                    JOptionPane.showMessageDialog(null, "Member Added");
+                    inputNama.setText(" Ketikkan nama...");
+                    inputNoTelepon.setText(" Ketik nomor telepon...");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Member Not Added");
+                }
+            } catch (ClassNotFoundException | IOException | JAXBException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            
         }
     }//GEN-LAST:event_addMemberActionPerformed
 

@@ -240,6 +240,7 @@ public class DataStoreMechanism {
             Customer newCust = UpdateCustomer(updatedCustomer, orderAmount, newType, newName, newPhoneNumber);
             customers.add(newCust);
             adapter.saveData(targetPath, customers);
+            return true;
         }
 
         return false;
