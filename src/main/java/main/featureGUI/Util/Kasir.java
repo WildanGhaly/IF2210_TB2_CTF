@@ -35,7 +35,7 @@ public class Kasir extends javax.swing.JPanel {
 
     public void instantiate(){
         for (Integer i = 0; i < 20; i++) {
-            listBarang.add(new BarangUI(new Barang(32, i, ("Barang".concat(i.toString())), 20000, 18000, "Pecahan", null)));
+            listBarang.add(new BarangUI(new Barang(32, i, ("Barang".concat(i.toString())), 20000, 18000, "Pecahan", null, null)));
         }
     }
 
