@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.xml.bind.JAXBException;
@@ -65,6 +66,23 @@ public class ObjDataAdapter implements DataAdapter {
         } catch (ClassNotFoundException e) {
             throw new IOException("Failed to load data from " + path, e);
         }
+    }
+
+    /**
+     * Adds the given data to the specified file path in binary OBJ format using Java's ObjectOutputStream.
+     * @param path the file path to add the data to
+     * @param data the data to be added
+     * @throws IOException if there is an error while writing to the file
+     * @throws PropertyException if there is an error with the properties of the file
+     * @throws JAXBException if there is an error while converting the data to XML format
+     * @see #saveData(String, List)
+     * @see #loadData(String)
+     */
+    public void addData(String path, Object data) throws IOException, PropertyException, JAXBException {
+        List<?> existingData = loadData(path);
+        List<Object> newData = new ArrayList<>(existingData);
+        newData.add(data);
+        saveData(path, newData);
     }
 
 }

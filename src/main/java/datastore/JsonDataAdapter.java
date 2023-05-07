@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import com.google.gson.Gson;
@@ -50,6 +51,22 @@ public class JsonDataAdapter implements DataAdapter {
         List<?> data = gson.fromJson(reader, new TypeToken<List<?>>(){}.getType());
         reader.close();
         return data;
+    }
+
+    /**
+     * The addData method adds an object to a List of objects stored in a file in JSON format.
+     * @param path - the path to the file where the data is stored
+     * @param data - the object to be added to the file
+     * @throws IOException if there is an issue reading or writing the file
+     * @see #loadData(String)
+     * @see #saveData(String, List)
+     */
+    @Override
+    public void addData(String path, Object data) throws IOException {
+        List<?> existingData = loadData(path);
+        List<Object> newData = new ArrayList<>(existingData);
+        newData.add(data);
+        saveData(path, newData);
     }
 }
 
