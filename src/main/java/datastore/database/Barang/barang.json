@@ -6,6 +6,7 @@
     "sellPrice": 100000.0,
     "buyPrice": 50000.0,
     "kategori": "Pakaian",
+    "description": "Adalah sebuah baju",
     "image": "baju.com"
   },
   {
@@ -15,6 +16,7 @@
     "sellPrice": 200000.0,
     "buyPrice": 100000.0,
     "kategori": "Pakaian",
+    "description": "Adalah sebuah celana",
     "image": "celana.com"
   },
   {
@@ -24,6 +26,7 @@
     "sellPrice": 300000.0,
     "buyPrice": 150000.0,
     "kategori": "Pakaian",
+    "description": "Adalah sebuah sepatu",
     "image": "sepatu.com"
   },
   {
@@ -33,6 +36,7 @@
     "sellPrice": 400000.0,
     "buyPrice": 200000.0,
     "kategori": "Pakaian",
+    "description": "Adalah sebuah kemeja",
     "image": "kemeja.com"
   }
 ]
