@@ -48,6 +48,7 @@ public class Barang implements Serializable {
     private double sellPrice;
     private double buyPrice;
     private String kategori;
+    private String description;
     private String image;
 
     /**
@@ -64,15 +65,17 @@ public class Barang implements Serializable {
      * @param sellPrice the price at which this item can be sold
      * @param buyPrice the price at which this item was purchased
      * @param kategori the category to which this item belongs
+     * @param description the description of this item
      * @param image the file path to the image associated with this item
      */
-    public Barang(int id, int stock, String name, double sellPrice, double buyPrice, String kategori, String image) {
+    public Barang(int id, int stock, String name, double sellPrice, double buyPrice, String kategori, String description, String image) {
         this.id = id;
         this.stock = stock;
         this.name = name;
         this.sellPrice = sellPrice;
         this.buyPrice = buyPrice;
         this.kategori = kategori;
+        this.description = description;
         this.image = image;
     }
 

@@ -297,14 +297,14 @@ public class DataStoreMechanism {
                     amount = items.get(id);
                     itemPrice = (double) map.get("sellPrice");
                     price += itemPrice * amount;
-                    barang.add(new Barang(id, stock - amount, (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                    barang.add(new Barang(id, stock - amount, (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("description"), (String) map.get("image")));
                 } else {
-                    barang.add(new Barang(id, (int) (double) map.get("stock"), (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("image")));
+                    barang.add(new Barang(id, (int) (double) map.get("stock"), (String) map.get("name"), (double) map.get("sellPrice"), (double) map.get("buyPrice"), (String) map.get("kategori"), (String) map.get("description"), (String) map.get("image")));
                 }
             } else if (obj instanceof Barang){
                 if (items.containsKey(((Barang) obj).getId())){
                     price += ((Barang) obj).getSellPrice() * items.get(((Barang) obj).getId());
-                    barang.add(new Barang(((Barang) obj).getId(), ((Barang) obj).getStock() - items.get(((Barang) obj).getId()), ((Barang) obj).getName(), ((Barang) obj).getSellPrice(), ((Barang) obj).getBuyPrice(), ((Barang) obj).getKategori(), ((Barang) obj).getImage()));
+                    barang.add(new Barang(((Barang) obj).getId(), ((Barang) obj).getStock() - items.get(((Barang) obj).getId()), ((Barang) obj).getName(), ((Barang) obj).getSellPrice(), ((Barang) obj).getBuyPrice(), ((Barang) obj).getKategori(), ((Barang) obj).getDescription(), ((Barang) obj).getImage()));
                 } else {
                     barang.add((Barang) obj);
                 }
@@ -346,8 +346,8 @@ public class DataStoreMechanism {
      * <ul>
      *  <li><code>0</code>: The name of the name of item.</li>
      * <li><code>1</code>: The date of the transaction.</li>
-     * <li><code>2</code>: The time of the transaction.</li>
-     * <li><code>3</code>: The items purchased in the transaction.</li>
+     * <li><code>2</code>: The quantity of the transaction.</li>
+     * <li><code>3</code>: The price purchased in the transaction.</li>
      * <li><code>4</code>: The total price of the transaction.</li>
      * </ul>
      * <p>For example, the following code can be used to get the history of transactions for a customer with the name <code>"Wildan Ghaly"</code> from a database file located at <code>"./database.xml"</code>:</p>
@@ -426,8 +426,8 @@ public class DataStoreMechanism {
      * <ul>
      * <li><code>0</code>: The name of the name of item.</li>
      * <li><code>1</code>: The date of the transaction.</li>
-     * <li><code>2</code>: The time of the transaction.</li>
-     * <li><code>3</code>: The items purchased in the transaction.</li>
+     * <li><code>2</code>: The quantity of the transaction.</li>
+     * <li><code>3</code>: The price purchased in the transaction.</li>
      * <li><code>4</code>: The total price of the transaction.</li>
      * </ul>
      * <p>For example, the following code can be used to get the history of transactions for the date <code>"January"</code> and <code>"2020"</code> from a database file located at <code>"./database.xml"</code>:</p>
@@ -647,6 +647,138 @@ public class DataStoreMechanism {
 
         return names;
     }
+
+
+    /**
+     * <p>Reads data from path then use it to get the item's id.</p>
+     * <p>This method is used to add a new item to the database file.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *  <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static int getId(String path) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "items.xml";
+     * addBarang(path, "newBarangs", "100", "newKategori", "1000", "500", "newDesc", "newImage");
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @param nama The name of the item.
+     * @param stock The stock of the item.
+     * @param kategori The category of the item.
+     * @param sellPrice The selling price of the item.
+     * @param buyPrice The buying price of the item.
+     * @param description The description of the item.
+     * @param image The image of the item.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     */
+    public static void addBarang(String path, String nama, String stock, String kategori, String sellPrice, String buyPrice, String description, String image) throws ClassNotFoundException, IOException, JAXBException {
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+        adapter.addData(path, new Barang(data.size() + 1, Integer.parseInt(stock), nama, Double.parseDouble(sellPrice), Double.parseDouble(buyPrice), kategori, description, image));
+    }
+
+
+    /**
+     * <p>Reads data from path then use it to find the same item's name and update it.</p>
+     * <p>This method is used to update an item in the database file. </p>
+     * <p>The method will load the data from the database file, then find the item's name that matches the specified name, then update the item's data with the specified data.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static void updateBarang(String path, String nama, String stock, String sellPrice, String buyPrice, String kategori, String description, String image) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "items.xml";
+     * updateBarang(path, "newBarangs", "100", "newKategori", "1000", "500", "newDesc", "newImage");
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @param nama The name of the item.
+     * @param stock The stock of the item.
+     * @param kategori The category of the item.
+     * @param sellPrice The selling price of the item.
+     * @param buyPrice The buying price of the item.
+     * @param description The description of the item.
+     * @param image The image of the item.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Barang
+     * @see LinkedTreeMap
+     */
+    public static void updateBarang(String path, String nama, String stock, String sellPrice, String buyPrice, String kategori, String description, String image) throws ClassNotFoundException, IOException, JAXBException {
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+        List<Barang> barang = new ArrayList<>();
+
+        for (Object obj : data){
+            if (obj instanceof Barang && ((Barang) obj).getName().equals(nama)){
+                barang.add(new Barang(((Barang) obj).getId(), Integer.parseInt(stock), nama, Double.parseDouble(sellPrice), Double.parseDouble(buyPrice), kategori, description, image));
+            } else if (obj instanceof Barang){
+                barang.add((Barang) obj);
+            } else if (obj instanceof LinkedTreeMap && ((LinkedTreeMap<?, ?>) obj).containsKey("name") && ((LinkedTreeMap<?, ?>) obj).get("name").equals(nama)){
+                barang.add(new Barang((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id"), Integer.parseInt(stock), nama, Double.parseDouble(sellPrice), Double.parseDouble(buyPrice), kategori, description, image));
+            } else if (obj instanceof LinkedTreeMap){
+                barang.add(new Barang((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id"), (int) (double) ((LinkedTreeMap<?, ?>) obj).get("stock"), (String) ((LinkedTreeMap<?, ?>) obj).get("name"), (double) ((LinkedTreeMap<?, ?>) obj).get("sellPrice"), (double) ((LinkedTreeMap<?, ?>) obj).get("buyPrice"), (String) ((LinkedTreeMap<?, ?>) obj).get("kategori"), (String) ((LinkedTreeMap<?, ?>) obj).get("description"), (String) ((LinkedTreeMap<?, ?>) obj).get("image")));
+            } 
+
+        }
+
+        adapter.saveData(path, barang);
+        
+    }
+
+
+    
     /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args
@@ -693,6 +825,11 @@ public class DataStoreMechanism {
             }
             System.out.println();
         }
+        System.out.println("\n===================================================\n");
+
+        addBarang(path2, "newBarangs", "100", "newKategori", "1000", "500", "newDesc", "newImage");
+        updateBarang(path2, "newBarang", "20", "1000", "500", "newKategori", "newDescription", "newImg");
+        
         System.out.println("\n===================================================\n");
     }
 }
