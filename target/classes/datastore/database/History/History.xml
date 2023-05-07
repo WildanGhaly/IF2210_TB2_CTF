@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <dataWrapper>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="history">
-        <nama>Willy</nama>
-        <namaBarang>Ayam Goreng</namaBarang>
-        <tanggal>2023-05-07</tanggal>
-        <kuantitas>2</kuantitas>
-        <harga>5000.0</harga>
+        <id>1</id>
+        <name>Willy</name>
+        <itemName>Ayam Goreng</itemName>
+        <date>2023-05-07</date>
+        <quantity>2</quantity>
+        <price>5000.0</price>
         <total>10000.0</total>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="history">
-        <nama>Willy</nama>
-        <namaBarang>Ayam Bakar</namaBarang>
-        <tanggal>2023-05-07</tanggal>
-        <kuantitas>3</kuantitas>
-        <harga>5000.0</harga>
+        <id>1</id>
+        <name>Willy</name>
+        <itemName>Ayam Bakar</itemName>
+        <date>2023-05-07</date>
+        <quantity>3</quantity>
+        <price>5000.0</price>
         <total>15000.0</total>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="history">
-        <nama>Wildan</nama>
-        <namaBarang>Ayam Geprek</namaBarang>
-        <tanggal>2023-05-07</tanggal>
-        <kuantitas>4</kuantitas>
-        <harga>3000.0</harga>
+        <id>2</id>
+        <name>Wildan</name>
+        <itemName>Ayam Geprek</itemName>
+        <date>2023-05-07</date>
+        <quantity>4</quantity>
+        <price>3000.0</price>
         <total>12000.0</total>
     </item>
 </dataWrapper>

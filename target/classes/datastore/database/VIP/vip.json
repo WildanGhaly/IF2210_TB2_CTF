@@ -7,17 +7,17 @@
     "totalSpent": 0.0
   },
   {
-    "name": "WildanVIP",
-    "phoneNumber": "32422222222",
-    "id": 8,
-    "points": 0,
-    "totalSpent": 0.0
-  },
-  {
     "name": "GhalyVIP",
     "phoneNumber": "00000000000",
     "id": 9,
     "points": 0,
     "totalSpent": 0.0
+  },
+  {
+    "name": "newName",
+    "phoneNumber": "newNumber",
+    "id": 8,
+    "points": 8,
+    "totalSpent": 3575.0
   }
 ]

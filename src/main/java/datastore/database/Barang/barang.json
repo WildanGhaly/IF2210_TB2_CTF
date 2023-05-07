@@ -1,6 +1,7 @@
 [
   {
-    "stock": 2,
+    "id": 0.0,
+    "stock": 2.0,
     "name": "Baju",
     "sellPrice": 100000.0,
     "buyPrice": 50000.0,
@@ -8,7 +9,8 @@
     "image": "baju.com"
   },
   {
-    "stock": 3,
+    "id": 1.0,
+    "stock": 3.0,
     "name": "Celana",
     "sellPrice": 200000.0,
     "buyPrice": 100000.0,
@@ -16,11 +18,21 @@
     "image": "celana.com"
   },
   {
-    "stock": 4,
+    "id": 2.0,
+    "stock": 4.0,
     "name": "Sepatu",
     "sellPrice": 300000.0,
     "buyPrice": 150000.0,
     "kategori": "Pakaian",
     "image": "sepatu.com"
+  },
+  {
+    "id": 3,
+    "stock": 5,
+    "name": "Kemeja",
+    "sellPrice": 400000.0,
+    "buyPrice": 200000.0,
+    "kategori": "Pakaian",
+    "image": "kemeja.com"
   }
 ]
