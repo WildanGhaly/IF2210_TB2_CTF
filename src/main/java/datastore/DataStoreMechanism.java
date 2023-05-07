@@ -393,6 +393,106 @@ public class DataStoreMechanism {
         }
         return result;
     }
+            
+    /**
+     * <p>The following method can be used to get the history of transaction in one month with the given month and year.</p>
+     * <p>The database file must be in XML, JSON, or OBJ format, and the method uses the <code>DataAdapter</code> interface class, as well as <code>XmlDataAdapter</code>, <code>JsonDataAdapter</code>, and <code>ObjDataAdapter</code> classes.</p>
+     * <p>To use this method, simply provide the path to the database file, the month, and the year. The method returns a 2D array of strings containing the history of transactions for the customer.</p>
+     * <p>Note that this method does not update the database file.</p>
+     * <ul>
+     *   <li><code>path</code>: The path to the database file.</li>
+     *  <li><code>month</code>: The month of the transaction.</li>
+     * <li><code>year</code>: The year of the transaction.</li>
+     * </ul>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     *  <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     *  <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public String[][] getTransactionReport(String path, String month, String year) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>The method returns a 2D array of strings containing the history of transactions for the customer.</p>
+     * <p>The first dimension of the array represents the transaction, and the second dimension represents the following information:</p>
+     * <ul>
+     * <li><code>0</code>: The name of the name of item.</li>
+     * <li><code>1</code>: The date of the transaction.</li>
+     * <li><code>2</code>: The time of the transaction.</li>
+     * <li><code>3</code>: The items purchased in the transaction.</li>
+     * <li><code>4</code>: The total price of the transaction.</li>
+     * </ul>
+     * <p>For example, the following code can be used to get the history of transactions for the date <code>"January"</code> and <code>"2020"</code> from a database file located at <code>"./database.xml"</code>:</p>
+     * <pre>
+     * String[][] history = getTransactionReport("./database.xml", "January", "2020");
+     * </pre>
+     * @param path The path to the database file.
+     * @param month The month of the transaction.
+     * @param year The year of the transaction.
+     * @return A 2D array of strings containing the history of transactions for the customer.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see #getHistoryTransaction(String path, String name)
+     */
+    public static String[][] getTransactionReport(String path, String month, String year) throws ClassNotFoundException, IOException, JAXBException{
+        ArrayList<String[]> history = new ArrayList<>();
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+        
+        List<?> data = adapter.loadData(path);
+
+        String[] months = {"January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"};
+        int i = 0;
+        for (String m : months){
+            if (m.equals(month)){
+                break;
+            }
+            i++;
+        }
+
+        String monthInNumber = Integer.toString(i + 1);
+        if (monthInNumber.length() == 1){
+            monthInNumber = "0" + monthInNumber;
+        }
+
+        for (Object obj : data){
+            if (obj instanceof LinkedTreeMap){
+                LinkedTreeMap<?, ?> map = (LinkedTreeMap<?, ?>) obj;
+                String[] date = ((String) map.get("date")).split("-");
+                System.out.println(date[0] + " " + date[1]);
+                if (date[0].equals(year) && date[1].equals(monthInNumber)){
+                    history.add(new String[]{(String) map.get("itemName"), (String) map.get("date"), Double.toString((Double) map.get("quantity")), Double.toString((Double) map.get("price")), Double.toString((Double) map.get("total"))});
+                }
+            } else if (obj instanceof History){
+                String[] date = ((History) obj).getDate().split("-");
+                if (date[0].equals(year) && date[1].equals(monthInNumber)){
+                    history.add(new String[]{((History) obj).getItemName(), ((History) obj).getDate(), Integer.toString(((History) obj).getQuantity()), Double.toString(((History) obj).getPrice()), Double.toString(((History) obj).getTotal())});
+                }
+            } 
+        }
+
+        String[][] result = new String[history.size()][5];
+        for (int j = 0; j < history.size(); j++){
+            result[j] = history.get(j);
+        }
+        
+        return result;
+    }
 
 
     /**
@@ -560,7 +660,7 @@ public class DataStoreMechanism {
         String targetPath   = "src/main/java/datastore/database/VIP/vip.json";
         String path2        = "src/main/java/datastore/database/Barang/barang.xml";
         String path3        = "src/main/java/datastore/database/Customer/customer.json";
-        String historyPath  = "src/main/java/datastore/database/History/history.json";
+        String historyPath  = "src/main/java/datastore/database/History/history.xml";
         // DeleteData(path, 4, Member.class);
         Update(8, 1000, path, targetPath, "vip", "newName", "newNumber", VIP.class);
         double barangPrice = getItemsPrice(path2, new HashMap<Integer, Integer>(){{
@@ -584,5 +684,15 @@ public class DataStoreMechanism {
         for (String s : nameList){
             System.out.println(s);
         }
+
+        System.out.println("\n===================================================\n");
+        String[][] historyTransaction = DataStoreMechanism.getTransactionReport(historyPath, "May", "2023");
+        for (String[] s : historyTransaction){
+            for (String s2 : s){
+                System.out.print(s2 + " ");
+            }
+            System.out.println();
+        }
+        System.out.println("\n===================================================\n");
     }
 }
