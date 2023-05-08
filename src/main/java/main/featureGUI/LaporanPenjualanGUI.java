@@ -12,7 +12,7 @@ import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
 import java.io.IOException;
-
+import java.awt.Font;
 import javax.swing.JPanel;
 import main.featureGUI.Util.RequestImage;
 // import javax.xml.bind.JAXBException;
@@ -89,7 +89,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
 
         logoLaporan.setBackground(new java.awt.Color(40, 41, 61));
         logoLaporan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/pendaftaranmember/logoPendaftaranMember.png"))); // NOI18N
+        logoLaporan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/laporanpenjualan/logopenjualan.png"))); // NOI18N
 
         statusPanel.setOpaque(false);
         statusPanel.setPreferredSize(new java.awt.Dimension(151, 48));
@@ -170,6 +170,9 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
         jTable1.setShowGrid(true);
         jTable1.getTableHeader().setResizingAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
+        jTable1.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
+        jTable1.getTableHeader().setBackground(new java.awt.Color(40, 41, 61));
+        jTable1.getTableHeader().setForeground(new java.awt.Color(72, 84, 254));
         jTable1.setUpdateSelectionOnSort(false);
         jTable1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTable1);
@@ -222,7 +225,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
     private void comboBoxBulanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxBulanActionPerformed
         try {
             jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                DataStoreMechanism.getTransactionReport(historyPath, comboBoxBulan.getSelectedItem().toString(), comboBoxTahun.getSelectedItem().toString())
+                DataStoreMechanism.getTransactionReport(historyPath, String.valueOf(comboBoxBulan.getSelectedItem()), String.valueOf(comboBoxTahun.getSelectedItem()))
                 ,
                 new String [] {
                     "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
@@ -258,7 +261,7 @@ public class LaporanPenjualanGUI extends javax.swing.JPanel {
     private void comboBoxTahunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboBoxTahunActionPerformed
         try {
             jTable1.setModel(new javax.swing.table.DefaultTableModel(
-                DataStoreMechanism.getTransactionReport(historyPath, comboBoxBulan.getSelectedItem().toString(), comboBoxTahun.getSelectedItem().toString())
+                DataStoreMechanism.getTransactionReport(historyPath, String.valueOf(comboBoxBulan.getSelectedItem()), String.valueOf(comboBoxTahun.getSelectedItem()))
                 ,
                 new String [] {
                     "Nama Barang", "Tanggal", "Kuantitas", "Harga", "Total Harga"
