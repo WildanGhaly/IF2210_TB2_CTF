@@ -315,7 +315,7 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
             set.add(OrientationRequested.PORTRAIT);
             jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer, true, set, true);
             // add time 1000 thread
-            Thread.sleep(1000);
+            Thread.sleep(10000);
             JOptionPane.showMessageDialog(null, "\nPrint Berhasil\n");
         } catch (PrinterAbortException ex) {
             JOptionPane.showMessageDialog(null, "\nPrint Gagal\n");
