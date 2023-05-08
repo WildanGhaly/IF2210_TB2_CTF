@@ -12,6 +12,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.xml.bind.JAXBException;
 
+import customer.Member;
+import customer.VIP;
 import datastore.DataStoreMechanism;
 import main.featureGUI.Util.UtilFunction;
 
@@ -357,14 +359,38 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
                 JOptionPane.showMessageDialog(null, "invalid telephone number");
             } else {
                 /*TODO data update disini*/
-                ubahNama.getText();
-                ubahNoTelepon.getText();
-                /*data update disini*/
-                JOptionPane.showMessageDialog(null, "Member Updated");
-                ubahNama.setText(" Ubah nama disini...");
-                ubahNoTelepon.setText(" Ubah nomor telepon disini...");
-                comboBoxCariMember.setSelectedIndex(-1);
-                comboBoxCariMember.setLabelText("Cari member...");
+                String newName = ubahNama.getText();
+                String newNumber = ubahNoTelepon.getText();
+                String chosenMember = comboBoxCariMember.getSelectedItem().toString();
+                if (comboBoxStatus.getSelectedIndex() != -1){
+                    String newStatus = comboBoxStatus.getSelectedItem().toString();
+                    System.out.println(newStatus);
+                    try {
+                        int isVIP = DataStoreMechanism.isVIPClass(memberPath, vipPath, chosenMember);
+                        String prevPath = isVIP == 1 ? vipPath : memberPath;
+                        String targetPath = newStatus.equals("VIP") ? vipPath : memberPath;
+                        String newType = newStatus.equals("VIP") ? "vip" : "member";
+                        int customerID = DataStoreMechanism.getCustomerID(prevPath, chosenMember);
+                        Class<?> clazz = isVIP == 1 ? VIP.class : Member.class;
+                        DataStoreMechanism.Update(customerID, 0, prevPath, targetPath, newType, newName, newNumber, clazz);
+                        comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel<>(DataStoreMechanism.readName(vipPath)));
+                        for (String i : DataStoreMechanism.readName(memberPath)) {
+                            comboBoxCariMember.addItem(i);
+                        }
+                    } catch (ClassNotFoundException | IOException | JAXBException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                    
+                    /*data update disini*/
+                    JOptionPane.showMessageDialog(null, "Member Updated");
+                    ubahNama.setText(" Ubah nama disini...");
+                    ubahNoTelepon.setText(" Ubah nomor telepon disini...");
+                    comboBoxCariMember.setSelectedIndex(-1);
+                    comboBoxCariMember.setLabelText("Cari member...");
+                } else {
+                    JOptionPane.showMessageDialog(null, "invalid status");
+                }
             }
         } else {
             ubahNama.setText(" Ubah nama disini...");
