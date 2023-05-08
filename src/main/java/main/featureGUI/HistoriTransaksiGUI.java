@@ -11,8 +11,17 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.awt.Insets;
+import java.awt.print.PrinterAbortException;
+import java.awt.print.PrinterException;
 import java.io.IOException;
+import java.text.MessageFormat;
+import javax.print.attribute.HashPrintRequestAttributeSet;
+import javax.print.attribute.PrintRequestAttributeSet;
+import javax.print.attribute.standard.OrientationRequested;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTable;
+
 import main.featureGUI.Util.RequestImage;
 import datastore.DataStoreMechanism;
 
@@ -78,6 +87,8 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
         };
         comboBoxCariMember = new main.featureGUI.Util.customcombobox.Combobox<>();
         polygonCariMember = new javax.swing.JLabel();
+        printPanel = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setPreferredSize(new java.awt.Dimension(904, 720));
 
@@ -94,7 +105,14 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
 
         jTable1.setBackground(new java.awt.Color(40, 41, 61));
         jTable1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(72, 84, 254));
+        jTable1.setForeground(new java.awt.Color(72,84,254));
+        jTable1.getTableHeader().setResizingAllowed(false);
+        jTable1.getTableHeader().setReorderingAllowed(false);
+        jTable1.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
+        // change header background
+        jTable1.getTableHeader().setBackground(new java.awt.Color(40, 41, 61));
+        jTable1.getTableHeader().setForeground(new java.awt.Color(72, 84, 254));
+        jTable1.getTableHeader().setBorder(null);
         jTable1.setGridColor(new java.awt.Color(72, 84, 254));
         jTable1.setRowHeight(50);
         jTable1.setRowSelectionAllowed(false);
@@ -103,11 +121,6 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
         jTable1.setShowGrid(true);
         jTable1.getTableHeader().setResizingAllowed(false);
         jTable1.getTableHeader().setReorderingAllowed(false);
-        jTable1.getTableHeader().setFont(new Font("Segoe UI", Font.BOLD, 14));
-        // change header background
-        jTable1.getTableHeader().setBackground(new java.awt.Color(40, 41, 61));
-        jTable1.getTableHeader().setForeground(new java.awt.Color(72, 84, 254));
-        jTable1.getTableHeader().setBorder(null);
         jTable1.setUpdateSelectionOnSort(false);
         jTable1.setVerifyInputWhenFocusTarget(false);
         jScrollPane1.setViewportView(jTable1);
@@ -176,44 +189,72 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        printPanel.setBackground(new java.awt.Color(40, 41, 61));
+        printPanel.setForeground(new java.awt.Color(40, 41, 61));
+
+        jButton1.setBackground(new java.awt.Color(40, 41, 61));
+        jButton1.setForeground(new java.awt.Color(40, 41, 61));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/historiTransaksi/print.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout printPanelLayout = new javax.swing.GroupLayout(printPanel);
+        printPanel.setLayout(printPanelLayout);
+        printPanelLayout.setHorizontalGroup(
+            printPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+        );
+        printPanelLayout.setVerticalGroup(
+            printPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout historiPanelLayout = new javax.swing.GroupLayout(historiPanel);
         historiPanel.setLayout(historiPanelLayout);
         historiPanelLayout.setHorizontalGroup(
             historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(historiPanelLayout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(67, Short.MAX_VALUE))
-            .addGroup(historiPanelLayout.createSequentialGroup()
                 .addGap(60, 60, 60)
-                .addComponent(comboBoxPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                .addGroup(historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(comboBoxPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 836, Short.MAX_VALUE)
+                    .addGroup(historiPanelLayout.createSequentialGroup()
+                        .addGroup(historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(historiPanelLayout.createSequentialGroup()
+                                .addGap(14, 14, 14)
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 748, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(jLabel2))
+                            .addComponent(printPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 38, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(historiPanelLayout.createSequentialGroup()
-                    .addGap(184, 184, 184)
-                    .addComponent(logoPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(184, Short.MAX_VALUE)))
+            .addGroup(historiPanelLayout.createSequentialGroup()
+                .addGap(184, 184, 184)
+                .addComponent(logoPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, 534, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         historiPanelLayout.setVerticalGroup(
             historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(historiPanelLayout.createSequentialGroup()
-                .addContainerGap(97, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(logoPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(comboBoxPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(historiPanelLayout.createSequentialGroup()
-                        .addGap(58, 58, 58)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historiPanelLayout.createSequentialGroup()
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(202, Short.MAX_VALUE))
+                        .addGap(165, 165, 165))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, historiPanelLayout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(99, 99, 99))))
-            .addGroup(historiPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(historiPanelLayout.createSequentialGroup()
-                    .addGap(22, 22, 22)
-                    .addComponent(logoPendaftaran, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(633, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
+                .addComponent(printPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(16, 16, 16))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -264,16 +305,37 @@ public class HistoriTransaksiGUI extends javax.swing.JPanel {
 				}
     }//GEN-LAST:event_comboBoxCariMemberActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        // print to pdf
+        MessageFormat header = new MessageFormat("Histori Transaksi " + String.valueOf(comboBoxCariMember.getSelectedItem()));
+        MessageFormat footer = new MessageFormat("Page{0,number,integer}");
+        try {
+            PrintRequestAttributeSet set = new HashPrintRequestAttributeSet();
+            set.add(OrientationRequested.PORTRAIT);
+            jTable1.print(JTable.PrintMode.FIT_WIDTH, header, footer, true, set, true);
+            // add time 1000 thread
+            Thread.sleep(1000);
+            JOptionPane.showMessageDialog(null, "\nPrint Berhasil\n");
+        } catch (PrinterAbortException ex) {
+            JOptionPane.showMessageDialog(null, "\nPrint Gagal\n");
+        } catch (PrinterException | InterruptedException ex) {
+            JOptionPane.showMessageDialog(null, "\nPrint Gagal\n");
+        }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    
     private main.featureGUI.Util.customcombobox.Combobox<String> comboBoxCariMember;
     private javax.swing.JPanel comboBoxPanel;
     private javax.swing.JPanel historiPanel;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JLabel logoPendaftaran;
     private javax.swing.JLabel polygonCariMember;
+    private javax.swing.JPanel printPanel;
     // End of variables declaration//GEN-END:variables
 }
