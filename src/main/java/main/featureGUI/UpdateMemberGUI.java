@@ -6,9 +6,13 @@ package main.featureGUI;
 
 import java.awt.Graphics;
 import java.awt.Image;
+import java.io.IOException;
 
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.xml.bind.JAXBException;
+
+import datastore.DataStoreMechanism;
 import main.featureGUI.Util.UtilFunction;
 
 import main.featureGUI.Util.RequestImage;
@@ -22,6 +26,9 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
     /**
      * Creates new form UpdateMemberGUI
      */
+    private String memberPath = "src/main/java/datastore/database/Member/member.json";
+    private String vipPath = "src/main/java/datastore/database/VIP/vip.json";
+
     private static final UpdateMemberGUI UPDATE_MEMBER_GUI = new UpdateMemberGUI();
 
     private final Image comboBoxUpdateImg = RequestImage.requestImage("updatemember/comboBoxUpdateMember.png");
@@ -234,7 +241,21 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
 
         comboBoxCariMember.setBackground(new java.awt.Color(0,0,0,0));
         comboBoxCariMember.setForeground(new java.awt.Color(217, 217, 217));
-        comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Salman", "Willy", "Copa", "Haidar", "Haikal", "Afnan" }));
+        try {
+            comboBoxCariMember.setModel(new javax.swing.DefaultComboBoxModel<>(DataStoreMechanism.readName(vipPath)));
+            for (String i : DataStoreMechanism.readName(memberPath)) {
+                comboBoxCariMember.addItem(i);
+            }
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (JAXBException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         comboBoxCariMember.setSelectedIndex(-1);
         comboBoxCariMember.setFont(new java.awt.Font("Inter", 1, 22));
         comboBoxCariMember.setLabelText("Cari member...");
