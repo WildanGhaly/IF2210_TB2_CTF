@@ -29,12 +29,12 @@ java -jar "IF2210_TB2_CTF.jar"
 ```
 
 ## Author
-| Student ID | Name                  |
-| ---------- | --------------------- |
-| 13521010   | Muhamad Salman Hakim Alfarisi |
-| 13521011   | Afnan Edsa Ramadhan |
-| 13521012   | Haikal Ardzi Shofiyyurrohman |
-| 13521015   | Hidayatullah Wildan Ghaly B. |
-| 13521011   | Afnan Edsa Ramadhan |
+| Student ID | Name                           |
+| ---------- | ------------------------------_|
+| 13521010   | Muhamad Salman Hakim Alfarisi  |
+| 13521011   | Afnan Edsa Ramadhan            |
+| 13521012   | Haikal Ardzi Shofiyyurrohman   |
+| 13521015   | Hidayatullah Wildan Ghaly B.   |
+| 13521011   | Afnan Edsa Ramadhan            |
 | 13521025   | Muhammad Haidar Akita Tresnadi |
-| 13521026   | Kartini Copa |
+| 13521026   | Kartini Copa                   |
