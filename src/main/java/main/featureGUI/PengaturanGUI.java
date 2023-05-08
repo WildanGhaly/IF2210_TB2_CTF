@@ -5,6 +5,7 @@
 package main.featureGUI;
 
 import java.awt.Cursor;
+import java.awt.EventQueue;
 import java.awt.Graphics;
 import java.awt.Image;
 
@@ -12,6 +13,10 @@ import javax.swing.JPanel;
 
 import lombok.Getter;
 import main.featureGUI.Util.RequestImage;
+
+import java.util.*;
+import java.lang.reflect.*;
+import plugins.*;
 
 /**
  *
@@ -24,9 +29,14 @@ public class PengaturanGUI extends javax.swing.JPanel {
      */
     private static final PengaturanGUI PENGATURAN_GUI = new PengaturanGUI();
     private final Image statusBoxPanelImg = RequestImage.requestImage("updatemember/boxStatus.png");
+    private String jarPath;
 
     private PengaturanGUI() {
         initComponents();
+    }
+
+    public void setJarPath(String jarPath) {
+        this.jarPath = jarPath;
     }
 
     public static PengaturanGUI getInstance(){
@@ -195,6 +205,32 @@ public class PengaturanGUI extends javax.swing.JPanel {
 
     private void usePluginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usePluginActionPerformed
         // TODO button tambahannya:
+        try{
+            List<String> classes = new ArrayList<>();
+            classes = Loader.getClassNamesFromJar(this.jarPath);
+            for (String className : classes) {
+                System.out.println(className);
+            }
+
+            ArrayList<Class> availableClasses = Loader.loadJarFile(this.jarPath);
+
+            Class<?> c = availableClasses.get(0);
+            System.out.println(c.getName());
+            Method m = c.getDeclaredMethod("start");
+            
+            EventQueue.invokeLater(() -> {
+                try {
+                Object obj = c.newInstance();
+                m.setAccessible(true);
+                m.invoke(obj);
+
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                }
+            });
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }//GEN-LAST:event_usePluginActionPerformed
 
 
@@ -256,6 +292,7 @@ public class PengaturanGUI extends javax.swing.JPanel {
                 actionCommand = evt.getActionCommand();
                 usePlugin.setEnabled(true);
                 usePlugin.setVisible(true);
+                setJarPath(filePath);
             }
             dispose();
         }//GEN-LAST:event_fileChooserPluginActionPerformed
