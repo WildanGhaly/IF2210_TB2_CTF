@@ -780,6 +780,74 @@ public class DataStoreMechanism {
 
 
     /**
+     * <p>Reads data from path then use it to find the same item's name and delete it.</p>
+     * <p>This method is used to delete an item in database by setting the id to -1. </p>
+     * <p>The method will load the data from the database file, then find the item's name that matches the specified name, then delete the item's data by setting the id to -1.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static void deleteBarang(String path, String name) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "items.xml";
+     * deleteBarang(path, "newBarangs");
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @param name The name of the item.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Barang
+     * @see LinkedTreeMap
+     */
+    public static void deleteBarang(String path, String name) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+        List<Barang> barang = new ArrayList<>();
+
+        for (Object obj : data){
+            if (obj instanceof Barang && !((Barang) obj).getName().equals(name)){
+                barang.add((Barang) obj);
+            } else if (obj instanceof Barang){
+                ((Barang) obj).setId(-1);
+                barang.add((Barang) obj);
+            } else if (obj instanceof LinkedTreeMap && !((LinkedTreeMap<?, ?>) obj).get("name").equals(name)){
+                barang.add(new Barang((int) (double) ((LinkedTreeMap<?, ?>) obj).get("id"), (int) (double) ((LinkedTreeMap<?, ?>) obj).get("stock"), (String) ((LinkedTreeMap<?, ?>) obj).get("name"), (double) ((LinkedTreeMap<?, ?>) obj).get("sellPrice"), (double) ((LinkedTreeMap<?, ?>) obj).get("buyPrice"), (String) ((LinkedTreeMap<?, ?>) obj).get("kategori"), (String) ((LinkedTreeMap<?, ?>) obj).get("description"), (String) ((LinkedTreeMap<?, ?>) obj).get("image")));
+            } else if (obj instanceof LinkedTreeMap && ((LinkedTreeMap<?, ?>) obj).get("name").equals(name)){
+                barang.add(new Barang(-1, (int) (double) ((LinkedTreeMap<?, ?>) obj).get("stock"), (String) ((LinkedTreeMap<?, ?>) obj).get("name"), (double) ((LinkedTreeMap<?, ?>) obj).get("sellPrice"), (double) ((LinkedTreeMap<?, ?>) obj).get("buyPrice"), (String) ((LinkedTreeMap<?, ?>) obj).get("kategori"), (String) ((LinkedTreeMap<?, ?>) obj).get("description"), (String) ((LinkedTreeMap<?, ?>) obj).get("image")));
+            }
+
+        }
+
+        adapter.saveData(path, barang);
+    } 
+
+
+    /**
      * <p>Reads data from path then convert it to String[][] format.</p>
      * <p>This method is used to get all items in the database file. </p>
      * <p>The method will load the data from the database file, then convert it to String[][] format.</p>
@@ -1088,6 +1156,69 @@ public class DataStoreMechanism {
             return ((Customer) data.get(data.size() - 1)).getId();
         } else if (data.get(data.size() - 1) instanceof LinkedTreeMap){
             return (int) (double) ((LinkedTreeMap<?, ?>) data.get(data.size() - 1)).get("id");
+        }
+        return 0;
+    }
+
+
+    /**
+     * <p>This method is used to get the id of the member. </p>
+     * <p>The method will load the data from the database file, then get the id of the member.</p>
+     * <p>The method will return the id of the member.</p>
+     * <p>The method may throw the following exceptions:</p>
+     * <ul>
+     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
+     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
+     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
+     * </ul>
+     * <p>See the following classes for more information:</p>
+     * <ul>
+     * <li><code>DataAdapter</code></li>    
+     * <li><code>XmlDataAdapter</code></li>
+     * <li><code>JsonDataAdapter</code></li>
+     * <li><code>ObjDataAdapter</code></li>
+     * </ul>
+     * <p>The method signature is as follows:</p>
+     * <pre>
+     * public static int getCustomerID (String path, String name) throws ClassNotFoundException, IOException, JAXBException
+     * </pre>
+     * <p>Code example:</p>
+     * <pre>
+     * ...
+     * // define the path to the database file
+     * String path = "members.xml";
+     * int id = DataStoreMechanism.getMemberID(path, "John");
+     * ...
+     * </pre>
+     * @param path The path to the database file.
+     * @param name The name of the member.
+     * @return The id of the member.
+     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
+     * @throws IOException If there is an error reading from the database file.
+     * @throws JAXBException If there is an error parsing the XML data from the database file.
+     * @see DataAdapter
+     * @see XmlDataAdapter
+     * @see JsonDataAdapter
+     * @see ObjDataAdapter
+     * @see Member
+     */
+    public static int getCustomerID(String path, String name) throws ClassNotFoundException, IOException, JAXBException{
+        DataAdapter adapter = 
+            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
+            path.endsWith(".json") ? new JsonDataAdapter() : 
+            new ObjDataAdapter();
+
+        List<?> data = adapter.loadData(path);
+        for (int i = 0; i < data.size(); i++){
+            if (data.get(i) instanceof Member){
+                if (((Member) data.get(i)).getName().equals(name)){
+                    return ((Member) data.get(i)).getId();
+                }
+            } else if (data.get(i) instanceof LinkedTreeMap){
+                if (((LinkedTreeMap<?, ?>) data.get(i)).get("name").equals(name)){
+                    return (int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("id");
+                }
+            }
         }
         return 0;
     }
