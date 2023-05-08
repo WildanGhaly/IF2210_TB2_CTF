@@ -1161,69 +1161,6 @@ public class DataStoreMechanism {
     }
 
 
-    /**
-     * <p>This method is used to get the id of the member. </p>
-     * <p>The method will load the data from the database file, then get the id of the member.</p>
-     * <p>The method will return the id of the member.</p>
-     * <p>The method may throw the following exceptions:</p>
-     * <ul>
-     * <li><code>ClassNotFoundException</code>: If the data adapter class for the specified file type is not found.</li>
-     * <li><code>IOException</code>: If there is an error reading from the database file.</li>
-     * <li><code>JAXBException</code>: If there is an error parsing the XML data from the database file.</li>
-     * </ul>
-     * <p>See the following classes for more information:</p>
-     * <ul>
-     * <li><code>DataAdapter</code></li>    
-     * <li><code>XmlDataAdapter</code></li>
-     * <li><code>JsonDataAdapter</code></li>
-     * <li><code>ObjDataAdapter</code></li>
-     * </ul>
-     * <p>The method signature is as follows:</p>
-     * <pre>
-     * public static int getCustomerID (String path, String name) throws ClassNotFoundException, IOException, JAXBException
-     * </pre>
-     * <p>Code example:</p>
-     * <pre>
-     * ...
-     * // define the path to the database file
-     * String path = "members.xml";
-     * int id = DataStoreMechanism.getMemberID(path, "John");
-     * ...
-     * </pre>
-     * @param path The path to the database file.
-     * @param name The name of the member.
-     * @return The id of the member.
-     * @throws ClassNotFoundException If the data adapter class for the specified file type is not found.
-     * @throws IOException If there is an error reading from the database file.
-     * @throws JAXBException If there is an error parsing the XML data from the database file.
-     * @see DataAdapter
-     * @see XmlDataAdapter
-     * @see JsonDataAdapter
-     * @see ObjDataAdapter
-     * @see Member
-     */
-    public static int getCustomerID(String path, String name) throws ClassNotFoundException, IOException, JAXBException{
-        DataAdapter adapter = 
-            path.endsWith(".xml")  ? new XmlDataAdapter()  : 
-            path.endsWith(".json") ? new JsonDataAdapter() : 
-            new ObjDataAdapter();
-
-        List<?> data = adapter.loadData(path);
-        for (int i = 0; i < data.size(); i++){
-            if (data.get(i) instanceof Member){
-                if (((Member) data.get(i)).getName().equals(name)){
-                    return ((Member) data.get(i)).getId();
-                }
-            } else if (data.get(i) instanceof LinkedTreeMap){
-                if (((LinkedTreeMap<?, ?>) data.get(i)).get("name").equals(name)){
-                    return (int) (double) ((LinkedTreeMap<?, ?>) data.get(i)).get("id");
-                }
-            }
-        }
-        return 0;
-    }
-
-
 
     /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
