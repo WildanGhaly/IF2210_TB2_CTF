@@ -8,7 +8,7 @@
         <buyPrice>12.29</buyPrice>
         <kategori>Food</kategori>
         <description>Pasta is a food</description>
-        <image>/src/main/datastore/database/image/Pasta.png</image>
+        <image>Pasta.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>2</id>
@@ -18,7 +18,7 @@
         <buyPrice>6.51</buyPrice>
         <kategori>Food</kategori>
         <description>French Fries is a food</description>
-        <image>/src/main/datastore/database/image/FrenchFries.png</image>
+        <image>French Fries.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>3</id>
@@ -28,7 +28,7 @@
         <buyPrice>10.25</buyPrice>
         <kategori>Food</kategori>
         <description>Ice Cream is a food</description>
-        <image>/src/main/datastore/database/image/IceCream.png</image>
+        <image>Ice Cream.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>4</id>
@@ -38,7 +38,7 @@
         <buyPrice>10.73</buyPrice>
         <kategori>Food</kategori>
         <description>Bread is a food</description>
-        <image>/src/main/datastore/database/image/Bread.png</image>
+        <image>Bread.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>5</id>
@@ -48,7 +48,7 @@
         <buyPrice>4.23</buyPrice>
         <kategori>Food</kategori>
         <description>Fried Rice is a food</description>
-        <image>/src/main/datastore/database/image/FriedRice.png</image>
+        <image>Fried Rice.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>6</id>
@@ -58,7 +58,7 @@
         <buyPrice>8.35</buyPrice>
         <kategori>Food</kategori>
         <description>Pancakes is a food</description>
-        <image>/src/main/datastore/database/image/Pancakes.png</image>
+        <image>Pancakes.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>7</id>
@@ -68,7 +68,7 @@
         <buyPrice>5.94</buyPrice>
         <kategori>Food</kategori>
         <description>Burger is a food</description>
-        <image>/src/main/datastore/database/image/Burger.png</image>
+        <image>Burger.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>8</id>
@@ -78,7 +78,7 @@
         <buyPrice>10.14</buyPrice>
         <kategori>Food</kategori>
         <description>Pizza is a food</description>
-        <image>/src/main/datastore/database/image/Pizza.png</image>
+        <image>Pizza.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>9</id>
@@ -88,7 +88,7 @@
         <buyPrice>4.66</buyPrice>
         <kategori>Food</kategori>
         <description>Pumpkin Pie is a food</description>
-        <image>/src/main/datastore/database/image/PumpkinPie.png</image>
+        <image>Pumpkin Pie.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>10</id>
@@ -98,7 +98,7 @@
         <buyPrice>6.71</buyPrice>
         <kategori>Food</kategori>
         <description>Chicken Pot Pie is a food</description>
-        <image>/src/main/datastore/database/image/ChickenPotPie.png</image>
+        <image>Chicken Pot Pie.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>11</id>
@@ -108,7 +108,7 @@
         <buyPrice>14.47</buyPrice>
         <kategori>Food</kategori>
         <description>Banana is a food</description>
-        <image>/src/main/datastore/database/image/Banana.png</image>
+        <image>Banana.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>12</id>
@@ -118,7 +118,7 @@
         <buyPrice>3.97</buyPrice>
         <kategori>Food</kategori>
         <description>Apple Pie is a food</description>
-        <image>/src/main/datastore/database/image/ApplePie.png</image>
+        <image>Apple Pie.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>13</id>
@@ -128,7 +128,7 @@
         <buyPrice>13.42</buyPrice>
         <kategori>Food</kategori>
         <description>Bagel is a food</description>
-        <image>/src/main/datastore/database/image/Bagel.png</image>
+        <image>Bagel.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>14</id>
@@ -138,7 +138,7 @@
         <buyPrice>6.75</buyPrice>
         <kategori>Food</kategori>
         <description>Muffins is a food</description>
-        <image>/src/main/datastore/database/image/Muffins.png</image>
+        <image>Muffins.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>15</id>
@@ -148,7 +148,7 @@
         <buyPrice>12.95</buyPrice>
         <kategori>Food</kategori>
         <description>Alfredo Sauce is a food</description>
-        <image>/src/main/datastore/database/image/AlfredoSauce.png</image>
+        <image>Alfredo Sauce.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>16</id>
@@ -158,7 +158,7 @@
         <buyPrice>10.32</buyPrice>
         <kategori>Food</kategori>
         <description>Reece's Peanut Cups is a food</description>
-        <image>/src/main/datastore/database/image/Reece'sPeanutCups.png</image>
+        <image>Reece's Peanut Cups.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>17</id>
@@ -168,7 +168,7 @@
         <buyPrice>9.84</buyPrice>
         <kategori>Food</kategori>
         <description>Ice Cream Cake is a food</description>
-        <image>/src/main/datastore/database/image/IceCreamCake.png</image>
+        <image>Ice Cream Cake.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>18</id>
@@ -178,7 +178,7 @@
         <buyPrice>5.55</buyPrice>
         <kategori>Food</kategori>
         <description>CheeseCake is a food</description>
-        <image>/src/main/datastore/database/image/CheeseCake.png</image>
+        <image>Cheese Cake.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>19</id>
@@ -188,7 +188,7 @@
         <buyPrice>9.95</buyPrice>
         <kategori>Food</kategori>
         <description>Cheese is a food</description>
-        <image>/src/main/datastore/database/image/Cheese.png</image>
+        <image>Cheese.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>20</id>
@@ -198,7 +198,7 @@
         <buyPrice>14.46</buyPrice>
         <kategori>Food</kategori>
         <description>Banana Bread is a food</description>
-        <image>/src/main/datastore/database/image/BananaBread.png</image>
+        <image>Banana Bread.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>21</id>
@@ -208,7 +208,7 @@
         <buyPrice>10.32</buyPrice>
         <kategori>Food</kategori>
         <description>Potato Chips is a food</description>
-        <image>/src/main/datastore/database/image/PotatoChips.png</image>
+        <image>Potato Chips.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>22</id>
@@ -218,7 +218,7 @@
         <buyPrice>3.92</buyPrice>
         <kategori>Food</kategori>
         <description>Cheetos is a food</description>
-        <image>/src/main/datastore/database/image/Cheetos.png</image>
+        <image>Cheetos.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>23</id>
@@ -228,7 +228,7 @@
         <buyPrice>8.62</buyPrice>
         <kategori>Food</kategori>
         <description>Doritos is a food</description>
-        <image>/src/main/datastore/database/image/Doritos.png</image>
+        <image>Doritos.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>24</id>
@@ -238,7 +238,7 @@
         <buyPrice>8.05</buyPrice>
         <kategori>Food</kategori>
         <description>Tacos is a food</description>
-        <image>/src/main/datastore/database/image/Tacos.png</image>
+        <image>Tacos.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>25</id>
@@ -248,7 +248,7 @@
         <buyPrice>16.21</buyPrice>
         <kategori>Food</kategori>
         <description>Burritos is a food</description>
-        <image>/src/main/datastore/database/image/Burritos.png</image>
+        <image>Burritos.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>26</id>
@@ -258,7 +258,7 @@
         <buyPrice>7.47</buyPrice>
         <kategori>Food</kategori>
         <description>Chimichanga is a food</description>
-        <image>/src/main/datastore/database/image/Chimichanga.png</image>
+        <image>Chimichanga.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>27</id>
@@ -268,7 +268,7 @@
         <buyPrice>11.81</buyPrice>
         <kategori>Food</kategori>
         <description>Echilada is a food</description>
-        <image>/src/main/datastore/database/image/Echilada.png</image>
+        <image>Echilada.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>28</id>
@@ -278,7 +278,7 @@
         <buyPrice>6.37</buyPrice>
         <kategori>Food</kategori>
         <description>Salsa is a food</description>
-        <image>/src/main/datastore/database/image/Salsa.png</image>
+        <image>Salsa.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>29</id>
@@ -288,7 +288,7 @@
         <buyPrice>5.95</buyPrice>
         <kategori>Food</kategori>
         <description>Marinara Sauce is a food</description>
-        <image>/src/main/datastore/database/image/MarinaraSauce.png</image>
+        <image>Marinara Sauce.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>30</id>
@@ -298,7 +298,7 @@
         <buyPrice>14.4</buyPrice>
         <kategori>Food</kategori>
         <description>Broccoli is a food</description>
-        <image>/src/main/datastore/database/image/Broccoli.png</image>
+        <image>Broccoli.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>31</id>
@@ -308,7 +308,7 @@
         <buyPrice>7.39</buyPrice>
         <kategori>Food</kategori>
         <description>Chocolate Covered Strawberries is a food</description>
-        <image>/src/main/datastore/database/image/ChocolateCoveredStrawberries.png</image>
+        <image>Chocolate Covered Strawberries.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>32</id>
@@ -318,7 +318,7 @@
         <buyPrice>10.03</buyPrice>
         <kategori>Food</kategori>
         <description>Kiwi is a food</description>
-        <image>/src/main/datastore/database/image/Kiwi.png</image>
+        <image>Kiwi.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>33</id>
@@ -328,7 +328,7 @@
         <buyPrice>8.21</buyPrice>
         <kategori>Food</kategori>
         <description>Tomato is a food</description>
-        <image>/src/main/datastore/database/image/Tomato.png</image>
+        <image>Tomato.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>34</id>
@@ -338,7 +338,7 @@
         <buyPrice>8.65</buyPrice>
         <kategori>Food</kategori>
         <description>Salad is a food</description>
-        <image>/src/main/datastore/database/image/Salad.png</image>
+        <image>Salad.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>35</id>
@@ -348,7 +348,7 @@
         <buyPrice>9.81</buyPrice>
         <kategori>Food</kategori>
         <description>Steak is a food</description>
-        <image>/src/main/datastore/database/image/Steak.png</image>
+        <image>Steak.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>36</id>
@@ -358,7 +358,7 @@
         <buyPrice>5.04</buyPrice>
         <kategori>Food</kategori>
         <description>Chicken Tenders is a food</description>
-        <image>/src/main/datastore/database/image/ChickenTenders.png</image>
+        <image>ChickenTenders.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>37</id>
@@ -368,7 +368,7 @@
         <buyPrice>3.18</buyPrice>
         <kategori>Food</kategori>
         <description>Grilled Chicken is a food</description>
-        <image>/src/main/datastore/database/image/GrilledChicken.png</image>
+        <image>Grilled Chicken.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>38</id>
@@ -378,7 +378,7 @@
         <buyPrice>3.26</buyPrice>
         <kategori>Food</kategori>
         <description>Ribs is a food</description>
-        <image>/src/main/datastore/database/image/Ribs.png</image>
+        <image>Ribs.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>39</id>
@@ -388,7 +388,7 @@
         <buyPrice>14.25</buyPrice>
         <kategori>Food</kategori>
         <description>Biscuits and Gravy is a food</description>
-        <image>/src/main/datastore/database/image/BiscuitsandGravy.png</image>
+        <image>Biscuits and Gravy.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>40</id>
@@ -398,7 +398,7 @@
         <buyPrice>4.24</buyPrice>
         <kategori>Food</kategori>
         <description>Hot Dogs is a food</description>
-        <image>/src/main/datastore/database/image/HotDogs.png</image>
+        <image>HotDogs.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>41</id>
@@ -408,7 +408,7 @@
         <buyPrice>7.05</buyPrice>
         <kategori>Food</kategori>
         <description>Fried Chicken is a food</description>
-        <image>/src/main/datastore/database/image/FriedChicken.png</image>
+        <image>Fried Chicken.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>42</id>
@@ -418,7 +418,7 @@
         <buyPrice>10.88</buyPrice>
         <kategori>Food</kategori>
         <description>Roasted Chicken and Garlic is a food</description>
-        <image>/src/main/datastore/database/image/RoastedChickenandGarlic.png</image>
+        <image>Roasted Chicken and Garlic.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>43</id>
@@ -428,7 +428,7 @@
         <buyPrice>9.93</buyPrice>
         <kategori>Food</kategori>
         <description>Eggs is a food</description>
-        <image>/src/main/datastore/database/image/Eggs.png</image>
+        <image>Eggs.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>44</id>
@@ -438,7 +438,7 @@
         <buyPrice>8.66</buyPrice>
         <kategori>Food</kategori>
         <description>Bacon is a food</description>
-        <image>/src/main/datastore/database/image/Bacon.png</image>
+        <image>Bacon.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>45</id>
@@ -448,7 +448,7 @@
         <buyPrice>13.29</buyPrice>
         <kategori>Food</kategori>
         <description>Sausage is a food</description>
-        <image>/src/main/datastore/database/image/Sausage.png</image>
+        <image>Sausage.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>46</id>
@@ -458,7 +458,7 @@
         <buyPrice>5.15</buyPrice>
         <kategori>Food</kategori>
         <description>Mashed Potatoes is a food</description>
-        <image>/src/main/datastore/database/image/MashedPotatoes.png</image>
+        <image>Mashed Potatoes.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>47</id>
@@ -468,7 +468,7 @@
         <buyPrice>5.09</buyPrice>
         <kategori>Food</kategori>
         <description>Stuffing is a food</description>
-        <image>/src/main/datastore/database/image/Stuffing.png</image>
+        <image>Stuffing.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>48</id>
@@ -478,7 +478,7 @@
         <buyPrice>8.25</buyPrice>
         <kategori>Food</kategori>
         <description>Brownies is a food</description>
-        <image>/src/main/datastore/database/image/Brownies.png</image>
+        <image>Brownies.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>49</id>
@@ -488,7 +488,7 @@
         <buyPrice>9.64</buyPrice>
         <kategori>Food</kategori>
         <description>Cookies is a food</description>
-        <image>/src/main/datastore/database/image/Cookies.png</image>
+        <image>Cookies.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>50</id>
@@ -498,7 +498,7 @@
         <buyPrice>4.73</buyPrice>
         <kategori>Food</kategori>
         <description>Submarine Sandwiches is a food</description>
-        <image>/src/main/datastore/database/image/SubmarineSandwiches.png</image>
+        <image>Submarine Sandwiches.png</image>
     </item>
     <item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="barang">
         <id>51</id>
