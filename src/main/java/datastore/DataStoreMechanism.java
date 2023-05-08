@@ -1224,7 +1224,6 @@ public class DataStoreMechanism {
     }
 
 
-
     /**
      * <p> Main method for testing the DataStoreMechanism class. </p>
      * @param args

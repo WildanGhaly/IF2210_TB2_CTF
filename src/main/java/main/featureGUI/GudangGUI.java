@@ -10,14 +10,16 @@ import javax.swing.JPanel;
 import javax.xml.bind.JAXBException;
 
 import datastore.DataStoreMechanism;
+
 import lombok.Getter;
+
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Image;
 import java.io.IOException;
 
-import main.featureGUI.Util.AddBarang;
+
 import main.featureGUI.Util.RequestImage;
 
 /**
@@ -552,8 +554,10 @@ public class GudangGUI extends javax.swing.JPanel {
     }//GEN-LAST:event_tambahStockActionPerformed
 
     private void addBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBarangActionPerformed
+
         AddBarang addBarang = new AddBarang();
         addBarang.setVisible(true);
+
     }//GEN-LAST:event_addBarangActionPerformed
 
     private void deleteBarangActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBarangActionPerformed

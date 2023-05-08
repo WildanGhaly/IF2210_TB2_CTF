@@ -358,7 +358,6 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
             else if (!UtilFunction.isNumeric(ubahNoTelepon.getText())){
                 JOptionPane.showMessageDialog(null, "invalid telephone number");
             } else {
-                /*TODO data update disini*/
                 String newName = ubahNama.getText();
                 String newNumber = ubahNoTelepon.getText();
                 String chosenMember = comboBoxCariMember.getSelectedItem().toString();
@@ -381,7 +380,7 @@ public class UpdateMemberGUI extends javax.swing.JPanel {
                         // TODO Auto-generated catch block
                         e.printStackTrace();
                     }
-                    
+
                     /*data update disini*/
                     JOptionPane.showMessageDialog(null, "Member Updated");
                     ubahNama.setText(" Ubah nama disini...");
